@@ -21,16 +21,15 @@
 
 ## ERD - Tables
 ### Users 
-| UserId | User(fml) | Userpin | Realpersonname |
-| --- | --- | --- | --- |
-
+| UserId | Userpin | RealPersonName |
+| --- | --- | --- |
 
 ### Accounts
-| AccountID | Balance | Accounttype | PrimaryUser |
+| AccountID | Balance | AccountType | PrimaryUser |
 | --- | --- | --- | --- |
 
 
-### Transactioins 
+### Transactions 
 | TransactionID | AccountID | Amount | Date |
 | --- | --- | --- | --- |
 
