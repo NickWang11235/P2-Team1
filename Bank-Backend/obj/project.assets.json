@@ -4484,19 +4484,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nedtu\\.nuget\\packages\\": {}
+    "/home/nickw/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nedtu\\Documents\\RevatureTraining\\P2-Team1\\Bank-Backend\\Bank-Backend.csproj",
+      "projectUniqueName": "/home/nickw/Documents/Revature/P2-Team1/Bank-Backend/Bank-Backend.csproj",
       "projectName": "Bank-Backend",
-      "projectPath": "C:\\Users\\nedtu\\Documents\\RevatureTraining\\P2-Team1\\Bank-Backend\\Bank-Backend.csproj",
-      "packagesPath": "C:\\Users\\nedtu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nedtu\\Documents\\RevatureTraining\\P2-Team1\\Bank-Backend\\obj\\",
+      "projectPath": "/home/nickw/Documents/Revature/P2-Team1/Bank-Backend/Bank-Backend.csproj",
+      "packagesPath": "/home/nickw/.nuget/packages/",
+      "outputPath": "/home/nickw/Documents/Revature/P2-Team1/Bank-Backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nedtu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/nickw/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4514,11 +4514,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4559,7 +4554,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.107/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

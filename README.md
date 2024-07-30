@@ -40,3 +40,8 @@
 - Home page- 
 - Accounts page - Deposit,Withdraw,History,
 - Profile page
+
+
+# 06/30/2024
+
+Worked on normalizing database to 3NF. Discussed role distribution. Organized git repo structure. 
