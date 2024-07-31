@@ -28,6 +28,11 @@
 | AccountID | Balance | AccountType | PrimaryUser |
 | --- | --- | --- | --- |
 
+### AccountUsers
+
+| AccountID | User |
+| --- | --- |
+
 
 ### Transactions 
 | TransactionID | AccountID | Amount | Date |
