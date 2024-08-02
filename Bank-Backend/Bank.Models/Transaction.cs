@@ -1,7 +1,33 @@
+using System.ComponentModel.DataAnnotations;
+
 public class Transaction
 {
-    int Id { get; set; }
-    Account AccountId { get; set; }
-    decimal Amount { get; set; }
-    DateTime Time { get; set; }
+    [Key]
+    public int TransactionId { get; set; }
+    public Account FromAccount { get; set; }
+    public Account? ToAccount { get; set; }
+    public double Amount { get; set; }
+    public DateTime Time { get; set; }
+
+    public Transaction()
+    {
+        FromAccount = new Account();
+        Time = DateTime.Now;
+    }
+
+    public Transaction(Account account, double amount)
+    {
+        FromAccount = account;
+        Amount = amount;
+        Time = DateTime.Now;
+    }
+
+    public Transaction(Account fromAccount, Account toAccount, double amount)
+    {
+        FromAccount = fromAccount;
+        ToAccount = toAccount;
+        Amount = amount;
+        Time = DateTime.Now;
+    }
+
 }
