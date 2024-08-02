@@ -1,13 +1,14 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 public class Transaction
 {
     [Key]
-    int Id { get; set; }
-    Account FromAccount { get; set; }
-    Account? ToAccount { get; set; }
-    decimal Amount { get; set; }
-    DateTime Time { get; set; }
+    public int TransactionId { get; set; }
+    public Account FromAccount { get; set; }
+    public Account? ToAccount { get; set; }
+    public double Amount { get; set; }
+    public DateTime Time { get; set; }
 
     public Transaction()
     {
@@ -15,14 +16,14 @@ public class Transaction
         Time = DateTime.Now;
     }
 
-    public Transaction(Account account, decimal amount)
+    public Transaction(Account account, double amount)
     {
         FromAccount = account;
         Amount = amount;
         Time = DateTime.Now;
     }
 
-    public Transaction(Account fromAccount, Account toAccount, decimal amount)
+    public Transaction(Account fromAccount, Account toAccount, double amount)
     {
         FromAccount = fromAccount;
         ToAccount = toAccount;

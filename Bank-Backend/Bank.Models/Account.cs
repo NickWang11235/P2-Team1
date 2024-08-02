@@ -1,24 +1,17 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 public class Account
 {
     [Key]
-    int Id { get; set; }
-    decimal Balance { get; set; }
-    AccountType Type { get; set; }
-    User PrimaryUser { get; set; }
-    List<User> Users { get; set; }
-
+    public int AccountId { get; set; }
+    public double Balance { get; set; }
+    public AccountType Type { get; set; }
+    [ForeignKey(nameof(User.UserId))]
+    public int PrimaryUserId { get; set; }
+    public List<User> Users { get; set; }
     public Account()
     {
-        PrimaryUser = new User();
         Users = new List<User>();
     }
-
-    public Account(User user)
-    {
-        PrimaryUser = user;
-        Users = new List<User>();
-    }
-
 }

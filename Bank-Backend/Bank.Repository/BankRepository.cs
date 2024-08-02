@@ -7,8 +7,10 @@ public class BankRepository : IBankRepository
 
     public BankRepository(string connectionString)
     {
-        _bankContext = new BankContext(new DbContextOptionsBuilder<BankContext>().UseSqlServer(connectionString).Options);
+        DbContextOptions<BankContext> options;
+        options = new DbContextOptionsBuilder<BankContext>()
+            .UseSqlServer(connectionString)
+            .Options;
+        _bankContext = new BankContext(options);
     }
-
-
 }

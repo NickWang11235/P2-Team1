@@ -1,13 +1,12 @@
-
 using System.ComponentModel.DataAnnotations;
 
 public class User
 {
     [Key]
-    int Id { get; set; }
-    string Password { get; set; }
-    string Name { get; set; }
-    List<Account> Accounts { get; set; }
+    public int UserId { get; set; }
+    public string Password { get; set; }
+    public string Name { get; set; }
+    public List<Account> Accounts { get; set; }
 
     public User()
     {
