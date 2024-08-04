@@ -1,4 +1,5 @@
 import { User,Account,Transaction } from "../models/dtos";
+import AccountSummaryDetails from "./account-summary-details";
 
 export default function AccountSummary(account:Account){
 
@@ -11,14 +12,39 @@ export default function AccountSummary(account:Account){
     else if(account.AccountType === "CLOWN") imageSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0unitLDK9Bzp4rgrIn9a4Q1Kdz1muTrBBtg&s";
     
 
-    const iconStyling ={
+    const icon ={
         maxHeight: "75px",
+        borderRadius:"15%",
+        backgroundColor:"white",
+        padding: "5px",
+    }
+    const iconAndTitle = {
+        border: "dashed orange",
+        position:"relative",
+        float: "left",
+        height:"100%",
+    }
+
+    const accountSummary ={
+        border: "solid red",
+        borderRadius:"15%",
+        backgroundColor:"gray",
+        padding:"10px",
+        margin: "5px",
+    }
+
+    const accountDetails ={
+        border: "dashed red",
+        
     }
 
     return (
-        <div>
-            <img src={imageSrc} style={iconStyling}></img>
-            <h3>{account.AccountType}</h3>
+        <div className="accountSummary" style={accountSummary}>
+            <div className="iconAndTitle" style={iconAndTitle}>
+                <img className="icon" src={imageSrc} style={icon}></img>
+                <h3>{account.AccountType}</h3>
+            </div>
+                <AccountSummaryDetails{...account}/>
         </div>
     );
 

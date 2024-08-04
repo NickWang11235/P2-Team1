@@ -25,12 +25,11 @@ export default function AccountSummaryList(accountList:Account[]){
     //     );
     // })
 
-    const accountSummaryStyling ={
+    const accountListStyle ={
         display: "flex",
         flexDirection: "column",
-        // justifyContent: "center",
         alignItems: "center",
-
+        margin: "5px",
     }
 
     const listOfAccountSummaries = (
@@ -46,9 +45,11 @@ export default function AccountSummaryList(accountList:Account[]){
 
 
     return(
-        <ul style={accountSummaryStyling}>
+        <div className="accountList" style={accountListStyle}>
+        <ul>
             {listOfAccountSummaries}
         </ul>
+        </div>
         // <div>
         //     <AccountSummary {...accountList[0]}/>
         // </div>
