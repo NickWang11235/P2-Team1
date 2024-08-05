@@ -5,6 +5,7 @@ export default function AccountSummaryDetails(account:Account){
 
     const accountDetails ={
         border: "dashed light-green",
+        display: "flex"
         
     }
 
