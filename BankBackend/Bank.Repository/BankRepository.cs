@@ -1,10 +1,21 @@
+namespace BankBackend.Repository;
+
 using Microsoft.EntityFrameworkCore;
 
+using BankBackend.Models;
+
+/// <summary>
+/// 
+/// </summary>
 public class BankRepository : IBankRepository
 {
 
     private BankContext _bankContext;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="connectionString"></param>
     public BankRepository(string connectionString)
     {
         DbContextOptions<BankContext> options;
@@ -16,7 +27,7 @@ public class BankRepository : IBankRepository
 
 
     /// <summary>
-    /// find a user with userId
+    /// find a user with <c>userId</c>
     /// </summary>
     /// <param name="userId"></param>
     /// <returns>the user with the Id if such user exists, null if not</returns>
@@ -35,60 +46,145 @@ public class BankRepository : IBankRepository
     }
 
     /// <summary>
-    /// find all the accounts of the user with userId
+    /// find all the accounts of the user with <c>userId</c>
     /// </summary>
     /// <param name="userId"></param>
-    /// <returns></returns>
-    /// <exception cref="NotImplementedException"></exception>
-    public List<Account> GetAccountsByUserId(int userId)
+    /// <returns>a list containing all the accounts, null if user does not exist</returns>
+    public List<Account>? GetAccountsByUserId(int userId)
     {
-        throw new NotImplementedException();
+        User? user = _bankContext.Users.FirstOrDefault(x => x.UserId == userId);
+        if (user == null)
+        {
+            return null;
+        }
+        else
+        {
+            return user.Accounts;
+        }
     }
 
     /// <summary>
-    /// 
+    /// uploads the user to database
     /// </summary>
     /// <param name="user"></param>
-    /// <returns></returns>
-    /// <exception cref="NotImplementedException"></exception>
+    /// <returns>the user that is just created</returns>
     public User CreateUser(User user)
     {
-        throw new NotImplementedException();
+        User newUser = _bankContext.Users.Add(user).Entity;
+        _bankContext.SaveChanges();
+        return newUser;
     }
 
     /// <summary>
-    /// 
+    /// updates the password of user with <c>userId</c> to <c>password</c>
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <param name="password"></param>
+    /// <returns>the updated user with the new password, null if the user does not exist</returns>
+    public User? UpdatePassword(int userId, string password)
+    {
+        User? user = _bankContext.Users.FirstOrDefault(x => x.UserId == userId);
+        if (user == null)
+        {
+            return null;
+        }
+        else
+        {
+            user.Password = password;
+            _bankContext.SaveChanges();
+            return user;
+        }
+    }
+
+    /// <summary>
+    /// updates the name of the user with <c>userId</c> to <c>name</c>
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <param name="name"></param>
+    /// <returns>the updated user with the new name, null if the user does not exist</returns>
+    public User? UpdateName(int userId, string name)
+    {
+        User? user = _bankContext.Users.FirstOrDefault(x => x.UserId == userId);
+        if (user == null)
+        {
+            return null;
+        }
+        else
+        {
+            user.Name = name;
+            _bankContext.SaveChanges();
+            return user;
+        }
+    }
+
+    /// <summary>
+    /// adds <c>account</c> to the account list of the user with <c>userId</c>
     /// </summary>
     /// <param name="account"></param>
     /// <param name="userId"></param>
-    /// <returns></returns>
-    /// <exception cref="NotImplementedException"></exception>
-    public User AddAccountToUser(Account account, int userId)
+    /// <returns>the updated user with the added account, null if the user does not exist</returns>
+    public User? AddAccountToUser(Account account, int userId)
     {
-        throw new NotImplementedException();
+        User? user = _bankContext.Users.FirstOrDefault(x => x.UserId == userId);
+        if (user == null)
+        {
+            return null;
+        }
+        else
+        {
+            user.Accounts.Add(account);
+            _bankContext.SaveChanges();
+            return user;
+        }
     }
 
     /// <summary>
-    /// 
+    /// deletes the user with <c>userId</c>
     /// </summary>
     /// <param name="userId"></param>
-    /// <returns></returns>
-    /// <exception cref="NotImplementedException"></exception>
-    public User DeleteUserById(int userId)
+    /// <returns>the user that was just deleted, null if the user does not exist</returns>
+    public User? DeleteUserById(int userId)
     {
-        throw new NotImplementedException();
+        User? user = _bankContext.Users.FirstOrDefault(x => x.UserId == userId);
+        if (user == null)
+        {
+            return null;
+        }
+        else
+        {
+            _bankContext.Users.Remove(user);
+            _bankContext.SaveChanges();
+            return user;
+        }
     }
 
     /// <summary>
-    /// 
+    /// deletes the account with <c>accountId</c> from the user with <c>userId</c>
     /// </summary>
     /// <param name="userId"></param>
     /// <param name="accountId"></param>
-    /// <returns></returns>
-    /// <exception cref="NotImplementedException"></exception>
-    public int DeleteUserAccountByAccountId(int userId, int accountId)
+    /// <returns>the account that was just deleted, null if user or account does not exist</returns>
+    public Account? DeleteUserAccountByAccountId(int userId, int accountId)
     {
-        throw new NotImplementedException();
+        User? user = _bankContext.Users.FirstOrDefault(x => x.UserId == userId);
+        if (user == null)
+        {
+            return null;
+        }
+        else
+        {
+            Account? account = user.Accounts.FirstOrDefault(x => x.AccountId == accountId);
+            if (account == null)
+            {
+                return null;
+            }
+            else
+            {
+                user.Accounts.Remove(account);
+                _bankContext.SaveChanges();
+                return account;
+            }
+        }
     }
 
 
@@ -142,6 +238,30 @@ public class BankRepository : IBankRepository
     /// <returns></returns>
     /// <exception cref="NotImplementedException"></exception>
     public Account CreateAccount(Account account)
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="accountId"></param>
+    /// <param name="balance"></param>
+    /// <returns></returns>
+    /// <exception cref="NotImplementedException"></exception>
+    public Account UpdateBalance(int accountId, double balance)
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="accountId"></param>
+    /// <param name="userId"></param>
+    /// <returns></returns>
+    /// <exception cref="NotImplementedException"></exception>
+    public Account UpdatePrimaryUser(int accountId, int userId)
     {
         throw new NotImplementedException();
     }
@@ -247,4 +367,5 @@ public class BankRepository : IBankRepository
     {
         throw new NotImplementedException();
     }
+
 }

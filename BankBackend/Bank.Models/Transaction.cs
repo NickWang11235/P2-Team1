@@ -1,13 +1,15 @@
+namespace BankBackend.Models;
+
 using System.ComponentModel.DataAnnotations;
 
 public class Transaction
 {
     [Key]
     public int TransactionId { get; set; }
-    public Account FromAccount { get; set; }
-    public Account? ToAccount { get; set; }
-    public double Amount { get; set; }
-    public DateTime Time { get; set; }
+    public Account FromAccount { get; private set; }
+    public Account? ToAccount { get; private set; }
+    public double Amount { get; private set; }
+    public DateTime Time { get; private set; }
 
     public Transaction()
     {

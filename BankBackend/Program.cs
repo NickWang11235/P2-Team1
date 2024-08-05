@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
+using BankBackend.Repository;
 public class Program
 {
     public static void Main(string[] args)

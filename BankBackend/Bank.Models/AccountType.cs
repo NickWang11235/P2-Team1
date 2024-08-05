@@ -1,3 +1,5 @@
+namespace BankBackend.Models;
+
 public enum AccountType
 {
 

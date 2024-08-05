@@ -1,4 +1,8 @@
+namespace BankBackend.Repository;
+
 using Microsoft.EntityFrameworkCore;
+
+using BankBackend.Models;
 
 public class BankContext : DbContext
 {

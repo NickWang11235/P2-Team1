@@ -1,3 +1,5 @@
+namespace BankBackend.Models;
+
 using System.ComponentModel.DataAnnotations;
 
 public class User
