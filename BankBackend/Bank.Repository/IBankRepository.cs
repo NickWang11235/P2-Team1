@@ -32,21 +32,21 @@ public interface IBankRepository
     //find all the accounts in the database
     public List<Account> GetAllAccounts();
     //find all the users of the account with accountId
-    public List<User> GetUsersByAccountId(int accountId);
+    public List<User>? GetUsersByAccountId(int accountId);
     //find all the primary accounts of user with userId
-    public List<Account> GetPrimaryAccountsByUserId(int userId);
+    public List<Account>? GetPrimaryAccountsByUserId(int userId);
     //create a new account
     public Account CreateAccount(Account account);
     //updates the balance of the account with accountId
-    public Account UpdateBalance(int accountId, double balance);
+    public Account? UpdateBalance(int accountId, double balance);
     //updates the primary user of the account with accountId
-    public Account UpdatePrimaryUser(int accountId, int userId);
+    public Account? UpdatePrimaryUser(int accountId, int userId);
     //add a user to the account with accountId
-    public Account AddUserToAccount(User user, int accountId);
+    public Account? AddUserToAccount(User user, int accountId);
     //delete an account with accountId
-    public Account DeleteAccountById(int accountId);
+    public Account? DeleteAccountById(int accountId);
     //delete an user with userId from account with accountId
-    public int DeleteAccountUserByUserId(int accountId, int userId);
+    public User? DeleteAccountUserByUserId(int accountId, int userId);
 
 
     //find a transaction with transactionId
@@ -60,6 +60,6 @@ public interface IBankRepository
     //create a transaction
     public Transaction CreateTransaction(Transaction transaction);
     //delete a transaction with transactionId
-    public Transaction DeleteTransactionByTransactionId(int transactionId);
+    public Transaction? DeleteTransactionByTransactionId(int transactionId);
 
 }
