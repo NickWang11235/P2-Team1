@@ -1,0 +1,245 @@
+{
+  "source_base_path": "/home/nickw/Documents/Revature/P2-Team1/BankBackend",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Account.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Account.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.AccountType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.AccountType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.BankContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.BankContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.BankRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.BankRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.IBankRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.IBankRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Models.Account.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Models.Account.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Models.AccountType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Models.AccountType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Models.Transaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Models.Transaction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Models.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Models.User.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Repository.BankContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Repository.BankContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Repository.BankRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Repository.BankRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Repository.IBankRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Repository.IBankRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Repository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Repository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Transaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Transaction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.User.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bank_Backend.Migrations.Initial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bank_Backend.Migrations.Initial.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bank_Backend.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bank_Backend.Migrations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

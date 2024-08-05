@@ -1,0 +1,650 @@
+### YamlMime:ManagedReference
+items:
+- uid: BankBackend.Account
+  commentId: T:BankBackend.Account
+  id: Account
+  parent: BankBackend
+  children:
+  - BankBackend.Account.#ctor
+  - BankBackend.Account.AccountId
+  - BankBackend.Account.Balance
+  - BankBackend.Account.PrimaryUserId
+  - BankBackend.Account.Type
+  - BankBackend.Account.Users
+  langs:
+  - csharp
+  - vb
+  name: Account
+  nameWithType: Account
+  fullName: BankBackend.Account
+  type: Class
+  source:
+    remote:
+      path: BankBackend/Bank.Models/Account.cs
+      branch: repository
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: Account
+    path: Bank.Models/Account.cs
+    startLine: 5
+  assemblies:
+  - BankBackend
+  namespace: BankBackend
+  syntax:
+    content: public class Account
+    content.vb: Public Class Account
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BankBackend.Account.AccountId
+  commentId: P:BankBackend.Account.AccountId
+  id: AccountId
+  parent: BankBackend.Account
+  langs:
+  - csharp
+  - vb
+  name: AccountId
+  nameWithType: Account.AccountId
+  fullName: BankBackend.Account.AccountId
+  type: Property
+  source:
+    remote:
+      path: BankBackend/Bank.Models/Account.cs
+      branch: repository
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: AccountId
+    path: Bank.Models/Account.cs
+    startLine: 7
+  assemblies:
+  - BankBackend
+  namespace: BankBackend
+  syntax:
+    content: >-
+      [Key]
+
+      public int AccountId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      Public Property AccountId As Integer
+  overload: BankBackend.Account.AccountId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+- uid: BankBackend.Account.Balance
+  commentId: P:BankBackend.Account.Balance
+  id: Balance
+  parent: BankBackend.Account
+  langs:
+  - csharp
+  - vb
+  name: Balance
+  nameWithType: Account.Balance
+  fullName: BankBackend.Account.Balance
+  type: Property
+  source:
+    remote:
+      path: BankBackend/Bank.Models/Account.cs
+      branch: repository
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: Balance
+    path: Bank.Models/Account.cs
+    startLine: 9
+  assemblies:
+  - BankBackend
+  namespace: BankBackend
+  syntax:
+    content: public double Balance { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Balance As Double
+  overload: BankBackend.Account.Balance*
+- uid: BankBackend.Account.Type
+  commentId: P:BankBackend.Account.Type
+  id: Type
+  parent: BankBackend.Account
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Account.Type
+  fullName: BankBackend.Account.Type
+  type: Property
+  source:
+    remote:
+      path: BankBackend/Bank.Models/Account.cs
+      branch: repository
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: Type
+    path: Bank.Models/Account.cs
+    startLine: 10
+  assemblies:
+  - BankBackend
+  namespace: BankBackend
+  syntax:
+    content: public AccountType Type { get; set; }
+    parameters: []
+    return:
+      type: BankBackend.AccountType
+    content.vb: Public Property Type As AccountType
+  overload: BankBackend.Account.Type*
+- uid: BankBackend.Account.PrimaryUserId
+  commentId: P:BankBackend.Account.PrimaryUserId
+  id: PrimaryUserId
+  parent: BankBackend.Account
+  langs:
+  - csharp
+  - vb
+  name: PrimaryUserId
+  nameWithType: Account.PrimaryUserId
+  fullName: BankBackend.Account.PrimaryUserId
+  type: Property
+  source:
+    remote:
+      path: BankBackend/Bank.Models/Account.cs
+      branch: repository
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: PrimaryUserId
+    path: Bank.Models/Account.cs
+    startLine: 11
+  assemblies:
+  - BankBackend
+  namespace: BankBackend
+  syntax:
+    content: >-
+      [ForeignKey("UserId")]
+
+      public int PrimaryUserId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <ForeignKey("UserId")>
+
+      Public Property PrimaryUserId As Integer
+  overload: BankBackend.Account.PrimaryUserId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: UserId
+- uid: BankBackend.Account.Users
+  commentId: P:BankBackend.Account.Users
+  id: Users
+  parent: BankBackend.Account
+  langs:
+  - csharp
+  - vb
+  name: Users
+  nameWithType: Account.Users
+  fullName: BankBackend.Account.Users
+  type: Property
+  source:
+    remote:
+      path: BankBackend/Bank.Models/Account.cs
+      branch: repository
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: Users
+    path: Bank.Models/Account.cs
+    startLine: 13
+  assemblies:
+  - BankBackend
+  namespace: BankBackend
+  syntax:
+    content: public List<User> Users { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{BankBackend.User}
+    content.vb: Public Property Users As List(Of User)
+  overload: BankBackend.Account.Users*
+- uid: BankBackend.Account.#ctor
+  commentId: M:BankBackend.Account.#ctor
+  id: '#ctor'
+  parent: BankBackend.Account
+  langs:
+  - csharp
+  - vb
+  name: Account()
+  nameWithType: Account.Account()
+  fullName: BankBackend.Account.Account()
+  type: Constructor
+  source:
+    remote:
+      path: BankBackend/Bank.Models/Account.cs
+      branch: repository
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: .ctor
+    path: Bank.Models/Account.cs
+    startLine: 14
+  assemblies:
+  - BankBackend
+  namespace: BankBackend
+  syntax:
+    content: public Account()
+    content.vb: Public Sub New()
+  overload: BankBackend.Account.#ctor*
+  nameWithType.vb: Account.New()
+  fullName.vb: BankBackend.Account.New()
+  name.vb: New()
+references:
+- uid: BankBackend
+  commentId: N:BankBackend
+  href: BankBackend.html
+  name: BankBackend
+  nameWithType: BankBackend
+  fullName: BankBackend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BankBackend.Account.AccountId*
+  commentId: Overload:BankBackend.Account.AccountId
+  href: BankBackend.Account.html#BankBackend_Account_AccountId
+  name: AccountId
+  nameWithType: Account.AccountId
+  fullName: BankBackend.Account.AccountId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: BankBackend.Account.Balance*
+  commentId: Overload:BankBackend.Account.Balance
+  href: BankBackend.Account.html#BankBackend_Account_Balance
+  name: Balance
+  nameWithType: Account.Balance
+  fullName: BankBackend.Account.Balance
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BankBackend.Account.Type*
+  commentId: Overload:BankBackend.Account.Type
+  href: BankBackend.Account.html#BankBackend_Account_Type
+  name: Type
+  nameWithType: Account.Type
+  fullName: BankBackend.Account.Type
+- uid: BankBackend.AccountType
+  commentId: T:BankBackend.AccountType
+  parent: BankBackend
+  href: BankBackend.AccountType.html
+  name: AccountType
+  nameWithType: AccountType
+  fullName: BankBackend.AccountType
+- uid: BankBackend.Account.PrimaryUserId*
+  commentId: Overload:BankBackend.Account.PrimaryUserId
+  href: BankBackend.Account.html#BankBackend_Account_PrimaryUserId
+  name: PrimaryUserId
+  nameWithType: Account.PrimaryUserId
+  fullName: BankBackend.Account.PrimaryUserId
+- uid: BankBackend.Account.Users*
+  commentId: Overload:BankBackend.Account.Users
+  href: BankBackend.Account.html#BankBackend_Account_Users
+  name: Users
+  nameWithType: Account.Users
+  fullName: BankBackend.Account.Users
+- uid: System.Collections.Generic.List{BankBackend.User}
+  commentId: T:System.Collections.Generic.List{BankBackend.User}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<User>
+  nameWithType: List<User>
+  fullName: System.Collections.Generic.List<BankBackend.User>
+  nameWithType.vb: List(Of User)
+  fullName.vb: System.Collections.Generic.List(Of BankBackend.User)
+  name.vb: List(Of User)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: BankBackend.User
+    name: User
+    href: BankBackend.User.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BankBackend.User
+    name: User
+    href: BankBackend.User.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: BankBackend.Account.#ctor*
+  commentId: Overload:BankBackend.Account.#ctor
+  href: BankBackend.Account.html#BankBackend_Account__ctor
+  name: Account
+  nameWithType: Account.Account
+  fullName: BankBackend.Account.Account
+  nameWithType.vb: Account.New
+  fullName.vb: BankBackend.Account.New
+  name.vb: New

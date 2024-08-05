@@ -1,0 +1,123 @@
+### YamlMime:ManagedReference
+items:
+- uid: BankBackend.AccountType
+  commentId: T:BankBackend.AccountType
+  id: AccountType
+  parent: BankBackend
+  children:
+  - BankBackend.AccountType.CHECKING
+  - BankBackend.AccountType.CLOWN
+  - BankBackend.AccountType.SAVINGS
+  langs:
+  - csharp
+  - vb
+  name: AccountType
+  nameWithType: AccountType
+  fullName: BankBackend.AccountType
+  type: Enum
+  source:
+    remote:
+      path: BankBackend/Bank.Models/AccountType.cs
+      branch: repository
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: AccountType
+    path: Bank.Models/AccountType.cs
+    startLine: 2
+  assemblies:
+  - BankBackend
+  namespace: BankBackend
+  syntax:
+    content: public enum AccountType
+    content.vb: Public Enum AccountType
+- uid: BankBackend.AccountType.SAVINGS
+  commentId: F:BankBackend.AccountType.SAVINGS
+  id: SAVINGS
+  parent: BankBackend.AccountType
+  langs:
+  - csharp
+  - vb
+  name: SAVINGS
+  nameWithType: AccountType.SAVINGS
+  fullName: BankBackend.AccountType.SAVINGS
+  type: Field
+  source:
+    remote:
+      path: BankBackend/Bank.Models/AccountType.cs
+      branch: repository
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: SAVINGS
+    path: Bank.Models/AccountType.cs
+    startLine: 5
+  assemblies:
+  - BankBackend
+  namespace: BankBackend
+  syntax:
+    content: SAVINGS = 0
+    return:
+      type: BankBackend.AccountType
+- uid: BankBackend.AccountType.CHECKING
+  commentId: F:BankBackend.AccountType.CHECKING
+  id: CHECKING
+  parent: BankBackend.AccountType
+  langs:
+  - csharp
+  - vb
+  name: CHECKING
+  nameWithType: AccountType.CHECKING
+  fullName: BankBackend.AccountType.CHECKING
+  type: Field
+  source:
+    remote:
+      path: BankBackend/Bank.Models/AccountType.cs
+      branch: repository
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: CHECKING
+    path: Bank.Models/AccountType.cs
+    startLine: 6
+  assemblies:
+  - BankBackend
+  namespace: BankBackend
+  syntax:
+    content: CHECKING = 1
+    return:
+      type: BankBackend.AccountType
+- uid: BankBackend.AccountType.CLOWN
+  commentId: F:BankBackend.AccountType.CLOWN
+  id: CLOWN
+  parent: BankBackend.AccountType
+  langs:
+  - csharp
+  - vb
+  name: CLOWN
+  nameWithType: AccountType.CLOWN
+  fullName: BankBackend.AccountType.CLOWN
+  type: Field
+  source:
+    remote:
+      path: BankBackend/Bank.Models/AccountType.cs
+      branch: repository
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: CLOWN
+    path: Bank.Models/AccountType.cs
+    startLine: 7
+  assemblies:
+  - BankBackend
+  namespace: BankBackend
+  syntax:
+    content: CLOWN = 2
+    return:
+      type: BankBackend.AccountType
+references:
+- uid: BankBackend
+  commentId: N:BankBackend
+  href: BankBackend.html
+  name: BankBackend
+  nameWithType: BankBackend
+  fullName: BankBackend
+- uid: BankBackend.AccountType
+  commentId: T:BankBackend.AccountType
+  parent: BankBackend
+  href: BankBackend.AccountType.html
+  name: AccountType
+  nameWithType: AccountType
+  fullName: BankBackend.AccountType

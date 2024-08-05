@@ -483,5 +483,10 @@ $RECYCLE.BIN/
 # Vim temporary swap files
 *.swp
 
-Bank-Backend/appsettings.json
+BankBackend/appsettings.json
 Migrations/
+# _site/
+# api/
+# index.md
+# docfx.json
+# *.yml
