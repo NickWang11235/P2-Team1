@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: BankBackend.Models
+  commentId: N:BankBackend.Models
+  id: BankBackend.Models
+  children:
+  - BankBackend.Models.Account
+  - BankBackend.Models.AccountType
+  - BankBackend.Models.Transaction
+  - BankBackend.Models.User
+  langs:
+  - csharp
+  - vb
+  name: BankBackend.Models
+  nameWithType: BankBackend.Models
+  fullName: BankBackend.Models
+  type: Namespace
+  assemblies:
+  - BankBackend
+references:
+- uid: BankBackend.Models.Account
+  commentId: T:BankBackend.Models.Account
+  parent: BankBackend.Models
+  href: BankBackend.Models.Account.html
+  name: Account
+  nameWithType: Account
+  fullName: BankBackend.Models.Account
+- uid: BankBackend.Models.AccountType
+  commentId: T:BankBackend.Models.AccountType
+  parent: BankBackend.Models
+  href: BankBackend.Models.AccountType.html
+  name: AccountType
+  nameWithType: AccountType
+  fullName: BankBackend.Models.AccountType
+- uid: BankBackend.Models.Transaction
+  commentId: T:BankBackend.Models.Transaction
+  parent: BankBackend.Models
+  href: BankBackend.Models.Transaction.html
+  name: Transaction
+  nameWithType: Transaction
+  fullName: BankBackend.Models.Transaction
+- uid: BankBackend.Models.User
+  commentId: T:BankBackend.Models.User
+  parent: BankBackend.Models
+  href: BankBackend.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: BankBackend.Models.User
+- uid: BankBackend.Models
+  commentId: N:BankBackend.Models
+  href: BankBackend.html
+  name: BankBackend.Models
+  nameWithType: BankBackend.Models
+  fullName: BankBackend.Models
+  spec.csharp:
+  - uid: BankBackend
+    name: BankBackend
+    href: BankBackend.html
+  - name: .
+  - uid: BankBackend.Models
+    name: Models
+    href: BankBackend.Models.html
+  spec.vb:
+  - uid: BankBackend
+    name: BankBackend
+    href: BankBackend.html
+  - name: .
+  - uid: BankBackend.Models
+    name: Models
+    href: BankBackend.Models.html

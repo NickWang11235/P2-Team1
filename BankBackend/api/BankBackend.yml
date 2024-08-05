@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: BankBackend
+  commentId: N:BankBackend
+  id: BankBackend
+  children:
+  - BankBackend.Account
+  - BankBackend.AccountType
+  - BankBackend.BankContext
+  - BankBackend.BankRepository
+  - BankBackend.IBankRepository
+  - BankBackend.Transaction
+  - BankBackend.User
+  langs:
+  - csharp
+  - vb
+  name: BankBackend
+  nameWithType: BankBackend
+  fullName: BankBackend
+  type: Namespace
+  assemblies:
+  - BankBackend
+references:
+- uid: BankBackend.Account
+  commentId: T:BankBackend.Account
+  parent: BankBackend
+  href: BankBackend.Account.html
+  name: Account
+  nameWithType: Account
+  fullName: BankBackend.Account
+- uid: BankBackend.AccountType
+  commentId: T:BankBackend.AccountType
+  parent: BankBackend
+  href: BankBackend.AccountType.html
+  name: AccountType
+  nameWithType: AccountType
+  fullName: BankBackend.AccountType
+- uid: BankBackend.Transaction
+  commentId: T:BankBackend.Transaction
+  parent: BankBackend
+  href: BankBackend.Transaction.html
+  name: Transaction
+  nameWithType: Transaction
+  fullName: BankBackend.Transaction
+- uid: BankBackend.User
+  commentId: T:BankBackend.User
+  parent: BankBackend
+  href: BankBackend.User.html
+  name: User
+  nameWithType: User
+  fullName: BankBackend.User
+- uid: BankBackend.BankContext
+  commentId: T:BankBackend.BankContext
+  href: BankBackend.BankContext.html
+  name: BankContext
+  nameWithType: BankContext
+  fullName: BankBackend.BankContext
+- uid: BankBackend.BankRepository
+  commentId: T:BankBackend.BankRepository
+  href: BankBackend.BankRepository.html
+  name: BankRepository
+  nameWithType: BankRepository
+  fullName: BankBackend.BankRepository
+- uid: BankBackend.IBankRepository
+  commentId: T:BankBackend.IBankRepository
+  parent: BankBackend
+  href: BankBackend.IBankRepository.html
+  name: IBankRepository
+  nameWithType: IBankRepository
+  fullName: BankBackend.IBankRepository
+- uid: BankBackend
+  commentId: N:BankBackend
+  href: BankBackend.html
+  name: BankBackend
+  nameWithType: BankBackend
+  fullName: BankBackend
