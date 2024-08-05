@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: BankBackend.Repository
+  commentId: N:BankBackend.Repository
+  id: BankBackend.Repository
+  children:
+  - BankBackend.Repository.BankContext
+  - BankBackend.Repository.BankRepository
+  - BankBackend.Repository.IBankRepository
+  langs:
+  - csharp
+  - vb
+  name: BankBackend.Repository
+  nameWithType: BankBackend.Repository
+  fullName: BankBackend.Repository
+  type: Namespace
+  assemblies:
+  - BankBackend
+references:
+- uid: BankBackend.Repository.BankContext
+  commentId: T:BankBackend.Repository.BankContext
+  parent: BankBackend.Repository
+  href: BankBackend.Repository.BankContext.html
+  name: BankContext
+  nameWithType: BankContext
+  fullName: BankBackend.Repository.BankContext
+- uid: BankBackend.Repository.BankRepository
+  commentId: T:BankBackend.Repository.BankRepository
+  href: BankBackend.Repository.BankRepository.html
+  name: BankRepository
+  nameWithType: BankRepository
+  fullName: BankBackend.Repository.BankRepository
+- uid: BankBackend.Repository.IBankRepository
+  commentId: T:BankBackend.Repository.IBankRepository
+  parent: BankBackend.Repository
+  href: BankBackend.Repository.IBankRepository.html
+  name: IBankRepository
+  nameWithType: IBankRepository
+  fullName: BankBackend.Repository.IBankRepository
+- uid: BankBackend.Repository
+  commentId: N:BankBackend.Repository
+  href: BankBackend.html
+  name: BankBackend.Repository
+  nameWithType: BankBackend.Repository
+  fullName: BankBackend.Repository
+  spec.csharp:
+  - uid: BankBackend
+    name: BankBackend
+    href: BankBackend.html
+  - name: .
+  - uid: BankBackend.Repository
+    name: Repository
+    href: BankBackend.Repository.html
+  spec.vb:
+  - uid: BankBackend
+    name: BankBackend
+    href: BankBackend.html
+  - name: .
+  - uid: BankBackend.Repository
+    name: Repository
+    href: BankBackend.Repository.html

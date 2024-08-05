@@ -1,0 +1,1049 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IBankRepository | mysite </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IBankRepository | mysite ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com-NET/P2-Team1/new/repository/apiSpec/new?filename=BankBackend_Repository_IBankRepository.md&amp;value=---%0Auid%3A%20BankBackend.Repository.IBankRepository%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="mysite">
+            mysite
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BankBackend.Repository.IBankRepository">
+
+
+
+  <h1 id="BankBackend_Repository_IBankRepository" data-uid="BankBackend.Repository.IBankRepository" class="text-break">
+Interface IBankRepository  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BankBackend.html">BankBackend</a>.<a class="xref" href="BankBackend.Repository.html">Repository</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>BankBackend.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IBankRepository</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="BankBackend_Repository_IBankRepository_AddAccountToUser_" data-uid="BankBackend.Repository.IBankRepository.AddAccountToUser*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_AddAccountToUser_BankBackend_Models_Account_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.AddAccountToUser(BankBackend.Models.Account,System.Int32)">
+  AddAccountToUser(Account, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">User? AddAccountToUser(Account account, int userId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>account</code> <a class="xref" href="BankBackend.Models.Account.html">Account</a></dt>
+    <dd></dd>
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_AddUserToAccount_" data-uid="BankBackend.Repository.IBankRepository.AddUserToAccount*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_AddUserToAccount_BankBackend_Models_User_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.AddUserToAccount(BankBackend.Models.User,System.Int32)">
+  AddUserToAccount(User, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Account? AddUserToAccount(User user, int accountId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <a class="xref" href="BankBackend.Models.User.html">User</a></dt>
+    <dd></dd>
+    <dt><code>accountId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.Account.html">Account</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_CreateAccount_" data-uid="BankBackend.Repository.IBankRepository.CreateAccount*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_CreateAccount_BankBackend_Models_Account_" data-uid="BankBackend.Repository.IBankRepository.CreateAccount(BankBackend.Models.Account)">
+  CreateAccount(Account)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Account CreateAccount(Account account)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>account</code> <a class="xref" href="BankBackend.Models.Account.html">Account</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.Account.html">Account</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_CreateTransaction_" data-uid="BankBackend.Repository.IBankRepository.CreateTransaction*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_CreateTransaction_BankBackend_Models_Transaction_" data-uid="BankBackend.Repository.IBankRepository.CreateTransaction(BankBackend.Models.Transaction)">
+  CreateTransaction(Transaction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Transaction CreateTransaction(Transaction transaction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>transaction</code> <a class="xref" href="BankBackend.Models.Transaction.html">Transaction</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.Transaction.html">Transaction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_CreateUser_" data-uid="BankBackend.Repository.IBankRepository.CreateUser*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_CreateUser_BankBackend_Models_User_" data-uid="BankBackend.Repository.IBankRepository.CreateUser(BankBackend.Models.User)">
+  CreateUser(User)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">User CreateUser(User user)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <a class="xref" href="BankBackend.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_DeleteAccountById_" data-uid="BankBackend.Repository.IBankRepository.DeleteAccountById*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_DeleteAccountById_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.DeleteAccountById(System.Int32)">
+  DeleteAccountById(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Account? DeleteAccountById(int accountId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>accountId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.Account.html">Account</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_DeleteAccountUserByUserId_" data-uid="BankBackend.Repository.IBankRepository.DeleteAccountUserByUserId*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_DeleteAccountUserByUserId_System_Int32_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.DeleteAccountUserByUserId(System.Int32,System.Int32)">
+  DeleteAccountUserByUserId(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">User? DeleteAccountUserByUserId(int accountId, int userId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>accountId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_DeleteTransactionByTransactionId_" data-uid="BankBackend.Repository.IBankRepository.DeleteTransactionByTransactionId*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_DeleteTransactionByTransactionId_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.DeleteTransactionByTransactionId(System.Int32)">
+  DeleteTransactionByTransactionId(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Transaction? DeleteTransactionByTransactionId(int transactionId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>transactionId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.Transaction.html">Transaction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_DeleteUserAccountByAccountId_" data-uid="BankBackend.Repository.IBankRepository.DeleteUserAccountByAccountId*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_DeleteUserAccountByAccountId_System_Int32_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.DeleteUserAccountByAccountId(System.Int32,System.Int32)">
+  DeleteUserAccountByAccountId(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Account? DeleteUserAccountByAccountId(int userId, int accountId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>accountId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.Account.html">Account</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_DeleteUserById_" data-uid="BankBackend.Repository.IBankRepository.DeleteUserById*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_DeleteUserById_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.DeleteUserById(System.Int32)">
+  DeleteUserById(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">User? DeleteUserById(int userId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_GetAccountByAccountId_" data-uid="BankBackend.Repository.IBankRepository.GetAccountByAccountId*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_GetAccountByAccountId_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.GetAccountByAccountId(System.Int32)">
+  GetAccountByAccountId(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Account? GetAccountByAccountId(int accountId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>accountId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.Account.html">Account</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_GetAccountsByUserId_" data-uid="BankBackend.Repository.IBankRepository.GetAccountsByUserId*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_GetAccountsByUserId_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.GetAccountsByUserId(System.Int32)">
+  GetAccountsByUserId(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;Account&gt;? GetAccountsByUserId(int userId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BankBackend.Models.Account.html">Account</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_GetAllAccounts_" data-uid="BankBackend.Repository.IBankRepository.GetAllAccounts*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_GetAllAccounts" data-uid="BankBackend.Repository.IBankRepository.GetAllAccounts">
+  GetAllAccounts()
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;Account&gt; GetAllAccounts()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BankBackend.Models.Account.html">Account</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_GetAllTransactions_" data-uid="BankBackend.Repository.IBankRepository.GetAllTransactions*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_GetAllTransactions" data-uid="BankBackend.Repository.IBankRepository.GetAllTransactions">
+  GetAllTransactions()
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;Transaction&gt; GetAllTransactions()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BankBackend.Models.Transaction.html">Transaction</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_GetAllUsers_" data-uid="BankBackend.Repository.IBankRepository.GetAllUsers*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_GetAllUsers" data-uid="BankBackend.Repository.IBankRepository.GetAllUsers">
+  GetAllUsers()
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;User&gt; GetAllUsers()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BankBackend.Models.User.html">User</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_GetPrimaryAccountsByUserId_" data-uid="BankBackend.Repository.IBankRepository.GetPrimaryAccountsByUserId*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_GetPrimaryAccountsByUserId_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.GetPrimaryAccountsByUserId(System.Int32)">
+  GetPrimaryAccountsByUserId(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;Account&gt;? GetPrimaryAccountsByUserId(int userId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BankBackend.Models.Account.html">Account</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_GetTransactionByTransactionId_" data-uid="BankBackend.Repository.IBankRepository.GetTransactionByTransactionId*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_GetTransactionByTransactionId_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.GetTransactionByTransactionId(System.Int32)">
+  GetTransactionByTransactionId(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Transaction? GetTransactionByTransactionId(int transactionId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>transactionId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.Transaction.html">Transaction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_GetTransactionsByFromAccount_" data-uid="BankBackend.Repository.IBankRepository.GetTransactionsByFromAccount*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_GetTransactionsByFromAccount_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.GetTransactionsByFromAccount(System.Int32)">
+  GetTransactionsByFromAccount(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;Transaction&gt; GetTransactionsByFromAccount(int fromAccountId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fromAccountId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BankBackend.Models.Transaction.html">Transaction</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_GetTransactionsByToAccountId_" data-uid="BankBackend.Repository.IBankRepository.GetTransactionsByToAccountId*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_GetTransactionsByToAccountId_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.GetTransactionsByToAccountId(System.Int32)">
+  GetTransactionsByToAccountId(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;Transaction&gt; GetTransactionsByToAccountId(int toAccountId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>toAccountId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BankBackend.Models.Transaction.html">Transaction</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_GetUserByUserId_" data-uid="BankBackend.Repository.IBankRepository.GetUserByUserId*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_GetUserByUserId_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.GetUserByUserId(System.Int32)">
+  GetUserByUserId(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">User? GetUserByUserId(int userId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_GetUsersByAccountId_" data-uid="BankBackend.Repository.IBankRepository.GetUsersByAccountId*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_GetUsersByAccountId_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.GetUsersByAccountId(System.Int32)">
+  GetUsersByAccountId(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;User&gt;? GetUsersByAccountId(int accountId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>accountId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BankBackend.Models.User.html">User</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_UpdateBalance_" data-uid="BankBackend.Repository.IBankRepository.UpdateBalance*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_UpdateBalance_System_Int32_System_Double_" data-uid="BankBackend.Repository.IBankRepository.UpdateBalance(System.Int32,System.Double)">
+  UpdateBalance(int, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Account? UpdateBalance(int accountId, double balance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>accountId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>balance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.Account.html">Account</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_UpdateName_" data-uid="BankBackend.Repository.IBankRepository.UpdateName*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_UpdateName_System_Int32_System_String_" data-uid="BankBackend.Repository.IBankRepository.UpdateName(System.Int32,System.String)">
+  UpdateName(int, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">User? UpdateName(int userId, string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_UpdatePassword_" data-uid="BankBackend.Repository.IBankRepository.UpdatePassword*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_UpdatePassword_System_Int32_System_String_" data-uid="BankBackend.Repository.IBankRepository.UpdatePassword(System.Int32,System.String)">
+  UpdatePassword(int, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">User? UpdatePassword(int userId, string password)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>password</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BankBackend_Repository_IBankRepository_UpdatePrimaryUser_" data-uid="BankBackend.Repository.IBankRepository.UpdatePrimaryUser*"></a>
+
+  <h3 id="BankBackend_Repository_IBankRepository_UpdatePrimaryUser_System_Int32_System_Int32_" data-uid="BankBackend.Repository.IBankRepository.UpdatePrimaryUser(System.Int32,System.Int32)">
+  UpdatePrimaryUser(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Account? UpdatePrimaryUser(int accountId, int userId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>accountId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BankBackend.Models.Account.html">Account</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com-NET/P2-Team1/blob/repository/BankBackend/Bank.Repository/IBankRepository.cs/#L8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
