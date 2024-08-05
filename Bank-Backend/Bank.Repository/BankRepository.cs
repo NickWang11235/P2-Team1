@@ -16,7 +16,7 @@ public class BankRepository : IBankRepository
 
 
     /// <summary>
-    /// find a user given userId
+    /// find a user with userId
     /// </summary>
     /// <param name="userId"></param>
     /// <returns>the user with the Id if such user exists, null if not</returns>
@@ -26,21 +26,21 @@ public class BankRepository : IBankRepository
     }
 
     /// <summary>
-    /// 
+    /// find all existing users in the database
     /// </summary>
-    /// <returns></returns>
+    /// <returns>a list containing all existing users, empty list if non exists</returns>
     public List<User> GetAllUsers()
     {
-        throw new NotImplementedException();
+        return _bankContext.Users.ToList();
     }
 
     /// <summary>
-    /// 
+    /// find all the accounts of the user with userId
     /// </summary>
-    /// <param name="accountId"></param>
+    /// <param name="userId"></param>
     /// <returns></returns>
     /// <exception cref="NotImplementedException"></exception>
-    public List<User> GetUsersByAccountId(int accountId)
+    public List<Account> GetAccountsByUserId(int userId)
     {
         throw new NotImplementedException();
     }
@@ -116,10 +116,10 @@ public class BankRepository : IBankRepository
     /// <summary>
     /// 
     /// </summary>
-    /// <param name="userId"></param>
+    /// <param name="accountId"></param>
     /// <returns></returns>
     /// <exception cref="NotImplementedException"></exception>
-    public List<Account> GetAccountsByUserId(int userId)
+    public List<User> GetUsersByAccountId(int accountId)
     {
         throw new NotImplementedException();
     }

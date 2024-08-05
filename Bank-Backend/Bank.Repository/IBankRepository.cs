@@ -1,11 +1,11 @@
 public interface IBankRepository
 {
-    //find a user given userId
+    //find a user with userId
     public User? GetUserByUserId(int userId);
     //find all the users in the database
     public List<User> GetAllUsers();
-    //find all the users of the account with accountId
-    public List<User> GetUsersByAccountId(int accountId);
+    //find all the accounts of user with userId
+    public List<Account> GetAccountsByUserId(int userId);
     //create an new user
     public User CreateUser(User user);
     //add an account to the user with userId
@@ -16,12 +16,12 @@ public interface IBankRepository
     public int DeleteUserAccountByAccountId(int userId, int accountId);
 
 
-    //find an account given accountId
+    //find an account with accountId
     public Account? GetAccountByAccountId(int accountId);
     //find all the accounts in the database
     public List<Account> GetAllAccounts();
-    //find all the accounts of user with userId
-    public List<Account> GetAccountsByUserId(int userId);
+    //find all the users of the account with accountId
+    public List<User> GetUsersByAccountId(int accountId);
     //find all the primary accounts of user with userId
     public List<Account> GetPrimaryAccountsByUserId(int userId);
     //create a new account
@@ -34,7 +34,7 @@ public interface IBankRepository
     public int DeleteAccountUserByUserId(int accountId, int userId);
 
 
-    //find a transaction given transactionId
+    //find a transaction with transactionId
     public Transaction? GetTransactionByTransactionId(int transactionId);
     //find all the transactions in the database
     public List<Transaction> GetAllTransactions();
