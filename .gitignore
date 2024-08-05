@@ -485,8 +485,8 @@ $RECYCLE.BIN/
 
 BankBackend/appsettings.json
 Migrations/
-_site/
-api/
-index.md
-docfx.json
-*.yml
+# _site/
+# api/
+# index.md
+# docfx.json
+# *.yml
