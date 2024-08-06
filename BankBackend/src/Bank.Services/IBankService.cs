@@ -1,5 +1,7 @@
 namespace BankBackend.Service;
 
+using BankBackend.Models;
+
 /// <summary>
 /// </summary>
 public interface IBankService
