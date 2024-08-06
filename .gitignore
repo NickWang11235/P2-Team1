@@ -483,7 +483,9 @@ $RECYCLE.BIN/
 # Vim temporary swap files
 *.swp
 
-BankBackend/appsettings.json
+appsettings.json
+*connectionString*
+
 Migrations/
 # _site/
 # api/
