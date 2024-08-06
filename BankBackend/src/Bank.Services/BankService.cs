@@ -1,151 +1,156 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using BankBackend.Repository;
-using BankBackend.Models;
+// using System;
+// using System.Collections.Generic;
+// using System.Linq;
+// using BankBackend.Repository;
+// using BankBackend.Models;
+// using BankBackend.Service;
+// using System.Linq.Expressions;
 
-namespace BankBackend.Service;
+// namespace BankBackend.Service;
 
-public class BankService : IBankService
-{
-    private readonly IBankRepository _repository;
 
-    public BankService(IBankRepository repository)
-    {
-        _repository = repository;
-    }
+// public class BankService : IBankService
+// {
+//     private readonly IBankRepository _repository;
 
-    public string ValidateLogin(string username, string password)
-    {
-        var user = _repository.GetAllUsers().FirstOrDefault(u => u.Username == username);
-        if (user == null)
-        {
-            return "Username not found.";
-        }
+//     public BankService(IBankRepository repository)
+//     {
+//         _repository = repository;
+//     }
 
-        if (user.Password != password)
-        {
-            return "Invalid Password.";
-        }
+//     public bool ValidateLogin(string username, string password)
+//     {
+//         var user = _repository.GetAllUsers().FirstOrDefault(u => u.Username == username);
+//         if (user == null)
+//         {
+//             // return "Username not found.";
+//             throw new LoginException("username not found");
+//         }
 
-        return "Login Successful.";
-    }
+//         if (user.Password != password)
+//         {
+//             // return "Invalid Password.";
+//             throw new LoginException("invlaid password");
+//         }
 
-    public User GetUserByUsername(string username)
-    {
-        return _repository.GetAllUsers().FirstOrDefault(u => u.Username == username);
-    }
+//         return true;
+//     }
 
-    public List<Account> GetUserAccounts(int userId)
-    {
-        return _repository.GetAccountsByUserId(userId);
-    }
+//     public User GetUserByUsername(string username)
+//     {
+//         return _repository.GetAllUsers().FirstOrDefault(u => u.Username == username);
+//     }
 
-    public List<Transaction> GetUserTransactions(int userId)
-    {
-        var accounts = _repository.GetAccountsByUserId(userId);
-        var transactions = new List<Transaction>();
-        foreach (var account in accounts)
-        {
-            transactions.AddRange(_repository.GetTransactionsByFromAccount(account.AccountId));
-            transactions.AddRange(_repository.GetTransactionsByToAccountId(account.AccountId));
-        }
-        return transactions;
-    }
+//     public List<Account> GetUserAccounts(int userId)
+//     {
+//         return _repository.GetAccountsByUserId(userId);
+//     }
 
-    public string Withdraw(int accountId, double amount)
-    {
-        var account = _repository.GetAccountByAccountId(accountId);
-        if (account == null)
-        {
-            return "Account not found.";
-        }
+//     public List<Transaction> GetUserTransactions(int userId)
+//     {
+//         var accounts = _repository.GetAccountsByUserId(userId);
+//         var transactions = new List<Transaction>();
+//         foreach (var account in accounts)
+//         {
+//             transactions.AddRange(_repository.GetTransactionsByFromAccount(account.AccountId));
+//             transactions.AddRange(_repository.GetTransactionsByToAccountId(account.AccountId));
+//         }
+//         return transactions;
+//     }
 
-        if (amount <= 0)
-        {
-            return "Invalid amount.";
-        }
+//     public string Withdraw(int accountId, double amount)
+//     {
+//         var account = _repository.GetAccountByAccountId(accountId);
+//         if (account == null)
+//         {
+//             return "Account not found.";
+//         }
 
-        if (account.Balance < amount)
-        {
-            return "Insufficient funds.";
-        }
+//         if (amount <= 0)
+//         {
+//             return "Invalid amount.";
+//         }
 
-        account.Balance -= amount;
-        _repository.CreateTransaction(new Transaction { FromAccount = account, Amount = amount });
-        return "Withdrawal successful.";
-    }
+//         if (account.Balance < amount)
+//         {
+//             return "Insufficient funds.";
+//         }
 
-    public string Deposit(int accountId, double amount)
-    {
-        var account = _repository.GetAccountByAccountId(accountId);
-        if (account == null)
-        {
-            return "Account not found.";
-        }
+//         account.Balance -= amount;
+//         _repository.CreateTransaction(new Transaction { FromAccount = account, Amount = amount });
+//         return "Withdrawal successful.";
+//     }
 
-        if (amount <= 0)
-        {
-            return "Invalid amount.";
-        }
+//     public string Deposit(int accountId, double amount)
+//     {
+//         var account = _repository.GetAccountByAccountId(accountId);
+//         if (account == null)
+//         {
+//             return "Account not found.";
+//         }
 
-        account.Balance += amount;
-        _repository.CreateTransaction(new Transaction { ToAccount = account, Amount = amount });
-        return "Deposit successful.";
-    }
+//         if (amount <= 0)
+//         {
+//             return "Invalid amount.";
+//         }
 
-    public string AddAccountToFamily(int userId, int accountId)
-    {
-        var user = _repository.GetUserByUserId(userId);
-        var account = _repository.GetAccountByAccountId(accountId);
+//         account.Balance += amount;
+//         _repository.CreateTransaction(new Transaction { ToAccount = account, Amount = amount });
+//         return "Deposit successful.";
+//     }
 
-        if (user == null || account == null)
-        {
-            return "User or Account not found.";
-        }
+//     public string AddAccountToFamily(int userId, int accountId)
+//     {
+//         var user = _repository.GetUserByUserId(userId);
+//         var account = _repository.GetAccountByAccountId(accountId);
 
-        if (account.Users.Contains(user))
-        {
-            return "User is already associated with this account.";
-        }
+//         if (user == null || account == null)
+//         {
+//             return "User or Account not found.";
+//         }
 
-        account.Users.Add(user);
-        _repository.CreateAccount(account);
-        return "Account successfully added to family.";
-    }
+//         if (account.Users.Contains(user))
+//         {
+//             return "User is already associated with this account.";
+//         }
 
-    public string RemoveAccountFromFamily(int userId, int accountId)
-    {
-        var user = _repository.GetUserByUserId(userId);
-        var account = _repository.GetAccountByAccountId(accountId);
+//         account.Users.Add(user);
+//         _repository.CreateAccount(account);
+//         return "Account successfully added to family.";
+//     }
 
-        if (user == null || account == null)
-        {
-            return "User or Account not found.";
-        }
+//     public string RemoveAccountFromFamily(int userId, int accountId)
+//     {
+//         var user = _repository.GetUserByUserId(userId);
+//         var account = _repository.GetAccountByAccountId(accountId);
 
-        if (!account.Users.Contains(user))
-        {
-            return "User is not associated with this account.";
-        }
+//         if (user == null || account == null)
+//         {
+//             return "User or Account not found.";
+//         }
 
-        account.Users.Remove(user);
-        _repository.CreateAccount(account);
-        return "Account successfully removed from family.";
-    }
+//         if (!account.Users.Contains(user))
+//         {
+//             return "User is not associated with this account.";
+//         }
 
-    public string UpdateUserProfile(int userId, string newUsername, string newPassword)
-    {
-        var user = _repository.GetUserByUserId(userId);
-        if (user == null)
-        {
-            return "User not found.";
-        }
+//         account.Users.Remove(user);
+//         _repository.CreateAccount(account);
+//         return "Account successfully removed from family.";
+//     }
 
-        user.Username = newUsername;
-        user.Password = newPassword;
-        _repository.CreateUser(user);
-        return "Profile updated successfully.";
-    }
-}
+//     public string UpdateUserProfile(int userId, string newUsername, string newPassword)
+//     {
+//         var user = _repository.GetUserByUserId(userId);
+//         if (user == null)
+//         {
+//             return "User not found.";
+//         }
+
+//         user.Username = newUsername;
+//         user.Password = newPassword;
+//         _repository.CreateUser(user);
+//         return "Profile updated successfully.";
+//     }
+// }
 

@@ -54,7 +54,7 @@ public interface IBankRepository
     //find all the transactions in the database
     public List<Transaction> GetAllTransactions();
     //find all the transactions with FromAccount having id fromAccountId
-    public List<Transaction> GetTransactionsByFromAccount(int fromAccountId);
+    public List<Transaction> GetTransactionsByFromAccountId(int fromAccountId);
     //find all the transactions with ToAccount having id toAccountId
     public List<Transaction> GetTransactionsByToAccountId(int toAccountId);
     //create a transaction

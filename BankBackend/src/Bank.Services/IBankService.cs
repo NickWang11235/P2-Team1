@@ -9,7 +9,7 @@ public interface IBankService
     // Validate the login credentials for a user.
     public string ValidateLogin(string username, string password);
     // Get a user by their username.
-    public User? GetUserByUsername(string username);
+    public Account? GetUserByUsername(string username);
     // Get all accounts associated with a user by their userId.
     public List<Account>? GetUserAccounts(int userId);
     // Get all transactions associated with a user by their userId.

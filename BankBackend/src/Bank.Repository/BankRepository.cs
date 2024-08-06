@@ -127,7 +127,7 @@ public class BankRepository : IBankRepository
     }
 
     /// <summary>
-    /// adds account with <c>account</c> to the account list of the user with <c>userId</c>
+    /// adds account with <c>accountId</c> to the account list of the user with <c>userId</c>
     /// </summary>
     /// <param name="account"></param>
     /// <param name="userId"></param>
@@ -269,7 +269,7 @@ public class BankRepository : IBankRepository
     }
 
     /// <summary>
-    ///  updates the balance of the account with <c>account</c> to <c>balance</c>
+    ///  updates the balance of the account with <c>accountId</c> to <c>balance</c>
     /// </summary>
     /// <param name="accountId"></param>
     /// <param name="balance"></param>
@@ -290,7 +290,7 @@ public class BankRepository : IBankRepository
     }
 
     /// <summary>
-    /// replaces the primary user of the account with <c>account</c> with <c>userId</c>
+    /// replaces the primary user of the account with <c>accountId</c> with <c>userId</c>
     /// </summary>
     /// <param name="accountId"></param>
     /// <param name="userId"></param>
@@ -313,15 +313,15 @@ public class BankRepository : IBankRepository
     }
 
     /// <summary>
-    /// adds user with <c>userId</c> to the account list of the account with <c>account</c>
+    /// adds user with <c>userId</c> to the account list of the account with <c>accountId</c>
     /// </summary>
     /// <param name="user"></param>
     /// <param name="accountId"></param>
-    /// <returns>the updated account with the new user, null if account does not exist</returns>
+    /// <returns>the updated account with the new user, null if account does not exist or if user does not exist</returns>
     public Account? AddUserToAccount(User user, int accountId)
     {
         Account? account = GetAccountByAccountId(accountId);
-        if (account == null)
+        if (account == null || user == null)
         {
             return null;
         }
@@ -412,7 +412,7 @@ public class BankRepository : IBankRepository
     /// </summary>
     /// <param name="fromAccountId"></param>
     /// <returns>list containing all such transactions</returns>
-    public List<Transaction> GetTransactionsByFromAccount(int fromAccountId)
+    public List<Transaction> GetTransactionsByFromAccountId(int fromAccountId)
     {
         return _bankContext.Transactions.Where(x => x.FromAccount.AccountId == fromAccountId).ToList();
     }

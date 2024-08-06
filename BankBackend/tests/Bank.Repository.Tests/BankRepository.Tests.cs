@@ -1,3 +1,4 @@
+using System.Data;
 using BankBackend.Models;
 using BankBackend.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -30,6 +31,11 @@ public class BankRepositoryTests
     private void RemoveAllAccounts()
     {
         _context.Accounts.RemoveRange(_context.Accounts);
+    }
+
+    private void RemoveAllTransactions()
+    {
+        _context.Transactions.RemoveRange(_context.Transactions);
     }
 
     [Fact]
@@ -422,7 +428,7 @@ public class BankRepositoryTests
 
     [Fact]
     public void UpdateBalanceAccountDoesNotExistReturnsNull()
-    {   
+    {
         //clear all accounts
         RemoveAllAccounts();
         //update non-exist account
@@ -434,7 +440,7 @@ public class BankRepositoryTests
     public void UpdateBalanceAccountExistsUpdatesAccount()
     {
         //create new account
-        Account account =  new Account();
+        Account account = new Account();
         account = _repository.CreateAccount(account);
         //update account
         Account? updatedAccount = _repository.UpdateBalance(account.AccountId, 2000);
@@ -445,20 +451,264 @@ public class BankRepositoryTests
     [Fact]
     public void UpdatePrimaryUserAccountDoesNotExistReturnsNull()
     {
+        //clear all accounts
         RemoveAllAccounts();
-        Account? account = _repository.UpdatePrimaryUser(42, 42);
+        //create a user
+        User user = new User();
+        user = _repository.CreateUser(user);
+        //update a non-exist account
+        Account? account = _repository.UpdatePrimaryUser(42, user.UserId);
+        Assert.Null(account);
     }
 
     [Fact]
     public void UpdatePrimaryUserUserDoesNotExistReturnsNull()
     {
-
+        //clear all users
+        RemoveAllUsers();
+        //create new account
+        Account account = new Account();
+        account = _repository.CreateAccount(account);
+        //update account with non-exist user
+        Account? updatedAccount = _repository.UpdatePrimaryUser(account.AccountId, 42);
+        Assert.Null(updatedAccount);
     }
 
     [Fact]
     public void UpdatePrimaryUserUserAndAccountExistReturnsAccount()
     {
+        //create new account
+        Account account = new Account();
+        account = _repository.CreateAccount(account);
+        //create new user
+        User user = new User();
+        user = _repository.CreateUser(user);
+        //update primary user of account to user
+        Account? updatedAccount = _repository.UpdatePrimaryUser(account.AccountId, user.UserId);
+        Assert.NotNull(updatedAccount);
+        Assert.Equal(user.UserId, updatedAccount.PrimaryUserId);
+    }
+
+    [Fact]
+    public void AddUserToAccountAccountDoesNotExistReturnsNull()
+    {
+        //clears all accounts
+        RemoveAllAccounts();
+        //create new user
+        User user = new User();
+        user = _repository.CreateUser(user);
+        //add that user to non-exist account
+        Account? account = _repository.AddUserToAccount(user, 42);
+        Assert.Null(account);
+    }
+
+    [Fact]
+    public void AddUserToAccountAccountExistsUpdatesAccount()
+    {
+        //create new user
+        User user = new User();
+        user = _repository.CreateUser(user);
+        //create new account
+        Account account = new Account();
+        account = _repository.CreateAccount(account);
+        //add that user to account
+        Account? updatedAccount = _repository.AddUserToAccount(user, account.AccountId);
+        Assert.NotNull(updatedAccount);
+        Assert.Contains(user, updatedAccount.Users);
+
+    }
+    [Fact]
+
+    public void DeleteAccountByIdAccountDoesNotExistReturnsNull()
+    {
+        //clear all accounts
+        RemoveAllAccounts();
+        //delete non-exist account
+        Account? account = _repository.DeleteAccountById(42);
+        Assert.Null(account);
+    }
+
+    [Fact]
+    public void DeleteAccountByIdAccountExistsDeletesAccount()
+    {
+        //create new account
+        Account account = new Account();
+        account = _repository.CreateAccount(account);
+        //delete account
+        Account? deletedAccount = _repository.DeleteAccountById(account.AccountId);
+        Assert.NotNull(account);
+        //try retrieving deleted account
+        deletedAccount = _repository.GetAccountByAccountId(account.AccountId);
+        Assert.Null(deletedAccount);
+    }
+
+    [Fact]
+    public void DeleteAccountUserByUserIdAccountDoesNotExistReturnsNull()
+    {
+        //clear all accounts
+        RemoveAllAccounts();
+        //create new user
+        User user = new User();
+        user = _repository.CreateUser(user);
+        //delete from non-exist account
+        User? deletedUser = _repository.DeleteAccountUserByUserId(42, user.UserId);
+        Assert.Null(deletedUser);
+    }
+
+    [Fact]
+    public void DeleteAccountUserByUserIdUserDoesNotExistReturnsNull()
+    {
+        //create new account
+        Account account = new Account();
+        account = _repository.CreateAccount(account);
+        //delete from non-exist user
+        User? deletedUser = _repository.DeleteAccountUserByUserId(account.AccountId, 42);
+        Assert.Null(deletedUser);
+    }
+
+    [Fact]
+    public void DeleteAccountUserByUserIdUserAndAccountExistReturnsDeletedUser()
+    {
+        //create new account
+        Account account = new Account();
+        account = _repository.CreateAccount(account);
+        //create new user
+        User user = new User();
+        user = _repository.CreateUser(user);
+        //add user to account
+        Account? updateAccount = _repository.AddUserToAccount(user, account.AccountId);
+        Assert.NotNull(updateAccount);
+        //delete the user from account
+        User? deletedUser = _repository.DeleteAccountUserByUserId(updateAccount.AccountId, user.UserId);
+        Assert.NotNull(deletedUser);
+        Assert.DoesNotContain(deletedUser, updateAccount.Users);
+    }
+
+    [Fact]
+    public void GetTransactionByTransactionIdTransactionDoesNotExistReturnsNull()
+    {
+        //clear all transactions
+        RemoveAllTransactions();
+        //retrieve non-exist transaction
+        Transaction? transaction = _repository.GetTransactionByTransactionId(42);
+        Assert.Null(transaction);
+    }
+
+    [Fact]
+    public void GetTransactionByTransactionIdTransactionExistsReturnsTransaction()
+    {
+        //create new transaction
+        Transaction transaction = new Transaction();
+        transaction = _repository.CreateTransaction(transaction);
+        //retrieve transaction
+        Transaction? foundTransaction = _repository.GetTransactionByTransactionId(transaction.TransactionId);
+        Assert.NotNull(foundTransaction);
+    }
+
+    [Fact]
+    public void GetAllTransactionsNoTransactionsExistReturnsEmptyList()
+    {
+        //clears all transactions
+        RemoveAllTransactions();
+        //retrieve non-exist transactions
+        List<Transaction> transactions = _repository.GetAllTransactions();
+        Assert.Empty(transactions);
+    }
+
+    [Fact]
+    public void GetAllTransactionsTransactionExistReturnsList()
+    {
+        //clears all transactions
+        RemoveAllTransactions();
+        //create transactions
+        Transaction transaction1 = _repository.CreateTransaction(new Transaction());
+        Transaction transaction2 = _repository.CreateTransaction(new Transaction());
+        Transaction transaction3 = _repository.CreateTransaction(new Transaction());
+        //retrieve all transactions
+        List<Transaction> transactions = _repository.GetAllTransactions();
+        Assert.Equal(3, transactions.Count());
+    }
+
+    [Fact]
+    public void GetTransactionsByFromAccountFromAccountDoesNotExistReturnsEmptyList()
+    {
+        //clear all accounts
+        RemoveAllAccounts();
+        //retrieve transactions from non-exist from account
+        List<Transaction> transactions = _repository.GetTransactionsByFromAccountId(42);
+        Assert.Empty(transactions);
+    }
+
+    [Fact]
+    public void GetTransactionsByFromAccountFromAccountExistsReturnsList()
+    {
+        //create new account
+        Account account = new Account();
+        account = _repository.CreateAccount(account);
+        //create new transaction
+        Transaction transaction = new Transaction();
+        transaction.FromAccount = account;
+        transaction = _repository.CreateTransaction(transaction);
+        //retrieve transactions from account
+        List<Transaction> transactions = _repository.GetTransactionsByFromAccountId(account.AccountId);
+        Assert.Contains(transaction, transactions);
+    }
+
+    [Fact]
+    public void GetTransactionsByFromAccountToAccountDoesNotExistReturnsEmptyList()
+    {
+        //clear all accounts
+        RemoveAllAccounts();
+        //retrieve transactions from non-exist to account
+        List<Transaction> transactions = _repository.GetTransactionsByToAccountId(42);
+        Assert.Empty(transactions);
 
     }
 
+    [Fact]
+    public void GetTransactionsByFromAccountToAccountExistsReturnsList()
+    {
+        //create new account
+        Account account = new Account();
+        account = _repository.CreateAccount(account);
+        //create new transaction
+        Transaction transaction = new Transaction();
+        transaction.ToAccount = account;
+        transaction = _repository.CreateTransaction(transaction);
+        //retrieve transactions to account
+        List<Transaction> transactions = _repository.GetTransactionsByToAccountId(account.AccountId);
+        Assert.Contains(transaction, transactions);
+    }
+
+    [Fact]
+    public void CreateTransactionUpdatesTransactionId()
+    {
+        Transaction transaction = new Transaction();
+        transaction = _repository.CreateTransaction(transaction);
+        Assert.NotEqual(0, transaction.TransactionId);
+    }
+
+    [Fact]
+    public void DeleteTransactionByTransactionIdTransactionDoesNotExistReturnsNull()
+    {
+        //clear all transactions
+        RemoveAllTransactions();
+        //delete non-exist transaction
+        Transaction? transaction = _repository.DeleteTransactionByTransactionId(42);
+        Assert.Null(transaction);
+    }
+
+    [Fact]
+    public void DeleteTransactionByTransactionIdTransactionExistsDeletesTransaction()
+    {
+        //create new transaction
+        Transaction transaction = new Transaction();
+        transaction = _repository.CreateTransaction(transaction);
+        //delete transaction
+        Transaction? deletedTransaction = _repository.DeleteTransactionByTransactionId(transaction.TransactionId);
+        Assert.NotNull(deletedTransaction);
+        //try retireving deleted transaction
+        deletedTransaction = _repository.DeleteTransactionByTransactionId(deletedTransaction.TransactionId);
+        Assert.Null(deletedTransaction);
+    }
 }
