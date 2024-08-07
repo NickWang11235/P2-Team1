@@ -6,8 +6,6 @@ name: .NET
 on:
   push:
     branches: [ "repository" ]
-  pull_request:
-    branches: [ "BackEnd" ]
 
 jobs:
   build:
