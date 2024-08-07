@@ -6,6 +6,8 @@ name: .NET
 on:
   push:
     branches: [ "repository" ]
+    
+  workflow_dispatch:
 
 jobs:
   build:
