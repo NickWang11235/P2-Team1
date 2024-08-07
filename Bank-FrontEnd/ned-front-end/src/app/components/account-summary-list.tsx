@@ -1,5 +1,5 @@
 import { User,Account,Transaction } from "../models/dtos";
-import AccountSummary from "./account-summary";
+import { AccountSummary} from "./account-summary";
 import { CurrentUserContext } from "../page";
 import { useContext } from "react";
 
@@ -25,7 +25,7 @@ export default function AccountSummaryList(){
     const listOfAccountSummaries = currentUser.user.Accounts.map((account,index)=>{
         return(
             <li key={index}>
-                <AccountSummary{...account}/>
+                <AccountSummary account = {account}/>
             </li>
         );
     })
@@ -44,9 +44,6 @@ export default function AccountSummaryList(){
             {listOfAccountSummaries}
         </ul>
         </div>
-        // <div>
-        //     <AccountSummary {...accountList[0]}/>
-        // </div>
     )
 
 }

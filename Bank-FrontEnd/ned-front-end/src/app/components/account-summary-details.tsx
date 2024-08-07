@@ -1,7 +1,7 @@
 import { User,Account,Transaction } from "../models/dtos";
 
 
-export default function AccountSummaryDetails(account:Account){
+export const AccountSummaryDetails = (props)=>{
 
     const accountDetails ={
         border: "dashed light-green",
@@ -11,7 +11,7 @@ export default function AccountSummaryDetails(account:Account){
 
     return(
         <div style={accountDetails}>
-        <p>Balance: {account.Balance}</p>
+        <p>Balance: {props.account.Balance}</p>
         <button>Withdraw</button>
         <button>Deposit</button>
         <button>History</button>

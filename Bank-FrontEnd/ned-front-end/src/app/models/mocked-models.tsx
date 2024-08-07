@@ -44,6 +44,20 @@ export const account3: Account = {
     PrimaryUserId: 2,
     Users: [user2],
 }
+export const account4: Account = {
+    AccountId: 48,
+    Balance: 11.96,
+    AccountType: "CLOWN",
+    PrimaryUserId: 2,
+    Users: [user1,user2],
+}
+export const account5: Account = {
+    AccountId: 420,
+    Balance: 1234.56,
+    AccountType: "CHECKING",
+    PrimaryUserId: 2,
+    Users: [user2],
+}
 
-user1.Accounts=[account1,account2];
-user2.Accounts=[account2,account3]
+user1.Accounts=[account1,account2,account4];
+user2.Accounts=[account2,account3,account4,account5]
