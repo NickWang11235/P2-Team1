@@ -1,7 +1,7 @@
 namespace BankBackend.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
-using BankBackend.Service;
+// using BankBackend.Service;
 
 
 [ApiController]
@@ -9,15 +9,15 @@ using BankBackend.Service;
 public class LoginController : ControllerBase
 {
 
-    private readonly IBankService _gameService;
+    // private readonly IBankService _gameService;
 
-    private readonly ILogger<LoginController> _logger;
+    // private readonly ILogger<LoginController> _logger;
 
-    public LoginController(ILogger<LoginController> logger, IBankService gameService)
-    {
-        _gameService = gameService;
-        _logger = logger;
-    }
+    // public LoginController(ILogger<LoginController> logger, IBankService gameService)
+    // {
+    //     _gameService = gameService;
+    //     _logger = logger;
+    // }
 
     // [HttpGet()]
     // public IEnumerable<Game> GetAll()
