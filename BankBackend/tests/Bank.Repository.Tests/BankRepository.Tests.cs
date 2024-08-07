@@ -52,7 +52,7 @@ public class BankRepositoryTests
     public void GetUserByUserIdWhenUserExistsReturnsUser()
     {
         //create a new user
-        User user = new User("ihatesand", "Anakin Skywalker");
+        User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         //upload user to database
         user = _repository.CreateUser(user);
         //retrieve user
@@ -79,9 +79,9 @@ public class BankRepositoryTests
         //clear database
         RemoveAllUsers();
         //create 3 new users
-        User user1 = new User("ihatesand", "Anakin Skywalker");
-        User user2 = new User("ilovedemocracy", "Emperor Palpatine");
-        User user3 = new User("badfeeling", "Obi Wan Kenobi");
+        User user1 = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
+        User user2 = new User("ilovedemocracy", "Emperor Palpatine", "EPalpatine");
+        User user3 = new User("badfeeling", "Obi Wan Kenobi", "OWKenobi");
         //upload 3 users
         user1 = _repository.CreateUser(user1);
         user2 = _repository.CreateUser(user2);
@@ -108,7 +108,7 @@ public class BankRepositoryTests
     public void GetAccountsByUserIdUserHasNoAccountsReturnsEmptyList()
     {
         //create new user
-        User user = new User("ihatesand", "Anakin Skywalker");
+        User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         user = _repository.CreateUser(user);
         //retrieve accounts of the new user with no accounts
         List<Account>? accounts = _repository.GetAccountsByUserId(user.UserId);
@@ -120,7 +120,7 @@ public class BankRepositoryTests
     public void GetAccountsByUserIdUserHasAccountsReturnsList()
     {
         //create uew user
-        User user = new User("ihatesand", "Anakin Skywalker");
+        User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         user = _repository.CreateUser(user);
         //add accounts to user
         _repository.AddAccountToUser(new Account(), user.UserId);
@@ -136,7 +136,7 @@ public class BankRepositoryTests
     public void CreateUserUpdatesUserId()
     {
         //create new user
-        User user = new User("ihatesand", "Anakin Skywalker");
+        User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         User createdUser = _repository.CreateUser(user);
         Assert.NotNull(createdUser);
         Assert.Equal(user.Name, createdUser.Name);
@@ -159,7 +159,7 @@ public class BankRepositoryTests
     public void UpdatePasswordUserExistsUpdatesdUser()
     {
         //create new user
-        User user = new User("ihatesand", "Anakin Skywalker");
+        User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         user = _repository.CreateUser(user);
         //udpate user
         User? updatedUser = _repository.UpdatePassword(user.UserId, "ilovesand");
@@ -181,7 +181,7 @@ public class BankRepositoryTests
     public void UpdateNameUserExistsUpdatesdUser()
     {
         //clear all users
-        User user = new User("ihatesand", "Anakin Skywalker");
+        User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         user = _repository.CreateUser(user);
         //update user
         User? updatedUser = _repository.UpdateName(user.UserId, "Padme");
@@ -203,7 +203,7 @@ public class BankRepositoryTests
     public void AddAccountToUserUserExistsUpdatesUserAccounts()
     {
         //create new user
-        User user = new User("ihatesand", "Anakin Skywalker");
+        User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         user = _repository.CreateUser(user);
         //add new account to user
         User? updatedUser = _repository.AddAccountToUser(new Account(), user.UserId);
@@ -233,7 +233,7 @@ public class BankRepositoryTests
     public void DeleteUserByIdUserExistsDeletesUser()
     {
         //create new user
-        User user = new User("ihatesand", "Anakin Skywalker");
+        User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         user = _repository.CreateUser(user);
         //delete that user
         User? deletedUser = _repository.DeleteUserById(user.UserId);
@@ -257,7 +257,7 @@ public class BankRepositoryTests
     public void DeleteUserAccountByAccountIdUserExistsButAccountDoesNotExistReturnsNull()
     {
         //create user
-        User user = new User("ihatesand", "Anakin Skywalker");
+        User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         user = _repository.CreateUser(user);
         //delete non-exist account of existing user
         Account? deletedAccount = _repository.DeleteUserAccountByAccountId(user.UserId, 42);
@@ -268,7 +268,7 @@ public class BankRepositoryTests
     public void DeleteUserAccountByAccountIdUserExistsAccountExistsDeletesAccount()
     {
         //create user
-        User user = new User("ihatesand", "Anakin Skywalker");
+        User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         user = _repository.CreateUser(user);
         //create accoubt
         Account account = new Account();
