@@ -5,7 +5,7 @@ name: .NET
 
 on:
   push:
-    branches: [ "repository" ]
+    branches: [ "repository", " BankServiceLayer " ]
     
   workflow_dispatch:
 
