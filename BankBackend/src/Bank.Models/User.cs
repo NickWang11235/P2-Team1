@@ -8,6 +8,7 @@ public class User
     public int UserId { get; set; }
     public string Password { get; set; }
     public string Name { get; set; }
+    // list of all accounts this user has access to
     public List<Account> Accounts { get; set; }
 
     public User()

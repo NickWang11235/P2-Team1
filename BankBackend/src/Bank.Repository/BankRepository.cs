@@ -10,7 +10,7 @@ using BankBackend.Models;
 public class BankRepository : IBankRepository
 {
 
-    private BankContext _bankContext;
+    private readonly BankContext _bankContext;
 
     /// <summary>
     /// constructor for dependency injection
