@@ -1,9 +1,11 @@
+import { useContext } from "react";
 import { User,Account,Transaction } from "../models/dtos";
+import { CurrentUserContext } from "../page";
 
 
 
 
-export default function UserInterface(user:User){
+export default function UserInterface(){
     
     const userInterfaceStyle = {
         height: "100%",
@@ -15,11 +17,13 @@ export default function UserInterface(user:User){
         maxHeight: "250px"
     }
 
+    const {currentUser} = useContext(CurrentUserContext);
+
     return(
 
         <div style={userInterfaceStyle}>
-            <img src={user.ImageUrl} style={imageStyles} alt="User Image"/>
-            <h1 className="user">{user.Name}</h1>
+            <img src={currentUser.user.ImageUrl} style={imageStyles} alt="User Image"/>
+            <h1 className="user">{currentUser.user.Name}</h1>
         </div>
     );
 }
