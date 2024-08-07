@@ -1,9 +1,12 @@
 import { User,Account,Transaction } from "../models/dtos";
 import AccountSummary from "./account-summary";
+import { CurrentUserContext } from "../page";
+import { useContext } from "react";
 
 
 
-export default function AccountSummaryList(accountList:Account[]){
+
+export default function AccountSummaryList(){
 
 
     // const listOfAccountSummaries = accountList && accountList.map && accountList.map((account,index)=>{
@@ -16,14 +19,16 @@ export default function AccountSummaryList(accountList:Account[]){
 
     // const listToUse : Account[] = accountList;
 
+    const {currentUser} = useContext(CurrentUserContext);
 
-    // const listOfAccountSummaries =   listToUse.map((account,index)=>{
-    //     return(
-    //         <li key={index}>
-    //             <AccountSummary{...account}/>
-    //         </li>
-    //     );
-    // })
+
+    const listOfAccountSummaries = currentUser.user.Accounts.map((account,index)=>{
+        return(
+            <li key={index}>
+                <AccountSummary{...account}/>
+            </li>
+        );
+    })
 
     const accountListStyle ={
         display: "flex",
@@ -31,17 +36,6 @@ export default function AccountSummaryList(accountList:Account[]){
         alignItems: "center",
         margin: "5px",
     }
-
-    const listOfAccountSummaries = (
-       <>
-            <li>
-                <AccountSummary{...accountList[0]}/>
-            </li>
-            <li>
-                <AccountSummary{...accountList[1]}/>
-            </li>
-        </>
-    )
 
 
     return(
