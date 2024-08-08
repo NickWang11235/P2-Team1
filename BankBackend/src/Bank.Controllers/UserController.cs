@@ -26,10 +26,9 @@ public class UsersController : ControllerBase
     }
 
     [HttpPost("login")]
-    public bool Login([FromBody] User user)
+    public User Login([FromBody] User user)
     {
-        User foundUser = _bankService.GetUserByUserId(user.UserId);
-        return foundUser.Password == user.Password;
+        return _bankService.ValidateLogin(user.Username,user.Password);
     }
 
     [HttpGet("{id}/accounts")]
