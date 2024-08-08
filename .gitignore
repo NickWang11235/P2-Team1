@@ -488,6 +488,7 @@ appsettings.json
 
 Migrations/
 coveragereport/
+testcov
 # _site/
 # api/
 # index.md
