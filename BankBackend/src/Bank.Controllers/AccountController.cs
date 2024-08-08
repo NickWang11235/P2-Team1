@@ -9,41 +9,46 @@ using BankBackend.Models;
 public class AccountController : ControllerBase
 {
 
-    private readonly IBankService _gameService;
+    private readonly IBankService _bankService;
 
     private readonly ILogger<AccountController> _logger;
 
-    public AccountController(ILogger<AccountController> logger, IBankService gameService)
+    public AccountController(ILogger<AccountController> logger, IBankService bankService)
     {
-        _gameService = gameService;
+        _bankService = bankService;
         _logger = logger;
     }
 
     [HttpPost("")]
-    public Account PostAccount(Account account){
-        throw new NotImplementedException();
+    public Account PostAccount([FromBody] Account account)
+    {
+        return _bankService.CreateAccount(account);
     }
 
     [HttpGet("{id}")]
-    public List<Transaction> GetTransactionsByAccountId(int id){
-        throw new NotImplementedException();
+    public List<Transaction> GetTransactionsByAccountId([FromRoute] int id)
+    {
+        return _bankService.GetTransactionsByAccountId(id);
     }
 
-    [HttpPatch("{id}")]
-    public Account PatchAccountById(int id){
-        throw new NotImplementedException();
-    }
+    // [HttpPatch("{id}")]
+    // public Account PatchAccountById([FromRoute] int id, [FromBody] Account account)
+    // {
+
+    // }
 
     [HttpPatch("{accountId}/add")]
-    public Account AddUserToAccountById(int accountId, int newId){
-        _gameService.AddAccountToFamily(accountId, newId);
-        // _gameService.AddAccountToFamily(accountId, user.UserId);
-        throw new NotImplementedException();
+    public Account AddUserToAccountById([FromRoute] int accountId, [FromBody] int userId)
+    {
+        _bankService.AddAccountToFamily(accountId, userId);
+        return _bankService.GetAccountByAccountId(accountId);
     }
 
     [HttpPatch("{accountId}/remove")]
-    public Account RemoveUserFromAccountById(int accountId, int newId){
-        throw new NotImplementedException();
+    public Account RemoveUserFromAccountById([FromRoute] int accountId, [FromBody] int userId)
+    {
+        _bankService.RemoveAccountFromFamily(accountId, userId);
+        return _bankService.GetAccountByAccountId(accountId);
     }
 
 }

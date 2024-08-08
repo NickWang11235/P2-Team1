@@ -9,49 +9,56 @@ using BankBackend.Models;
 public class UsersController : ControllerBase
 {
 
-    private readonly IBankService _gameService;
+    private readonly IBankService _bankService;
 
     private readonly ILogger<UsersController> _logger;
 
-    public UsersController(ILogger<UsersController> logger, IBankService gameService)
+    public UsersController(ILogger<UsersController> logger, IBankService bankService)
     {
-        _gameService = gameService;
+        _bankService = bankService;
         _logger = logger;
     }
 
     [HttpPost("")]
-    public User PostUser(User user){
-        throw new NotImplementedException();
+    public User PostUser([FromBody] User user)
+    {
+        return _bankService.CreateUser(user);
     }
 
     [HttpPost("login")]
-    public bool Login(User user)
+    public bool Login([FromBody] User user)
+    {
+        User foundUser = _bankService.GetUserByUserId(user.UserId);
+        return foundUser.Password == user.Password;
+    }
+
+    [HttpGet("{id}/accounts")]
+    public List<Account> GetAccountsByUserId([FromRoute] int id)
+    {
+        return _bankService.GetAccountsByUserId(id);
+    }
+
+    [HttpPatch("{userId}")]
+    public User UpdateUserInfo([FromRoute] int userId, [FromBody] User user)
+    {
+        // return _bankService.UpdateUserInfo(userId,)
+        throw new NotImplementedException();
+    }
+
+    [HttpPatch("{userId}/add")]
+    public Account AddUserToAccountById([FromRoute] int accountId, [FromBody] int newId)
     {
         throw new NotImplementedException();
     }
 
-    [HttpGet("{id}/accounts")]
-    public List<Account> GetAccountsByUserId(int id){
-        throw new NotImplementedException();
-    }
-
-    [HttpPatch("{userId}")]
-    public User UpdateUserInfo(User user){
-        throw new NotImplementedException();
-    }
-
-    [HttpPatch("{userId}/userName")]
-    public Account AddUserToAccountById(int accountId, int newId){
-        throw new NotImplementedException();
-    }
-
     [HttpPatch("{accountId}/remove")]
-    public Account RemoveUserFromAccountById(int accountId, int newId){
+    public Account RemoveUserFromAccountById([FromRoute] int accountId, [FromBody] int newId)
+    {
         throw new NotImplementedException();
     }
 
     [HttpPost("logout")]
-    public bool Logout(User user)
+    public void Logout()
     {
         throw new NotImplementedException();
     }

@@ -5,16 +5,16 @@ namespace BankBackend.Service;
 
 public class BankService : IBankService
 {
-    private readonly IBankRepository _repository;
+    private readonly IBankRepository _bankRepository;
 
     public BankService(IBankRepository repository)
     {
-        _repository = repository;
+        _bankRepository = repository;
     }
 
     public string ValidateLogin(string username, string password)
     {
-        var user = _repository.GetAllUsers().FirstOrDefault(u => u.Username == username);
+        var user = _bankRepository.GetAllUsers().FirstOrDefault(u => u.Username == username);
         if (user == null)
         {
             return "Username not found.";
@@ -28,31 +28,61 @@ public class BankService : IBankService
         return "Login Successful.";
     }
 
-    public User? GetUserByUsername(string username)
+    public User GetUserByUsername(string username)
     {
-        return _repository.GetAllUsers().FirstOrDefault(u => u.Username == username);
+        return _bankRepository.GetAllUsers().FirstOrDefault(u => u.Username == username);
     }
 
-    public List<Account>? GetUserAccounts(int userId)
+    public User GetUserByUserId(int userId)
     {
-        return _repository.GetAccountsByUserId(userId);
+        User? user = _bankRepository.GetUserByUserId(userId);
+        if (user == null)
+        {
+            throw new Exception();
+        }
+        return user;
     }
 
-    public List<Transaction> GetUserTransactions(int userId)
+    public Account GetAccountByAccountId(int accountId)
     {
-        var accounts = _repository.GetAccountsByUserId(userId);
+        Account? account = _bankRepository.GetAccountByAccountId(accountId);
+        if (account == null)
+        {
+            throw new Exception();
+        }
+        return account;
+    }
+
+    public List<Account> GetAccountsByUserId(int userId)
+    {
+        return _bankRepository.GetAccountsByUserId(userId);
+    }
+
+    public List<Transaction> GetTransactionsByUserId(int userId)
+    {
+        var accounts = _bankRepository.GetAccountsByUserId(userId);
         var transactions = new List<Transaction>();
         foreach (var account in accounts)
         {
-            transactions.AddRange(_repository.GetTransactionsByFromAccountId(account.AccountId));
-            transactions.AddRange(_repository.GetTransactionsByToAccountId(account.AccountId));
+            transactions.AddRange(_bankRepository.GetTransactionsByFromAccountId(account.AccountId));
+            transactions.AddRange(_bankRepository.GetTransactionsByToAccountId(account.AccountId));
         }
         return transactions;
     }
 
+    public List<Transaction> GetTransactionsByAccountId(int accountId)
+    {
+        List<Transaction> combinedTransactions = new List<Transaction>();
+        List<Transaction> fromTransactions = _bankRepository.GetTransactionsByFromAccountId(accountId);
+        List<Transaction> toTransactions = _bankRepository.GetTransactionsByToAccountId(accountId);
+        combinedTransactions.AddRange(fromTransactions);
+        combinedTransactions.AddRange(toTransactions);
+        return combinedTransactions;
+    }
+
     public string Withdraw(int accountId, double amount)
     {
-        var account = _repository.GetAccountByAccountId(accountId);
+        var account = _bankRepository.GetAccountByAccountId(accountId);
         if (account == null)
         {
             return "Account not found.";
@@ -69,13 +99,13 @@ public class BankService : IBankService
         }
 
         account.Balance -= amount;
-        _repository.CreateTransaction(new Transaction { FromAccount = account, Amount = amount });
+        _bankRepository.CreateTransaction(new Transaction { FromAccount = account, Amount = amount });
         return "Withdrawal successful.";
     }
 
     public string Deposit(int accountId, double amount)
     {
-        var account = _repository.GetAccountByAccountId(accountId);
+        var account = _bankRepository.GetAccountByAccountId(accountId);
         if (account == null)
         {
             return "Account not found.";
@@ -87,14 +117,14 @@ public class BankService : IBankService
         }
 
         account.Balance += amount;
-        _repository.CreateTransaction(new Transaction { ToAccount = account, Amount = amount });
+        _bankRepository.CreateTransaction(new Transaction { ToAccount = account, Amount = amount });
         return "Deposit successful.";
     }
 
     public string AddAccountToFamily(int userId, int accountId)
     {
-        var user = _repository.GetUserByUserId(userId);
-        var account = _repository.GetAccountByAccountId(accountId);
+        var user = _bankRepository.GetUserByUserId(userId);
+        var account = _bankRepository.GetAccountByAccountId(accountId);
 
         if (user == null || account == null)
         {
@@ -107,14 +137,14 @@ public class BankService : IBankService
         }
 
         account.Users.Add(user);
-        _repository.CreateAccount(account);
+        _bankRepository.CreateAccount(account);
         return "Account successfully added to family.";
     }
 
     public string RemoveAccountFromFamily(int userId, int accountId)
     {
-        var user = _repository.GetUserByUserId(userId);
-        var account = _repository.GetAccountByAccountId(accountId);
+        var user = _bankRepository.GetUserByUserId(userId);
+        var account = _bankRepository.GetAccountByAccountId(accountId);
 
         if (user == null || account == null)
         {
@@ -127,13 +157,13 @@ public class BankService : IBankService
         }
 
         account.Users.Remove(user);
-        _repository.CreateAccount(account);
+        _bankRepository.CreateAccount(account);
         return "Account successfully removed from family.";
     }
 
     public string UpdateUserProfile(int userId, string newUsername, string newPassword)
     {
-        var user = _repository.GetUserByUserId(userId);
+        var user = _bankRepository.GetUserByUserId(userId);
         if (user == null)
         {
             return "User not found.";
@@ -141,7 +171,19 @@ public class BankService : IBankService
 
         user.Username = newUsername;
         user.Password = newPassword;
-        _repository.CreateUser(user);
+        _bankRepository.CreateUser(user);
         return "Profile updated successfully.";
+    }
+
+    public Account CreateAccount(Account account)
+    {
+        account.AccountId = 0;
+        return _bankRepository.CreateAccount(account);
+    }
+
+    public User CreateUser(User user)
+    {
+        user.UserId = 0;
+        return _bankRepository.CreateUser(user);
     }
 }
