@@ -22,14 +22,28 @@ public class UsersController : ControllerBase
     [HttpPost("")]
     public User PostUser([FromBody] User user)
     {
-        return _bankService.CreateUser(user);
+        try
+        {
+            return _bankService.CreateUser(user);
+        }
+        catch (Exception)
+        {
+
+            throw new Exception();
+        }
+    }
+
+    [HttpGet("")]
+    public List<User> GetAllUsers()
+    {
+        User u = new User();
+        return _bankService.GetAllUsers();
     }
 
     [HttpPost("login")]
-    public bool Login([FromBody] User user)
+    public User Login([FromBody] User user)
     {
-        User foundUser = _bankService.GetUserByUserId(user.UserId);
-        return foundUser.Password == user.Password;
+        return _bankService.ValidateLogin(user.Username, user.Password);
     }
 
     [HttpGet("{id}/accounts")]

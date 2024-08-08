@@ -29,6 +29,10 @@ public class BankService : IBankService
         return user;
     }
 
+    public List<User> GetAllUsers(){
+        return _bankRepository.GetAllUsers();
+    }
+
     public User GetUserByUsername(string username)
     {
         User? user = _bankRepository.GetUserByUsername(username);
@@ -102,7 +106,7 @@ public class BankService : IBankService
         return combinedTransactions;
     }
 
-    public Account Deposit(int accountId, double amount)
+    public Transaction Deposit(int accountId, double amount)
     {
         Account? account = _bankRepository.GetAccountByAccountId(accountId);
         if (account == null)
@@ -114,11 +118,10 @@ public class BankService : IBankService
         {
             throw new RepositoryException("Unknown repository exception.");
         }
-        _bankRepository.CreateTransaction(new Transaction { FromAccount = account, Amount = amount });
-        return account;
+        return _bankRepository.CreateTransaction(new Transaction { FromAccount = account, Amount = amount });
     }
 
-    public Account Withdraw(int accountId, double amount)
+    public Transaction Withdraw(int accountId, double amount)
     {
         Account? account = _bankRepository.GetAccountByAccountId(accountId);
         if (account == null)
@@ -136,8 +139,24 @@ public class BankService : IBankService
         {
             throw new RepositoryException("Unknown repository exception.");
         }
-        _bankRepository.CreateTransaction(new Transaction { FromAccount = account, Amount = -amount });
-        return account;
+        return _bankRepository.CreateTransaction(new Transaction { FromAccount = account, Amount = -amount });
+    }
+
+    public Transaction Transfer(int fromAccountId, int toAccountId, double amount){
+        Account? fromAccount = _bankRepository.GetAccountByAccountId(fromAccountId);
+        Account? toAccount = _bankRepository.GetAccountByAccountId(toAccountId);
+        if (fromAccount == null ){
+            throw new AccountIdNotFoundException("FromAccount does not exist.");
+        }
+        if(toAccount == null){
+            throw new AccountIdNotFoundException("ToAccount does not exist.");
+        }
+        if(fromAccount.Balance < amount){
+            throw new InsufficientFundsException("Insufficient Funds.");
+        }
+        _bankRepository.UpdateBalance(fromAccountId, fromAccount.Balance - amount);
+        _bankRepository.UpdateBalance(toAccountId, toAccount.Balance + amount);
+        return _bankRepository.CreateTransaction(new Transaction(fromAccount, toAccount, amount));
     }
 
     public User AddAccountUser(int userId, int accountId)
