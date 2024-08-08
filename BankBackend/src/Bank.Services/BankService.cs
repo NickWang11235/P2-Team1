@@ -1,5 +1,6 @@
 using BankBackend.Repository;
 using BankBackend.Models;
+using BankBackend.Service.Exceptions;
 
 namespace BankBackend.Service;
 
@@ -17,12 +18,12 @@ public class BankService : IBankService
         var user = _repository.GetAllUsers().FirstOrDefault(u => u.Username == username);
         if (user == null)
         {
-            return "Username not found.";
+            throw new LoginException("Username not found.");
         }
 
         if (user.Password != password)
         {
-            return "Invalid Password.";
+            throw new LoginException("Invalid Password.");
         }
 
         return "Login Successful.";
