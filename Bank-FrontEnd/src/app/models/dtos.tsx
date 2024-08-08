@@ -7,10 +7,11 @@
  }
 
  export interface User{
-    UserId: number,
-    Password: string,
-    Name: string,
-    Accounts: Account[],
+    UserId?: number,
+    Username: string,
+    Password?: string,
+    Name?: string,
+    Accounts?: Account[],
    //  ImageUrl: string,
  }
 
