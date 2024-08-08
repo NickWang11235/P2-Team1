@@ -11,7 +11,7 @@
     Password: string,
     Name: string,
     Accounts: Account[],
-    ImageUrl: string,
+   //  ImageUrl: string,
  }
 
  export interface Transaction{
