@@ -94,17 +94,20 @@ public void Deposit_ValidAccount_IncreasesBalance()
     var updatedBalance = initialBalance + amount;
 
     var account = new Account { AccountId = accountId, Balance = initialBalance };
+    var updatedAccount = new Account { AccountId = accountId, Balance = updatedBalance };
 
-    // Setup the mock repository to return the initial account and then the updated account
     _mockRepository.Setup(r => r.GetAccountByAccountId(accountId)).Returns(account);
-    _mockRepository.Setup(r => r.UpdateBalance(accountId, updatedBalance)).Returns(new Account { AccountId = accountId, Balance = updatedBalance });
+    _mockRepository.Setup(r => r.UpdateBalance(accountId, updatedBalance)).Returns(updatedAccount);
+    _mockRepository.Setup(r => r.CreateTransaction(It.IsAny<Transaction>())).Returns(new Transaction { FromAccount = account, Amount = amount });
 
     // Act
-    _bankService.Deposit(accountId, amount);
-    var account2 = _bankService.GetAccountByAccountId(accountId);
+    var result = _bankService.Deposit(accountId, amount);
 
     // Assert
-    Assert.Equal(updatedBalance, account2.Balance);
+    _mockRepository.Verify(r => r.UpdateBalance(accountId, updatedBalance), Times.Once);
+    _mockRepository.Verify(r => r.CreateTransaction(It.IsAny<Transaction>()), Times.Once);
+    
+    Assert.Equal(amount, result.Amount);
 }
 
     [Fact]
