@@ -100,10 +100,11 @@ public void Deposit_ValidAccount_IncreasesBalance()
     _mockRepository.Setup(r => r.UpdateBalance(accountId, updatedBalance)).Returns(new Account { AccountId = accountId, Balance = updatedBalance });
 
     // Act
-    var result = _bankService.Deposit(accountId, amount);
+    _bankService.Deposit(accountId, amount);
+    var account2 = _bankService.GetAccountByAccountId(accountId);
 
     // Assert
-    Assert.Equal(updatedBalance, result.Balance);
+    Assert.Equal(updatedBalance, account2.Balance);
 }
 
     [Fact]
