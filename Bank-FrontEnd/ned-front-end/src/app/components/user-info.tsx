@@ -21,9 +21,9 @@ export default function UserInterface(){
 
     return(
 
-        <div style={userInterfaceStyle}>
-            <img src={currentUser.user.ImageUrl} style={imageStyles} alt="User Image"/>
-            <h1 className="user">{currentUser.user.Name}</h1>
+        <div className="user-profile">
+            <img src={currentUser.user.ImageUrl} className="user-image" alt="User Image"/>
+            <h1 className="user-name">{currentUser.user.Name}</h1>
         </div>
     );
 }
