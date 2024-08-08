@@ -64,6 +64,31 @@ public class BankRepositoryTests
     }
 
     [Fact]
+    public void GetUserByUsernameWhenNoUserExistReturnsNull()
+    {
+        //clear all users
+        RemoveAllUsers();
+        //retrieve non-exist user
+        User? user = _repository.GetUserByUsername("ASkywalker");
+        Assert.Null(user);
+    }
+
+    [Fact]
+    public void GetUserByUsernameWhenUserExistsReturnsUser()
+    {
+        //create a new user
+        User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
+        //upload user to database
+        user = _repository.CreateUser(user);
+        //retrieve user
+        User? foundUser = _repository.GetUserByUsername(user.Username);
+        Assert.NotNull(foundUser);
+        Assert.Equal(user.UserId, foundUser.UserId);
+        Assert.Equal(user.Password, foundUser.Password);
+        Assert.Equal(user.Name, foundUser.Name);
+    }
+
+    [Fact]
     public void GetAllUsersWhenNoUserExistsReturnsEmptyList()
     {
         //clear database
@@ -122,10 +147,14 @@ public class BankRepositoryTests
         //create uew user
         User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         user = _repository.CreateUser(user);
+        //create new accounts
+        Account account1 = _repository.CreateAccount(new Account());
+        Account account2 = _repository.CreateAccount(new Account());
+        Account account3 = _repository.CreateAccount(new Account());
         //add accounts to user
-        _repository.AddAccountToUser(new Account(), user.UserId);
-        _repository.AddAccountToUser(new Account(), user.UserId);
-        _repository.AddAccountToUser(new Account(), user.UserId);
+        _repository.AddAccountToUser(account1.AccountId, user.UserId);
+        _repository.AddAccountToUser(account2.AccountId, user.UserId);
+        _repository.AddAccountToUser(account3.AccountId, user.UserId);
         //retrieve accounts of user
         List<Account>? accounts = _repository.GetAccountsByUserId(user.UserId);
         Assert.NotNull(accounts);
@@ -168,25 +197,25 @@ public class BankRepositoryTests
     }
 
     [Fact]
-    public void UpdateNameUserDoesNotExistReturnsNull()
+    public void UpdateUsernameUserDoesNotExistReturnsNull()
     {
         //clear all users
         RemoveAllUsers();
         //update non-exist user
-        User? updatedUser = _repository.UpdateName(42, "Padme");
+        User? updatedUser = _repository.UpdateUsername(42, "Padme");
         Assert.Null(updatedUser);
     }
 
     [Fact]
-    public void UpdateNameUserExistsUpdatesdUser()
+    public void UpdateUsernameUserExistsUpdatesdUser()
     {
         //clear all users
         User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         user = _repository.CreateUser(user);
         //update user
-        User? updatedUser = _repository.UpdateName(user.UserId, "Padme");
+        User? updatedUser = _repository.UpdateUsername(user.UserId, "Padme");
         Assert.NotNull(updatedUser);
-        Assert.Equal("Padme", updatedUser.Name);
+        Assert.Equal("Padme", updatedUser.Username);
     }
 
     [Fact]
@@ -194,8 +223,10 @@ public class BankRepositoryTests
     {
         //clear all users
         RemoveAllUsers();
+        //create new account
+        Account account = _repository.CreateAccount(new Account());
         //update non-exist user
-        User? user = _repository.AddAccountToUser(new Account(), 42);
+        User? user = _repository.AddAccountToUser(account.AccountId, 42);
         Assert.Null(user);
     }
 
@@ -206,15 +237,18 @@ public class BankRepositoryTests
         User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         user = _repository.CreateUser(user);
         //add new account to user
-        User? updatedUser = _repository.AddAccountToUser(new Account(), user.UserId);
+        Account account1 = _repository.CreateAccount(new Account());
+        User? updatedUser = _repository.AddAccountToUser(account1.AccountId, user.UserId);
         Assert.NotNull(updatedUser);
         Assert.Single(updatedUser.Accounts);
         //add new account to user
-        updatedUser = _repository.AddAccountToUser(new Account(), user.UserId);
+        Account account2 = _repository.CreateAccount(new Account());
+        updatedUser = _repository.AddAccountToUser(account2.AccountId, user.UserId);
         Assert.NotNull(updatedUser);
         Assert.Equal(2, updatedUser.Accounts.Count());
         //add new account to user
-        updatedUser = _repository.AddAccountToUser(new Account(), user.UserId);
+        Account account3 = _repository.CreateAccount(new Account());
+        updatedUser = _repository.AddAccountToUser(account3.AccountId, user.UserId);
         Assert.NotNull(updatedUser);
         Assert.Equal(3, updatedUser.Accounts.Count());
     }
@@ -271,10 +305,9 @@ public class BankRepositoryTests
         User user = new User("ihatesand", "Anakin Skywalker", "ASkywalker");
         user = _repository.CreateUser(user);
         //create accoubt
-        Account account = new Account();
-        account = _repository.CreateAccount(account);
+        Account account = _repository.CreateAccount(new Account()); ;
         //add account to user
-        User? updatedUser = _repository.AddAccountToUser(account, user.UserId);
+        User? updatedUser = _repository.AddAccountToUser(account.AccountId, user.UserId);
         Assert.NotNull(updatedUser);
         //delete that account
         Account? deletedAccount = _repository.DeleteUserAccountByAccountId(updatedUser.UserId, account.AccountId);
@@ -360,9 +393,12 @@ public class BankRepositoryTests
         Account account = new Account();
         account = _repository.CreateAccount(account);
         //create users for account
-        _repository.AddUserToAccount(new User(), account.AccountId);
-        _repository.AddUserToAccount(new User(), account.AccountId);
-        _repository.AddUserToAccount(new User(), account.AccountId);
+        User user1 = _repository.CreateUser(new User());
+        User user2 = _repository.CreateUser(new User());
+        User user3 = _repository.CreateUser(new User());
+        _repository.AddUserToAccount(user1.UserId, account.AccountId);
+        _repository.AddUserToAccount(user2.UserId, account.AccountId);
+        _repository.AddUserToAccount(user3.UserId, account.AccountId);
         //retrieve users of account
         List<User>? users = _repository.GetUsersByAccountId(account.AccountId);
         Assert.NotNull(users);
@@ -498,7 +534,7 @@ public class BankRepositoryTests
         User user = new User();
         user = _repository.CreateUser(user);
         //add that user to non-exist account
-        Account? account = _repository.AddUserToAccount(user, 42);
+        Account? account = _repository.AddUserToAccount(user.UserId, 42);
         Assert.Null(account);
     }
 
@@ -512,7 +548,7 @@ public class BankRepositoryTests
         Account account = new Account();
         account = _repository.CreateAccount(account);
         //add that user to account
-        Account? updatedAccount = _repository.AddUserToAccount(user, account.AccountId);
+        Account? updatedAccount = _repository.AddUserToAccount(user.UserId, account.AccountId);
         Assert.NotNull(updatedAccount);
         Assert.Contains(user, updatedAccount.Users);
 
@@ -576,7 +612,7 @@ public class BankRepositoryTests
         User user = new User();
         user = _repository.CreateUser(user);
         //add user to account
-        Account? updateAccount = _repository.AddUserToAccount(user, account.AccountId);
+        Account? updateAccount = _repository.AddUserToAccount(user.UserId, account.AccountId);
         Assert.NotNull(updateAccount);
         //delete the user from account
         User? deletedUser = _repository.DeleteAccountUserByUserId(updateAccount.AccountId, user.UserId);

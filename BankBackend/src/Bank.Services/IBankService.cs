@@ -7,7 +7,7 @@ using BankBackend.Models;
 public interface IBankService
 {
     // Validate the login credentials for a user.
-    public string ValidateLogin(string username, string password);
+    public User ValidateLogin(string username, string password);
     // Get a user by their username.
     public User GetUserByUsername(string username);
     // Get a user by userId
@@ -19,17 +19,17 @@ public interface IBankService
     // Get all transactions associated with a user by their userId.
     public List<Transaction> GetTransactionsByUserId(int userId);
     // Get all transactions associated with an accountId 
+    public Account Withdraw(int accountId, double amount);
+    // Deposit an amount into an account.
+    public Account Deposit(int accountId, double amount);
     public List<Transaction> GetTransactionsByAccountId(int accountId);
     // Withdraw an amount from an account.
-    public string Withdraw(int accountId, double amount);
-    // Deposit an amount into an account.
-    public string Deposit(int accountId, double amount);
     // Add an account to a family.
-    public string AddAccountToFamily(int userId, int accountId);
+    public User AddAccountUser(int userId, int accountId);
     // Remove an account from a family.
-    public string RemoveAccountFromFamily(int userId, int accountId);
+    public User RemoveAccountUser(int userId, int accountId);
     // Update the profile of a user.
-    public string UpdateUserProfile(int userId, string newUsername, string newPassword);
+    public User UpdateUserProfile(int userId, string newUsername, string newPassword);
     // Create a new user
     public User CreateUser(User user);
     // Createa a new account

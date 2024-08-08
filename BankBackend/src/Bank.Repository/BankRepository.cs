@@ -46,6 +46,16 @@ public class BankRepository : IBankRepository
     }
 
     /// <summary>
+    /// find a user with <c>username</c>
+    /// </summary>
+    /// <param name="username"></param>
+    /// <returns>the user with the username, null if user does not exist</returns>
+    public User? GetUserByUsername(string username)
+    {
+        return _bankContext.Users.FirstOrDefault(x => x.Username == username);
+    }
+
+    /// <summary>
     /// find all existing users in the database
     /// </summary>
     /// <returns>a list containing all existing users, empty list if non exists</returns>
@@ -109,9 +119,9 @@ public class BankRepository : IBankRepository
     /// updates the name of the user with <c>userId</c> to <c>name</c>
     /// </summary>
     /// <param name="userId"></param>
-    /// <param name="name"></param>
-    /// <returns>the updated user with the new name, null if the user does not exist</returns>
-    public User? UpdateName(int userId, string name)
+    /// <param name="username"></param>
+    /// <returns>the updated user with the new username, null if the user does not exist</returns>
+    public User? UpdateUsername(int userId, string username)
     {
         User? user = GetUserByUserId(userId);
         if (user == null)
@@ -120,7 +130,7 @@ public class BankRepository : IBankRepository
         }
         else
         {
-            user.Name = name;
+            user.Username = username;
             _bankContext.SaveChanges();
             return user;
         }
@@ -129,13 +139,14 @@ public class BankRepository : IBankRepository
     /// <summary>
     /// adds account with <c>accountId</c> to the account list of the user with <c>userId</c>
     /// </summary>
-    /// <param name="account"></param>
+    /// <param name="accountId"></param>
     /// <param name="userId"></param>
     /// <returns>the updated user with the added account, null if the user does not exist</returns>
-    public User? AddAccountToUser(Account account, int userId)
+    public User? AddAccountToUser(int accountId, int userId)
     {
         User? user = GetUserByUserId(userId);
-        if (user == null)
+        Account? account = GetAccountByAccountId(accountId);
+        if (user == null || account == null)
         {
             return null;
         }
@@ -166,9 +177,6 @@ public class BankRepository : IBankRepository
             return user;
         }
     }
-
-
-    // THIS IS POTENTIALLY PROBLEMATIC. REQURE TESTING!!!
 
     /// <summary>
     /// deletes the account with <c>accountId</c> from the user with <c>userId</c>
@@ -295,7 +303,6 @@ public class BankRepository : IBankRepository
     /// <param name="accountId"></param>
     /// <param name="userId"></param>
     /// <returns>the updated account with the new primary user, null if account doesnot exist or if user does not exist</returns>
-    /// <exception cref="NotImplementedException"></exception>
     public Account? UpdatePrimaryUser(int accountId, int userId)
     {
         Account? account = GetAccountByAccountId(accountId);
@@ -315,12 +322,13 @@ public class BankRepository : IBankRepository
     /// <summary>
     /// adds user with <c>userId</c> to the account list of the account with <c>accountId</c>
     /// </summary>
-    /// <param name="user"></param>
+    /// <param name="userId"></param>
     /// <param name="accountId"></param>
     /// <returns>the updated account with the new user, null if account does not exist or if user does not exist</returns>
-    public Account? AddUserToAccount(User user, int accountId)
+    public Account? AddUserToAccount(int userId, int accountId)
     {
         Account? account = GetAccountByAccountId(accountId);
+        User? user = GetUserByUserId(userId);
         if (account == null || user == null)
         {
             return null;
@@ -352,9 +360,6 @@ public class BankRepository : IBankRepository
             return account;
         }
     }
-
-
-    // THIS IS POTENTIALLY PROBLEMATIC. REQURE TESTING!!!
 
     /// <summary>
     /// deletes the user with <c>userId</c> from the account with <c>accountId</c>

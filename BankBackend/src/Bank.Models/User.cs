@@ -1,7 +1,9 @@
 namespace BankBackend.Models;
 
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
+[Index(nameof(Username), IsUnique = true)]
 public class User
 {
     [Key]

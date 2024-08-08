@@ -40,14 +40,14 @@ public class AccountController : ControllerBase
     [HttpPatch("{accountId}/add")]
     public Account AddUserToAccountById([FromRoute] int accountId, [FromBody] int userId)
     {
-        _bankService.AddAccountToFamily(accountId, userId);
+        _bankService.AddAccountUser(accountId, userId);
         return _bankService.GetAccountByAccountId(accountId);
     }
 
     [HttpPatch("{accountId}/remove")]
     public Account RemoveUserFromAccountById([FromRoute] int accountId, [FromBody] int userId)
     {
-        _bankService.RemoveAccountFromFamily(accountId, userId);
+        _bankService.RemoveAccountUser(accountId, userId);
         return _bankService.GetAccountByAccountId(accountId);
     }
 

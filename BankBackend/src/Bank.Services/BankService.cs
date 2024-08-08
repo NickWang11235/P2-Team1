@@ -1,6 +1,6 @@
 using BankBackend.Repository;
 using BankBackend.Models;
-using BankBackend.Service.Exceptions;
+using BankBackend.Service;
 
 namespace BankBackend.Service;
 
@@ -13,25 +13,30 @@ public class BankService : IBankService
         _bankRepository = repository;
     }
 
-    public string ValidateLogin(string username, string password)
+    public User ValidateLogin(string username, string password)
     {
-        var user = _bankRepository.GetAllUsers().FirstOrDefault(u => u.Username == username);
+        User? user = _bankRepository.GetUserByUsername(username);
         if (user == null)
         {
-            throw new LoginException("Username not found.");
+            throw new UsernameNotFoundException("Username does not exist.");
         }
 
         if (user.Password != password)
         {
-            throw new LoginException("Invalid Password.");
+            throw new InvalidPasswordException("Invalid Password.");
         }
 
-        return "Login Successful.";
+        return user;
     }
 
     public User GetUserByUsername(string username)
     {
-        return _bankRepository.GetAllUsers().FirstOrDefault(u => u.Username == username);
+        User? user = _bankRepository.GetUserByUsername(username);
+        if (user == null)
+        {
+            throw new UsernameNotFoundException("Username does not exist.");
+        }
+        return user;
     }
 
     public User GetUserByUserId(int userId)
@@ -39,7 +44,7 @@ public class BankService : IBankService
         User? user = _bankRepository.GetUserByUserId(userId);
         if (user == null)
         {
-            throw new Exception();
+            throw new UserIdNotFoundException("User with userId does not exist.");
         }
         return user;
     }
@@ -49,20 +54,31 @@ public class BankService : IBankService
         Account? account = _bankRepository.GetAccountByAccountId(accountId);
         if (account == null)
         {
-            throw new Exception();
+            throw new AccountIdNotFoundException("Account with accountId does not exist.");
         }
         return account;
     }
 
     public List<Account> GetAccountsByUserId(int userId)
     {
-        return _bankRepository.GetAccountsByUserId(userId);
+        List<Account>? accounts = _bankRepository.GetAccountsByUserId(userId);
+        if (accounts == null)
+        {
+            throw new UserIdNotFoundException("User with userId does not exist.");
+        }
+        return accounts;
     }
 
     public List<Transaction> GetTransactionsByUserId(int userId)
     {
-        var accounts = _bankRepository.GetAccountsByUserId(userId);
-        var transactions = new List<Transaction>();
+        List<Account>? accounts = _bankRepository.GetAccountsByUserId(userId);
+        List<Transaction> transactions = new List<Transaction>();
+
+        if (accounts == null)
+        {
+            throw new UserIdNotFoundException("User with userId does not exist.");
+        }
+
         foreach (var account in accounts)
         {
             transactions.AddRange(_bankRepository.GetTransactionsByFromAccountId(account.AccountId));
@@ -73,6 +89,11 @@ public class BankService : IBankService
 
     public List<Transaction> GetTransactionsByAccountId(int accountId)
     {
+        Account? account = _bankRepository.GetAccountByAccountId(accountId);
+        if (account == null)
+        {
+            throw new AccountIdNotFoundException("Account with accountId does not exist.");
+        }
         List<Transaction> combinedTransactions = new List<Transaction>();
         List<Transaction> fromTransactions = _bankRepository.GetTransactionsByFromAccountId(accountId);
         List<Transaction> toTransactions = _bankRepository.GetTransactionsByToAccountId(accountId);
@@ -81,99 +102,114 @@ public class BankService : IBankService
         return combinedTransactions;
     }
 
-    public string Withdraw(int accountId, double amount)
+    public Account Deposit(int accountId, double amount)
     {
-        var account = _bankRepository.GetAccountByAccountId(accountId);
+        Account? account = _bankRepository.GetAccountByAccountId(accountId);
         if (account == null)
         {
-            return "Account not found.";
+            throw new AccountIdNotFoundException("Account with accountId does not exist.");
         }
-
-        if (amount <= 0)
+        account = _bankRepository.UpdateBalance(accountId, account.Balance + amount);
+        if (account == null)
         {
-            return "Invalid amount.";
+            throw new RepositoryException("Unknown repository exception.");
+        }
+        _bankRepository.CreateTransaction(new Transaction { FromAccount = account, Amount = amount });
+        return account;
+    }
+
+    public Account Withdraw(int accountId, double amount)
+    {
+        Account? account = _bankRepository.GetAccountByAccountId(accountId);
+        if (account == null)
+        {
+            throw new AccountIdNotFoundException("Account with accountId does not exist.");
         }
 
         if (account.Balance < amount)
         {
-            return "Insufficient funds.";
+            throw new InsufficientFundsException("Insufficient Funds.");
         }
 
-        account.Balance -= amount;
-        _bankRepository.CreateTransaction(new Transaction { FromAccount = account, Amount = amount });
-        return "Withdrawal successful.";
-    }
-
-    public string Deposit(int accountId, double amount)
-    {
-        var account = _bankRepository.GetAccountByAccountId(accountId);
+        account = _bankRepository.UpdateBalance(accountId, account.Balance - amount);
         if (account == null)
         {
-            return "Account not found.";
+            throw new RepositoryException("Unknown repository exception.");
         }
-
-        if (amount <= 0)
-        {
-            return "Invalid amount.";
-        }
-
-        account.Balance += amount;
-        _bankRepository.CreateTransaction(new Transaction { ToAccount = account, Amount = amount });
-        return "Deposit successful.";
+        _bankRepository.CreateTransaction(new Transaction { FromAccount = account, Amount = -amount });
+        return account;
     }
 
-    public string AddAccountToFamily(int userId, int accountId)
+    public User AddAccountUser(int userId, int accountId)
     {
-        var user = _bankRepository.GetUserByUserId(userId);
-        var account = _bankRepository.GetAccountByAccountId(accountId);
+        User? user = _bankRepository.GetUserByUserId(userId);
+        Account? account = _bankRepository.GetAccountByAccountId(accountId);
 
-        if (user == null || account == null)
+        if (user == null)
         {
-            return "User or Account not found.";
+            throw new UserIdNotFoundException("User with userId does not exist.");
+        }
+
+        if (account == null)
+        {
+            throw new AccountIdNotFoundException("Account with accountId does not exist.");
         }
 
         if (account.Users.Contains(user))
         {
-            return "User is already associated with this account.";
+            return user;
         }
 
-        account.Users.Add(user);
-        _bankRepository.CreateAccount(account);
-        return "Account successfully added to family.";
+
+        _bankRepository.AddUserToAccount(userId, accountId);
+        _bankRepository.AddAccountToUser(accountId, userId);
+        return user;
     }
 
-    public string RemoveAccountFromFamily(int userId, int accountId)
+    public User RemoveAccountUser(int userId, int accountId)
     {
-        var user = _bankRepository.GetUserByUserId(userId);
-        var account = _bankRepository.GetAccountByAccountId(accountId);
+        User? user = _bankRepository.GetUserByUserId(userId);
+        Account? account = _bankRepository.GetAccountByAccountId(accountId);
 
-        if (user == null || account == null)
+        if (user == null)
         {
-            return "User or Account not found.";
+            throw new UserIdNotFoundException("User with userId does not exist.");
+        }
+
+        if (account == null)
+        {
+            throw new AccountIdNotFoundException("Account with accountId does not exist.");
         }
 
         if (!account.Users.Contains(user))
         {
-            return "User is not associated with this account.";
+            return user;
         }
 
-        account.Users.Remove(user);
-        _bankRepository.CreateAccount(account);
-        return "Account successfully removed from family.";
+        _bankRepository.DeleteUserAccountByAccountId(userId, accountId);
+        _bankRepository.DeleteAccountUserByUserId(accountId, userId);
+        return user;
     }
 
-    public string UpdateUserProfile(int userId, string newUsername, string newPassword)
+    public User UpdateUserProfile(int userId, string newUsername, string newPassword)
     {
-        var user = _bankRepository.GetUserByUserId(userId);
+        User? user = _bankRepository.GetUserByUserId(userId);
         if (user == null)
         {
-            return "User not found.";
+            throw new UserIdNotFoundException("User with userId does not exist.");
         }
-
-        user.Username = newUsername;
-        user.Password = newPassword;
-        _bankRepository.CreateUser(user);
-        return "Profile updated successfully.";
+        User? existingUser = _bankRepository.GetUserByUsername(newUsername);
+        if (existingUser != null)
+        {
+            throw new UsernameAlreadyExistsException("Username is already in use.");
+        }
+        _bankRepository.UpdatePassword(userId, newPassword);
+        user = _bankRepository.UpdateUsername(userId, newUsername);
+        if (user == null)
+        {
+            throw new RepositoryException("Unknown repository exception.");
+        }
+        return user;
     }
 
     public Account CreateAccount(Account account)
@@ -187,4 +223,5 @@ public class BankService : IBankService
         user.UserId = 0;
         return _bankRepository.CreateUser(user);
     }
+
 }
