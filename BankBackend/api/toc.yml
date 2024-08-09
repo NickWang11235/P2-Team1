@@ -1,0 +1,55 @@
+### YamlMime:TableOfContent
+items:
+- uid: BankBackend.Controllers
+  name: BankBackend.Controllers
+  items:
+  - uid: BankBackend.Controllers.AccountController
+    name: AccountController
+  - uid: BankBackend.Controllers.UsersController
+    name: UsersController
+- uid: BankBackend.Models
+  name: BankBackend.Models
+  items:
+  - uid: BankBackend.Models.Account
+    name: Account
+  - uid: BankBackend.Models.AccountType
+    name: AccountType
+  - uid: BankBackend.Models.Transaction
+    name: Transaction
+  - uid: BankBackend.Models.User
+    name: User
+- uid: BankBackend.Repository
+  name: BankBackend.Repository
+  items:
+  - uid: BankBackend.Repository.BankContext
+    name: BankContext
+  - uid: BankBackend.Repository.BankRepository
+    name: BankRepository
+  - uid: BankBackend.Repository.IBankRepository
+    name: IBankRepository
+- uid: BankBackend.Service
+  name: BankBackend.Service
+  items:
+  - uid: BankBackend.Service.AccountIdNotFoundException
+    name: AccountIdNotFoundException
+  - uid: BankBackend.Service.BankExceptions
+    name: BankExceptions
+  - uid: BankBackend.Service.BankService
+    name: BankService
+  - uid: BankBackend.Service.IBankService
+    name: IBankService
+  - uid: BankBackend.Service.InsufficientFundsException
+    name: InsufficientFundsException
+  - uid: BankBackend.Service.InvalidPasswordException
+    name: InvalidPasswordException
+  - uid: BankBackend.Service.RepositoryException
+    name: RepositoryException
+  - uid: BankBackend.Service.UserIdNotFoundException
+    name: UserIdNotFoundException
+  - uid: BankBackend.Service.UserNotAuthorizedException
+    name: UserNotAuthorizedException
+  - uid: BankBackend.Service.UsernameAlreadyExistsException
+    name: UsernameAlreadyExistsException
+  - uid: BankBackend.Service.UsernameNotFoundException
+    name: UsernameNotFoundException
+memberLayout: SamePage

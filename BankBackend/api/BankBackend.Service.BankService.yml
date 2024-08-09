@@ -1,0 +1,2082 @@
+### YamlMime:ManagedReference
+items:
+- uid: BankBackend.Service.BankService
+  commentId: T:BankBackend.Service.BankService
+  id: BankService
+  parent: BankBackend.Service
+  children:
+  - BankBackend.Service.BankService.#ctor(BankBackend.Repository.IBankRepository)
+  - BankBackend.Service.BankService.AddAccountUser(System.Int32,System.Int32,System.Int32)
+  - BankBackend.Service.BankService.CreateAccount(BankBackend.Models.Account)
+  - BankBackend.Service.BankService.CreateUser(BankBackend.Models.User)
+  - BankBackend.Service.BankService.Deposit(System.Int32,System.Int32,System.Double)
+  - BankBackend.Service.BankService.GetAccountByAccountId(System.Int32)
+  - BankBackend.Service.BankService.GetAccountsByUserId(System.Int32)
+  - BankBackend.Service.BankService.GetAllAccounts
+  - BankBackend.Service.BankService.GetAllUsers
+  - BankBackend.Service.BankService.GetTransactionsByAccountId(System.Int32)
+  - BankBackend.Service.BankService.GetTransactionsByUserId(System.Int32)
+  - BankBackend.Service.BankService.GetUserByUserId(System.Int32)
+  - BankBackend.Service.BankService.GetUserByUsername(System.String)
+  - BankBackend.Service.BankService.RemoveAccountUser(System.Int32,System.Int32)
+  - BankBackend.Service.BankService.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+  - BankBackend.Service.BankService.UpdateUserProfile(System.Int32,System.String,System.String)
+  - BankBackend.Service.BankService.ValidateLogin(System.String,System.String)
+  - BankBackend.Service.BankService.Withdraw(System.Int32,System.Int32,System.Double)
+  langs:
+  - csharp
+  - vb
+  name: BankService
+  nameWithType: BankService
+  fullName: BankBackend.Service.BankService
+  type: Class
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: BankService
+    path: src/Bank.Services/BankService.cs
+    startLine: 5
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  syntax:
+    content: 'public class BankService : IBankService'
+    content.vb: Public Class BankService Implements IBankService
+  inheritance:
+  - System.Object
+  implements:
+  - BankBackend.Service.IBankService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BankBackend.Service.BankService.#ctor(BankBackend.Repository.IBankRepository)
+  commentId: M:BankBackend.Service.BankService.#ctor(BankBackend.Repository.IBankRepository)
+  id: '#ctor(BankBackend.Repository.IBankRepository)'
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: BankService(IBankRepository)
+  nameWithType: BankService.BankService(IBankRepository)
+  fullName: BankBackend.Service.BankService.BankService(BankBackend.Repository.IBankRepository)
+  type: Constructor
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: .ctor
+    path: src/Bank.Services/BankService.cs
+    startLine: 13
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  summary: constructor for dependency injection
+  example: []
+  syntax:
+    content: public BankService(IBankRepository repository)
+    parameters:
+    - id: repository
+      type: BankBackend.Repository.IBankRepository
+      description: ''
+    content.vb: Public Sub New(repository As IBankRepository)
+  overload: BankBackend.Service.BankService.#ctor*
+  nameWithType.vb: BankService.New(IBankRepository)
+  fullName.vb: BankBackend.Service.BankService.New(BankBackend.Repository.IBankRepository)
+  name.vb: New(IBankRepository)
+- uid: BankBackend.Service.BankService.CreateUser(BankBackend.Models.User)
+  commentId: M:BankBackend.Service.BankService.CreateUser(BankBackend.Models.User)
+  id: CreateUser(BankBackend.Models.User)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: CreateUser(User)
+  nameWithType: BankService.CreateUser(User)
+  fullName: BankBackend.Service.BankService.CreateUser(BankBackend.Models.User)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: CreateUser
+    path: src/Bank.Services/BankService.cs
+    startLine: 24
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  summary: >-
+    creates a user and returns the created user
+
+    if the given user has any an <code>UserId</code> other than 0 the <code>UserId</code> is ignored
+  example: []
+  syntax:
+    content: public User CreateUser(User user)
+    parameters:
+    - id: user
+      type: BankBackend.Models.User
+      description: ''
+    return:
+      type: BankBackend.Models.User
+      description: the created user
+    content.vb: Public Function CreateUser(user As User) As User
+  overload: BankBackend.Service.BankService.CreateUser*
+  implements:
+  - BankBackend.Service.IBankService.CreateUser(BankBackend.Models.User)
+- uid: BankBackend.Service.BankService.GetAllUsers
+  commentId: M:BankBackend.Service.BankService.GetAllUsers
+  id: GetAllUsers
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: GetAllUsers()
+  nameWithType: BankService.GetAllUsers()
+  fullName: BankBackend.Service.BankService.GetAllUsers()
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: GetAllUsers
+    path: src/Bank.Services/BankService.cs
+    startLine: 34
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  summary: finds all users
+  example: []
+  syntax:
+    content: public List<User> GetAllUsers()
+    return:
+      type: System.Collections.Generic.List{BankBackend.Models.User}
+      description: all users
+    content.vb: Public Function GetAllUsers() As List(Of User)
+  overload: BankBackend.Service.BankService.GetAllUsers*
+  implements:
+  - BankBackend.Service.IBankService.GetAllUsers
+- uid: BankBackend.Service.BankService.ValidateLogin(System.String,System.String)
+  commentId: M:BankBackend.Service.BankService.ValidateLogin(System.String,System.String)
+  id: ValidateLogin(System.String,System.String)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: ValidateLogin(string, string)
+  nameWithType: BankService.ValidateLogin(string, string)
+  fullName: BankBackend.Service.BankService.ValidateLogin(string, string)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: ValidateLogin
+    path: src/Bank.Services/BankService.cs
+    startLine: 47
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  summary: validates user loging with <code>username</code> and<code>password</code>
+  example: []
+  syntax:
+    content: public User ValidateLogin(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+      description: ''
+    - id: password
+      type: System.String
+      description: ''
+    return:
+      type: BankBackend.Models.User
+      description: the logged in user if credentials are correct
+    content.vb: Public Function ValidateLogin(username As String, password As String) As User
+  overload: BankBackend.Service.BankService.ValidateLogin*
+  exceptions:
+  - type: BankBackend.Service.UsernameNotFoundException
+    commentId: T:BankBackend.Service.UsernameNotFoundException
+    description: if user name does not exist
+  - type: BankBackend.Service.InvalidPasswordException
+    commentId: T:BankBackend.Service.InvalidPasswordException
+    description: if password is incorrect
+  implements:
+  - BankBackend.Service.IBankService.ValidateLogin(System.String,System.String)
+  nameWithType.vb: BankService.ValidateLogin(String, String)
+  fullName.vb: BankBackend.Service.BankService.ValidateLogin(String, String)
+  name.vb: ValidateLogin(String, String)
+- uid: BankBackend.Service.BankService.GetUserByUsername(System.String)
+  commentId: M:BankBackend.Service.BankService.GetUserByUsername(System.String)
+  id: GetUserByUsername(System.String)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: GetUserByUsername(string)
+  nameWithType: BankService.GetUserByUsername(string)
+  fullName: BankBackend.Service.BankService.GetUserByUsername(string)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: GetUserByUsername
+    path: src/Bank.Services/BankService.cs
+    startLine: 69
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  summary: finds a user by <code>username</code>
+  example: []
+  syntax:
+    content: public User GetUserByUsername(string username)
+    parameters:
+    - id: username
+      type: System.String
+      description: ''
+    return:
+      type: BankBackend.Models.User
+      description: user with the username
+    content.vb: Public Function GetUserByUsername(username As String) As User
+  overload: BankBackend.Service.BankService.GetUserByUsername*
+  exceptions:
+  - type: BankBackend.Service.UsernameNotFoundException
+    commentId: T:BankBackend.Service.UsernameNotFoundException
+    description: if a user with the username does not exist
+  implements:
+  - BankBackend.Service.IBankService.GetUserByUsername(System.String)
+  nameWithType.vb: BankService.GetUserByUsername(String)
+  fullName.vb: BankBackend.Service.BankService.GetUserByUsername(String)
+  name.vb: GetUserByUsername(String)
+- uid: BankBackend.Service.BankService.GetUserByUserId(System.Int32)
+  commentId: M:BankBackend.Service.BankService.GetUserByUserId(System.Int32)
+  id: GetUserByUserId(System.Int32)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: GetUserByUserId(int)
+  nameWithType: BankService.GetUserByUserId(int)
+  fullName: BankBackend.Service.BankService.GetUserByUserId(int)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: GetUserByUserId
+    path: src/Bank.Services/BankService.cs
+    startLine: 85
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  summary: finds a user by <code>userId</code>
+  example: []
+  syntax:
+    content: public User GetUserByUserId(int userId)
+    parameters:
+    - id: userId
+      type: System.Int32
+      description: ''
+    return:
+      type: BankBackend.Models.User
+      description: ''
+    content.vb: Public Function GetUserByUserId(userId As Integer) As User
+  overload: BankBackend.Service.BankService.GetUserByUserId*
+  exceptions:
+  - type: BankBackend.Service.UserIdNotFoundException
+    commentId: T:BankBackend.Service.UserIdNotFoundException
+    description: if a user with the userId does not exist
+  implements:
+  - BankBackend.Service.IBankService.GetUserByUserId(System.Int32)
+  nameWithType.vb: BankService.GetUserByUserId(Integer)
+  fullName.vb: BankBackend.Service.BankService.GetUserByUserId(Integer)
+  name.vb: GetUserByUserId(Integer)
+- uid: BankBackend.Service.BankService.GetAccountsByUserId(System.Int32)
+  commentId: M:BankBackend.Service.BankService.GetAccountsByUserId(System.Int32)
+  id: GetAccountsByUserId(System.Int32)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: GetAccountsByUserId(int)
+  nameWithType: BankService.GetAccountsByUserId(int)
+  fullName: BankBackend.Service.BankService.GetAccountsByUserId(int)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: GetAccountsByUserId
+    path: src/Bank.Services/BankService.cs
+    startLine: 101
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  summary: find
+  example: []
+  syntax:
+    content: public List<Account> GetAccountsByUserId(int userId)
+    parameters:
+    - id: userId
+      type: System.Int32
+      description: ''
+    return:
+      type: System.Collections.Generic.List{BankBackend.Models.Account}
+      description: ''
+    content.vb: Public Function GetAccountsByUserId(userId As Integer) As List(Of Account)
+  overload: BankBackend.Service.BankService.GetAccountsByUserId*
+  exceptions:
+  - type: BankBackend.Service.UserIdNotFoundException
+    commentId: T:BankBackend.Service.UserIdNotFoundException
+    description: ''
+  implements:
+  - BankBackend.Service.IBankService.GetAccountsByUserId(System.Int32)
+  nameWithType.vb: BankService.GetAccountsByUserId(Integer)
+  fullName.vb: BankBackend.Service.BankService.GetAccountsByUserId(Integer)
+  name.vb: GetAccountsByUserId(Integer)
+- uid: BankBackend.Service.BankService.UpdateUserProfile(System.Int32,System.String,System.String)
+  commentId: M:BankBackend.Service.BankService.UpdateUserProfile(System.Int32,System.String,System.String)
+  id: UpdateUserProfile(System.Int32,System.String,System.String)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: UpdateUserProfile(int, string, string)
+  nameWithType: BankService.UpdateUserProfile(int, string, string)
+  fullName: BankBackend.Service.BankService.UpdateUserProfile(int, string, string)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: UpdateUserProfile
+    path: src/Bank.Services/BankService.cs
+    startLine: 111
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  example: []
+  syntax:
+    content: public User UpdateUserProfile(int userId, string newUsername, string newPassword)
+    parameters:
+    - id: userId
+      type: System.Int32
+    - id: newUsername
+      type: System.String
+    - id: newPassword
+      type: System.String
+    return:
+      type: BankBackend.Models.User
+    content.vb: Public Function UpdateUserProfile(userId As Integer, newUsername As String, newPassword As String) As User
+  overload: BankBackend.Service.BankService.UpdateUserProfile*
+  implements:
+  - BankBackend.Service.IBankService.UpdateUserProfile(System.Int32,System.String,System.String)
+  nameWithType.vb: BankService.UpdateUserProfile(Integer, String, String)
+  fullName.vb: BankBackend.Service.BankService.UpdateUserProfile(Integer, String, String)
+  name.vb: UpdateUserProfile(Integer, String, String)
+- uid: BankBackend.Service.BankService.AddAccountUser(System.Int32,System.Int32,System.Int32)
+  commentId: M:BankBackend.Service.BankService.AddAccountUser(System.Int32,System.Int32,System.Int32)
+  id: AddAccountUser(System.Int32,System.Int32,System.Int32)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: AddAccountUser(int, int, int)
+  nameWithType: BankService.AddAccountUser(int, int, int)
+  fullName: BankBackend.Service.BankService.AddAccountUser(int, int, int)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: AddAccountUser
+    path: src/Bank.Services/BankService.cs
+    startLine: 132
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  example: []
+  syntax:
+    content: public User AddAccountUser(int userId, int addedUser, int accountId)
+    parameters:
+    - id: userId
+      type: System.Int32
+    - id: addedUser
+      type: System.Int32
+    - id: accountId
+      type: System.Int32
+    return:
+      type: BankBackend.Models.User
+    content.vb: Public Function AddAccountUser(userId As Integer, addedUser As Integer, accountId As Integer) As User
+  overload: BankBackend.Service.BankService.AddAccountUser*
+  implements:
+  - BankBackend.Service.IBankService.AddAccountUser(System.Int32,System.Int32,System.Int32)
+  nameWithType.vb: BankService.AddAccountUser(Integer, Integer, Integer)
+  fullName.vb: BankBackend.Service.BankService.AddAccountUser(Integer, Integer, Integer)
+  name.vb: AddAccountUser(Integer, Integer, Integer)
+- uid: BankBackend.Service.BankService.RemoveAccountUser(System.Int32,System.Int32)
+  commentId: M:BankBackend.Service.BankService.RemoveAccountUser(System.Int32,System.Int32)
+  id: RemoveAccountUser(System.Int32,System.Int32)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: RemoveAccountUser(int, int)
+  nameWithType: BankService.RemoveAccountUser(int, int)
+  fullName: BankBackend.Service.BankService.RemoveAccountUser(int, int)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: RemoveAccountUser
+    path: src/Bank.Services/BankService.cs
+    startLine: 163
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  example: []
+  syntax:
+    content: public User RemoveAccountUser(int userId, int accountId)
+    parameters:
+    - id: userId
+      type: System.Int32
+    - id: accountId
+      type: System.Int32
+    return:
+      type: BankBackend.Models.User
+    content.vb: Public Function RemoveAccountUser(userId As Integer, accountId As Integer) As User
+  overload: BankBackend.Service.BankService.RemoveAccountUser*
+  implements:
+  - BankBackend.Service.IBankService.RemoveAccountUser(System.Int32,System.Int32)
+  nameWithType.vb: BankService.RemoveAccountUser(Integer, Integer)
+  fullName.vb: BankBackend.Service.BankService.RemoveAccountUser(Integer, Integer)
+  name.vb: RemoveAccountUser(Integer, Integer)
+- uid: BankBackend.Service.BankService.CreateAccount(BankBackend.Models.Account)
+  commentId: M:BankBackend.Service.BankService.CreateAccount(BankBackend.Models.Account)
+  id: CreateAccount(BankBackend.Models.Account)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: CreateAccount(Account)
+  nameWithType: BankService.CreateAccount(Account)
+  fullName: BankBackend.Service.BankService.CreateAccount(BankBackend.Models.Account)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: CreateAccount
+    path: src/Bank.Services/BankService.cs
+    startLine: 197
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  example: []
+  syntax:
+    content: public Account CreateAccount(Account account)
+    parameters:
+    - id: account
+      type: BankBackend.Models.Account
+    return:
+      type: BankBackend.Models.Account
+    content.vb: Public Function CreateAccount(account As Account) As Account
+  overload: BankBackend.Service.BankService.CreateAccount*
+  implements:
+  - BankBackend.Service.IBankService.CreateAccount(BankBackend.Models.Account)
+- uid: BankBackend.Service.BankService.GetAllAccounts
+  commentId: M:BankBackend.Service.BankService.GetAllAccounts
+  id: GetAllAccounts
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: GetAllAccounts()
+  nameWithType: BankService.GetAllAccounts()
+  fullName: BankBackend.Service.BankService.GetAllAccounts()
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: GetAllAccounts
+    path: src/Bank.Services/BankService.cs
+    startLine: 203
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  example: []
+  syntax:
+    content: public List<Account> GetAllAccounts()
+    return:
+      type: System.Collections.Generic.List{BankBackend.Models.Account}
+    content.vb: Public Function GetAllAccounts() As List(Of Account)
+  overload: BankBackend.Service.BankService.GetAllAccounts*
+  implements:
+  - BankBackend.Service.IBankService.GetAllAccounts
+- uid: BankBackend.Service.BankService.GetAccountByAccountId(System.Int32)
+  commentId: M:BankBackend.Service.BankService.GetAccountByAccountId(System.Int32)
+  id: GetAccountByAccountId(System.Int32)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: GetAccountByAccountId(int)
+  nameWithType: BankService.GetAccountByAccountId(int)
+  fullName: BankBackend.Service.BankService.GetAccountByAccountId(int)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: GetAccountByAccountId
+    path: src/Bank.Services/BankService.cs
+    startLine: 208
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  example: []
+  syntax:
+    content: public Account GetAccountByAccountId(int accountId)
+    parameters:
+    - id: accountId
+      type: System.Int32
+    return:
+      type: BankBackend.Models.Account
+    content.vb: Public Function GetAccountByAccountId(accountId As Integer) As Account
+  overload: BankBackend.Service.BankService.GetAccountByAccountId*
+  implements:
+  - BankBackend.Service.IBankService.GetAccountByAccountId(System.Int32)
+  nameWithType.vb: BankService.GetAccountByAccountId(Integer)
+  fullName.vb: BankBackend.Service.BankService.GetAccountByAccountId(Integer)
+  name.vb: GetAccountByAccountId(Integer)
+- uid: BankBackend.Service.BankService.GetTransactionsByUserId(System.Int32)
+  commentId: M:BankBackend.Service.BankService.GetTransactionsByUserId(System.Int32)
+  id: GetTransactionsByUserId(System.Int32)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: GetTransactionsByUserId(int)
+  nameWithType: BankService.GetTransactionsByUserId(int)
+  fullName: BankBackend.Service.BankService.GetTransactionsByUserId(int)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: GetTransactionsByUserId
+    path: src/Bank.Services/BankService.cs
+    startLine: 220
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  example: []
+  syntax:
+    content: public List<Transaction> GetTransactionsByUserId(int userId)
+    parameters:
+    - id: userId
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{BankBackend.Models.Transaction}
+    content.vb: Public Function GetTransactionsByUserId(userId As Integer) As List(Of Transaction)
+  overload: BankBackend.Service.BankService.GetTransactionsByUserId*
+  implements:
+  - BankBackend.Service.IBankService.GetTransactionsByUserId(System.Int32)
+  nameWithType.vb: BankService.GetTransactionsByUserId(Integer)
+  fullName.vb: BankBackend.Service.BankService.GetTransactionsByUserId(Integer)
+  name.vb: GetTransactionsByUserId(Integer)
+- uid: BankBackend.Service.BankService.GetTransactionsByAccountId(System.Int32)
+  commentId: M:BankBackend.Service.BankService.GetTransactionsByAccountId(System.Int32)
+  id: GetTransactionsByAccountId(System.Int32)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: GetTransactionsByAccountId(int)
+  nameWithType: BankService.GetTransactionsByAccountId(int)
+  fullName: BankBackend.Service.BankService.GetTransactionsByAccountId(int)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: GetTransactionsByAccountId
+    path: src/Bank.Services/BankService.cs
+    startLine: 238
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  example: []
+  syntax:
+    content: public List<Transaction> GetTransactionsByAccountId(int accountId)
+    parameters:
+    - id: accountId
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{BankBackend.Models.Transaction}
+    content.vb: Public Function GetTransactionsByAccountId(accountId As Integer) As List(Of Transaction)
+  overload: BankBackend.Service.BankService.GetTransactionsByAccountId*
+  implements:
+  - BankBackend.Service.IBankService.GetTransactionsByAccountId(System.Int32)
+  nameWithType.vb: BankService.GetTransactionsByAccountId(Integer)
+  fullName.vb: BankBackend.Service.BankService.GetTransactionsByAccountId(Integer)
+  name.vb: GetTransactionsByAccountId(Integer)
+- uid: BankBackend.Service.BankService.Deposit(System.Int32,System.Int32,System.Double)
+  commentId: M:BankBackend.Service.BankService.Deposit(System.Int32,System.Int32,System.Double)
+  id: Deposit(System.Int32,System.Int32,System.Double)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: Deposit(int, int, double)
+  nameWithType: BankService.Deposit(int, int, double)
+  fullName: BankBackend.Service.BankService.Deposit(int, int, double)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: Deposit
+    path: src/Bank.Services/BankService.cs
+    startLine: 253
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  example: []
+  syntax:
+    content: public Transaction Deposit(int userId, int accountId, double amount)
+    parameters:
+    - id: userId
+      type: System.Int32
+    - id: accountId
+      type: System.Int32
+    - id: amount
+      type: System.Double
+    return:
+      type: BankBackend.Models.Transaction
+    content.vb: Public Function Deposit(userId As Integer, accountId As Integer, amount As Double) As Transaction
+  overload: BankBackend.Service.BankService.Deposit*
+  implements:
+  - BankBackend.Service.IBankService.Deposit(System.Int32,System.Int32,System.Double)
+  nameWithType.vb: BankService.Deposit(Integer, Integer, Double)
+  fullName.vb: BankBackend.Service.BankService.Deposit(Integer, Integer, Double)
+  name.vb: Deposit(Integer, Integer, Double)
+- uid: BankBackend.Service.BankService.Withdraw(System.Int32,System.Int32,System.Double)
+  commentId: M:BankBackend.Service.BankService.Withdraw(System.Int32,System.Int32,System.Double)
+  id: Withdraw(System.Int32,System.Int32,System.Double)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: Withdraw(int, int, double)
+  nameWithType: BankService.Withdraw(int, int, double)
+  fullName: BankBackend.Service.BankService.Withdraw(int, int, double)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: Withdraw
+    path: src/Bank.Services/BankService.cs
+    startLine: 273
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  example: []
+  syntax:
+    content: public Transaction Withdraw(int userId, int accountId, double amount)
+    parameters:
+    - id: userId
+      type: System.Int32
+    - id: accountId
+      type: System.Int32
+    - id: amount
+      type: System.Double
+    return:
+      type: BankBackend.Models.Transaction
+    content.vb: Public Function Withdraw(userId As Integer, accountId As Integer, amount As Double) As Transaction
+  overload: BankBackend.Service.BankService.Withdraw*
+  implements:
+  - BankBackend.Service.IBankService.Withdraw(System.Int32,System.Int32,System.Double)
+  nameWithType.vb: BankService.Withdraw(Integer, Integer, Double)
+  fullName.vb: BankBackend.Service.BankService.Withdraw(Integer, Integer, Double)
+  name.vb: Withdraw(Integer, Integer, Double)
+- uid: BankBackend.Service.BankService.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+  commentId: M:BankBackend.Service.BankService.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+  id: Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+  parent: BankBackend.Service.BankService
+  langs:
+  - csharp
+  - vb
+  name: Transfer(int, int, int, double)
+  nameWithType: BankService.Transfer(int, int, int, double)
+  fullName: BankBackend.Service.BankService.Transfer(int, int, int, double)
+  type: Method
+  source:
+    remote:
+      path: BankBackend/src/Bank.Services/BankService.cs
+      branch: controller
+      repo: git@github.com:240708-NET/P2-Team1.git
+    id: Transfer
+    path: src/Bank.Services/BankService.cs
+    startLine: 297
+  assemblies:
+  - BankBackend
+  namespace: BankBackend.Service
+  example: []
+  syntax:
+    content: public Transaction Transfer(int userId, int fromAccountId, int toAccountId, double amount)
+    parameters:
+    - id: userId
+      type: System.Int32
+    - id: fromAccountId
+      type: System.Int32
+    - id: toAccountId
+      type: System.Int32
+    - id: amount
+      type: System.Double
+    return:
+      type: BankBackend.Models.Transaction
+    content.vb: Public Function Transfer(userId As Integer, fromAccountId As Integer, toAccountId As Integer, amount As Double) As Transaction
+  overload: BankBackend.Service.BankService.Transfer*
+  implements:
+  - BankBackend.Service.IBankService.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+  nameWithType.vb: BankService.Transfer(Integer, Integer, Integer, Double)
+  fullName.vb: BankBackend.Service.BankService.Transfer(Integer, Integer, Integer, Double)
+  name.vb: Transfer(Integer, Integer, Integer, Double)
+references:
+- uid: BankBackend.Service
+  commentId: N:BankBackend.Service
+  href: BankBackend.html
+  name: BankBackend.Service
+  nameWithType: BankBackend.Service
+  fullName: BankBackend.Service
+  spec.csharp:
+  - uid: BankBackend
+    name: BankBackend
+    href: BankBackend.html
+  - name: .
+  - uid: BankBackend.Service
+    name: Service
+    href: BankBackend.Service.html
+  spec.vb:
+  - uid: BankBackend
+    name: BankBackend
+    href: BankBackend.html
+  - name: .
+  - uid: BankBackend.Service
+    name: Service
+    href: BankBackend.Service.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: BankBackend.Service.IBankService
+  commentId: T:BankBackend.Service.IBankService
+  parent: BankBackend.Service
+  href: BankBackend.Service.IBankService.html
+  name: IBankService
+  nameWithType: IBankService
+  fullName: BankBackend.Service.IBankService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BankBackend.Service.BankService.#ctor*
+  commentId: Overload:BankBackend.Service.BankService.#ctor
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService__ctor_BankBackend_Repository_IBankRepository_
+  name: BankService
+  nameWithType: BankService.BankService
+  fullName: BankBackend.Service.BankService.BankService
+  nameWithType.vb: BankService.New
+  fullName.vb: BankBackend.Service.BankService.New
+  name.vb: New
+- uid: BankBackend.Repository.IBankRepository
+  commentId: T:BankBackend.Repository.IBankRepository
+  parent: BankBackend.Repository
+  href: BankBackend.Repository.IBankRepository.html
+  name: IBankRepository
+  nameWithType: IBankRepository
+  fullName: BankBackend.Repository.IBankRepository
+- uid: BankBackend.Repository
+  commentId: N:BankBackend.Repository
+  href: BankBackend.html
+  name: BankBackend.Repository
+  nameWithType: BankBackend.Repository
+  fullName: BankBackend.Repository
+  spec.csharp:
+  - uid: BankBackend
+    name: BankBackend
+    href: BankBackend.html
+  - name: .
+  - uid: BankBackend.Repository
+    name: Repository
+    href: BankBackend.Repository.html
+  spec.vb:
+  - uid: BankBackend
+    name: BankBackend
+    href: BankBackend.html
+  - name: .
+  - uid: BankBackend.Repository
+    name: Repository
+    href: BankBackend.Repository.html
+- uid: BankBackend.Service.BankService.CreateUser*
+  commentId: Overload:BankBackend.Service.BankService.CreateUser
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_CreateUser_BankBackend_Models_User_
+  name: CreateUser
+  nameWithType: BankService.CreateUser
+  fullName: BankBackend.Service.BankService.CreateUser
+- uid: BankBackend.Service.IBankService.CreateUser(BankBackend.Models.User)
+  commentId: M:BankBackend.Service.IBankService.CreateUser(BankBackend.Models.User)
+  parent: BankBackend.Service.IBankService
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_CreateUser_BankBackend_Models_User_
+  name: CreateUser(User)
+  nameWithType: IBankService.CreateUser(User)
+  fullName: BankBackend.Service.IBankService.CreateUser(BankBackend.Models.User)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.CreateUser(BankBackend.Models.User)
+    name: CreateUser
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_CreateUser_BankBackend_Models_User_
+  - name: (
+  - uid: BankBackend.Models.User
+    name: User
+    href: BankBackend.Models.User.html
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.CreateUser(BankBackend.Models.User)
+    name: CreateUser
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_CreateUser_BankBackend_Models_User_
+  - name: (
+  - uid: BankBackend.Models.User
+    name: User
+    href: BankBackend.Models.User.html
+  - name: )
+- uid: BankBackend.Models.User
+  commentId: T:BankBackend.Models.User
+  parent: BankBackend.Models
+  href: BankBackend.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: BankBackend.Models.User
+- uid: BankBackend.Models
+  commentId: N:BankBackend.Models
+  href: BankBackend.html
+  name: BankBackend.Models
+  nameWithType: BankBackend.Models
+  fullName: BankBackend.Models
+  spec.csharp:
+  - uid: BankBackend
+    name: BankBackend
+    href: BankBackend.html
+  - name: .
+  - uid: BankBackend.Models
+    name: Models
+    href: BankBackend.Models.html
+  spec.vb:
+  - uid: BankBackend
+    name: BankBackend
+    href: BankBackend.html
+  - name: .
+  - uid: BankBackend.Models
+    name: Models
+    href: BankBackend.Models.html
+- uid: BankBackend.Service.BankService.GetAllUsers*
+  commentId: Overload:BankBackend.Service.BankService.GetAllUsers
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetAllUsers
+  name: GetAllUsers
+  nameWithType: BankService.GetAllUsers
+  fullName: BankBackend.Service.BankService.GetAllUsers
+- uid: BankBackend.Service.IBankService.GetAllUsers
+  commentId: M:BankBackend.Service.IBankService.GetAllUsers
+  parent: BankBackend.Service.IBankService
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAllUsers
+  name: GetAllUsers()
+  nameWithType: IBankService.GetAllUsers()
+  fullName: BankBackend.Service.IBankService.GetAllUsers()
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.GetAllUsers
+    name: GetAllUsers
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAllUsers
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.GetAllUsers
+    name: GetAllUsers
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAllUsers
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.List{BankBackend.Models.User}
+  commentId: T:System.Collections.Generic.List{BankBackend.Models.User}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<User>
+  nameWithType: List<User>
+  fullName: System.Collections.Generic.List<BankBackend.Models.User>
+  nameWithType.vb: List(Of User)
+  fullName.vb: System.Collections.Generic.List(Of BankBackend.Models.User)
+  name.vb: List(Of User)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: BankBackend.Models.User
+    name: User
+    href: BankBackend.Models.User.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BankBackend.Models.User
+    name: User
+    href: BankBackend.Models.User.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: BankBackend.Service.UsernameNotFoundException
+  commentId: T:BankBackend.Service.UsernameNotFoundException
+  href: BankBackend.Service.UsernameNotFoundException.html
+  name: UsernameNotFoundException
+  nameWithType: UsernameNotFoundException
+  fullName: BankBackend.Service.UsernameNotFoundException
+- uid: BankBackend.Service.InvalidPasswordException
+  commentId: T:BankBackend.Service.InvalidPasswordException
+  href: BankBackend.Service.InvalidPasswordException.html
+  name: InvalidPasswordException
+  nameWithType: InvalidPasswordException
+  fullName: BankBackend.Service.InvalidPasswordException
+- uid: BankBackend.Service.BankService.ValidateLogin*
+  commentId: Overload:BankBackend.Service.BankService.ValidateLogin
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_ValidateLogin_System_String_System_String_
+  name: ValidateLogin
+  nameWithType: BankService.ValidateLogin
+  fullName: BankBackend.Service.BankService.ValidateLogin
+- uid: BankBackend.Service.IBankService.ValidateLogin(System.String,System.String)
+  commentId: M:BankBackend.Service.IBankService.ValidateLogin(System.String,System.String)
+  parent: BankBackend.Service.IBankService
+  isExternal: true
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_ValidateLogin_System_String_System_String_
+  name: ValidateLogin(string, string)
+  nameWithType: IBankService.ValidateLogin(string, string)
+  fullName: BankBackend.Service.IBankService.ValidateLogin(string, string)
+  nameWithType.vb: IBankService.ValidateLogin(String, String)
+  fullName.vb: BankBackend.Service.IBankService.ValidateLogin(String, String)
+  name.vb: ValidateLogin(String, String)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.ValidateLogin(System.String,System.String)
+    name: ValidateLogin
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_ValidateLogin_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.ValidateLogin(System.String,System.String)
+    name: ValidateLogin
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_ValidateLogin_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BankBackend.Service.BankService.GetUserByUsername*
+  commentId: Overload:BankBackend.Service.BankService.GetUserByUsername
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetUserByUsername_System_String_
+  name: GetUserByUsername
+  nameWithType: BankService.GetUserByUsername
+  fullName: BankBackend.Service.BankService.GetUserByUsername
+- uid: BankBackend.Service.IBankService.GetUserByUsername(System.String)
+  commentId: M:BankBackend.Service.IBankService.GetUserByUsername(System.String)
+  parent: BankBackend.Service.IBankService
+  isExternal: true
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetUserByUsername_System_String_
+  name: GetUserByUsername(string)
+  nameWithType: IBankService.GetUserByUsername(string)
+  fullName: BankBackend.Service.IBankService.GetUserByUsername(string)
+  nameWithType.vb: IBankService.GetUserByUsername(String)
+  fullName.vb: BankBackend.Service.IBankService.GetUserByUsername(String)
+  name.vb: GetUserByUsername(String)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.GetUserByUsername(System.String)
+    name: GetUserByUsername
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetUserByUsername_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.GetUserByUsername(System.String)
+    name: GetUserByUsername
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetUserByUsername_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BankBackend.Service.UserIdNotFoundException
+  commentId: T:BankBackend.Service.UserIdNotFoundException
+  href: BankBackend.Service.UserIdNotFoundException.html
+  name: UserIdNotFoundException
+  nameWithType: UserIdNotFoundException
+  fullName: BankBackend.Service.UserIdNotFoundException
+- uid: BankBackend.Service.BankService.GetUserByUserId*
+  commentId: Overload:BankBackend.Service.BankService.GetUserByUserId
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetUserByUserId_System_Int32_
+  name: GetUserByUserId
+  nameWithType: BankService.GetUserByUserId
+  fullName: BankBackend.Service.BankService.GetUserByUserId
+- uid: BankBackend.Service.IBankService.GetUserByUserId(System.Int32)
+  commentId: M:BankBackend.Service.IBankService.GetUserByUserId(System.Int32)
+  parent: BankBackend.Service.IBankService
+  isExternal: true
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetUserByUserId_System_Int32_
+  name: GetUserByUserId(int)
+  nameWithType: IBankService.GetUserByUserId(int)
+  fullName: BankBackend.Service.IBankService.GetUserByUserId(int)
+  nameWithType.vb: IBankService.GetUserByUserId(Integer)
+  fullName.vb: BankBackend.Service.IBankService.GetUserByUserId(Integer)
+  name.vb: GetUserByUserId(Integer)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.GetUserByUserId(System.Int32)
+    name: GetUserByUserId
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetUserByUserId_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.GetUserByUserId(System.Int32)
+    name: GetUserByUserId
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetUserByUserId_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: BankBackend.Service.BankService.GetAccountsByUserId*
+  commentId: Overload:BankBackend.Service.BankService.GetAccountsByUserId
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetAccountsByUserId_System_Int32_
+  name: GetAccountsByUserId
+  nameWithType: BankService.GetAccountsByUserId
+  fullName: BankBackend.Service.BankService.GetAccountsByUserId
+- uid: BankBackend.Service.IBankService.GetAccountsByUserId(System.Int32)
+  commentId: M:BankBackend.Service.IBankService.GetAccountsByUserId(System.Int32)
+  parent: BankBackend.Service.IBankService
+  isExternal: true
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAccountsByUserId_System_Int32_
+  name: GetAccountsByUserId(int)
+  nameWithType: IBankService.GetAccountsByUserId(int)
+  fullName: BankBackend.Service.IBankService.GetAccountsByUserId(int)
+  nameWithType.vb: IBankService.GetAccountsByUserId(Integer)
+  fullName.vb: BankBackend.Service.IBankService.GetAccountsByUserId(Integer)
+  name.vb: GetAccountsByUserId(Integer)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.GetAccountsByUserId(System.Int32)
+    name: GetAccountsByUserId
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAccountsByUserId_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.GetAccountsByUserId(System.Int32)
+    name: GetAccountsByUserId
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAccountsByUserId_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.List{BankBackend.Models.Account}
+  commentId: T:System.Collections.Generic.List{BankBackend.Models.Account}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Account>
+  nameWithType: List<Account>
+  fullName: System.Collections.Generic.List<BankBackend.Models.Account>
+  nameWithType.vb: List(Of Account)
+  fullName.vb: System.Collections.Generic.List(Of BankBackend.Models.Account)
+  name.vb: List(Of Account)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: BankBackend.Models.Account
+    name: Account
+    href: BankBackend.Models.Account.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BankBackend.Models.Account
+    name: Account
+    href: BankBackend.Models.Account.html
+  - name: )
+- uid: BankBackend.Service.BankService.UpdateUserProfile*
+  commentId: Overload:BankBackend.Service.BankService.UpdateUserProfile
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_UpdateUserProfile_System_Int32_System_String_System_String_
+  name: UpdateUserProfile
+  nameWithType: BankService.UpdateUserProfile
+  fullName: BankBackend.Service.BankService.UpdateUserProfile
+- uid: BankBackend.Service.IBankService.UpdateUserProfile(System.Int32,System.String,System.String)
+  commentId: M:BankBackend.Service.IBankService.UpdateUserProfile(System.Int32,System.String,System.String)
+  parent: BankBackend.Service.IBankService
+  isExternal: true
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_UpdateUserProfile_System_Int32_System_String_System_String_
+  name: UpdateUserProfile(int, string, string)
+  nameWithType: IBankService.UpdateUserProfile(int, string, string)
+  fullName: BankBackend.Service.IBankService.UpdateUserProfile(int, string, string)
+  nameWithType.vb: IBankService.UpdateUserProfile(Integer, String, String)
+  fullName.vb: BankBackend.Service.IBankService.UpdateUserProfile(Integer, String, String)
+  name.vb: UpdateUserProfile(Integer, String, String)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.UpdateUserProfile(System.Int32,System.String,System.String)
+    name: UpdateUserProfile
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_UpdateUserProfile_System_Int32_System_String_System_String_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.UpdateUserProfile(System.Int32,System.String,System.String)
+    name: UpdateUserProfile
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_UpdateUserProfile_System_Int32_System_String_System_String_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BankBackend.Service.BankService.AddAccountUser*
+  commentId: Overload:BankBackend.Service.BankService.AddAccountUser
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_AddAccountUser_System_Int32_System_Int32_System_Int32_
+  name: AddAccountUser
+  nameWithType: BankService.AddAccountUser
+  fullName: BankBackend.Service.BankService.AddAccountUser
+- uid: BankBackend.Service.IBankService.AddAccountUser(System.Int32,System.Int32,System.Int32)
+  commentId: M:BankBackend.Service.IBankService.AddAccountUser(System.Int32,System.Int32,System.Int32)
+  parent: BankBackend.Service.IBankService
+  isExternal: true
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_AddAccountUser_System_Int32_System_Int32_System_Int32_
+  name: AddAccountUser(int, int, int)
+  nameWithType: IBankService.AddAccountUser(int, int, int)
+  fullName: BankBackend.Service.IBankService.AddAccountUser(int, int, int)
+  nameWithType.vb: IBankService.AddAccountUser(Integer, Integer, Integer)
+  fullName.vb: BankBackend.Service.IBankService.AddAccountUser(Integer, Integer, Integer)
+  name.vb: AddAccountUser(Integer, Integer, Integer)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.AddAccountUser(System.Int32,System.Int32,System.Int32)
+    name: AddAccountUser
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_AddAccountUser_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.AddAccountUser(System.Int32,System.Int32,System.Int32)
+    name: AddAccountUser
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_AddAccountUser_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: BankBackend.Service.BankService.RemoveAccountUser*
+  commentId: Overload:BankBackend.Service.BankService.RemoveAccountUser
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_RemoveAccountUser_System_Int32_System_Int32_
+  name: RemoveAccountUser
+  nameWithType: BankService.RemoveAccountUser
+  fullName: BankBackend.Service.BankService.RemoveAccountUser
+- uid: BankBackend.Service.IBankService.RemoveAccountUser(System.Int32,System.Int32)
+  commentId: M:BankBackend.Service.IBankService.RemoveAccountUser(System.Int32,System.Int32)
+  parent: BankBackend.Service.IBankService
+  isExternal: true
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_RemoveAccountUser_System_Int32_System_Int32_
+  name: RemoveAccountUser(int, int)
+  nameWithType: IBankService.RemoveAccountUser(int, int)
+  fullName: BankBackend.Service.IBankService.RemoveAccountUser(int, int)
+  nameWithType.vb: IBankService.RemoveAccountUser(Integer, Integer)
+  fullName.vb: BankBackend.Service.IBankService.RemoveAccountUser(Integer, Integer)
+  name.vb: RemoveAccountUser(Integer, Integer)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.RemoveAccountUser(System.Int32,System.Int32)
+    name: RemoveAccountUser
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_RemoveAccountUser_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.RemoveAccountUser(System.Int32,System.Int32)
+    name: RemoveAccountUser
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_RemoveAccountUser_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: BankBackend.Service.BankService.CreateAccount*
+  commentId: Overload:BankBackend.Service.BankService.CreateAccount
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_CreateAccount_BankBackend_Models_Account_
+  name: CreateAccount
+  nameWithType: BankService.CreateAccount
+  fullName: BankBackend.Service.BankService.CreateAccount
+- uid: BankBackend.Service.IBankService.CreateAccount(BankBackend.Models.Account)
+  commentId: M:BankBackend.Service.IBankService.CreateAccount(BankBackend.Models.Account)
+  parent: BankBackend.Service.IBankService
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_CreateAccount_BankBackend_Models_Account_
+  name: CreateAccount(Account)
+  nameWithType: IBankService.CreateAccount(Account)
+  fullName: BankBackend.Service.IBankService.CreateAccount(BankBackend.Models.Account)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.CreateAccount(BankBackend.Models.Account)
+    name: CreateAccount
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_CreateAccount_BankBackend_Models_Account_
+  - name: (
+  - uid: BankBackend.Models.Account
+    name: Account
+    href: BankBackend.Models.Account.html
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.CreateAccount(BankBackend.Models.Account)
+    name: CreateAccount
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_CreateAccount_BankBackend_Models_Account_
+  - name: (
+  - uid: BankBackend.Models.Account
+    name: Account
+    href: BankBackend.Models.Account.html
+  - name: )
+- uid: BankBackend.Models.Account
+  commentId: T:BankBackend.Models.Account
+  parent: BankBackend.Models
+  href: BankBackend.Models.Account.html
+  name: Account
+  nameWithType: Account
+  fullName: BankBackend.Models.Account
+- uid: BankBackend.Service.BankService.GetAllAccounts*
+  commentId: Overload:BankBackend.Service.BankService.GetAllAccounts
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetAllAccounts
+  name: GetAllAccounts
+  nameWithType: BankService.GetAllAccounts
+  fullName: BankBackend.Service.BankService.GetAllAccounts
+- uid: BankBackend.Service.IBankService.GetAllAccounts
+  commentId: M:BankBackend.Service.IBankService.GetAllAccounts
+  parent: BankBackend.Service.IBankService
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAllAccounts
+  name: GetAllAccounts()
+  nameWithType: IBankService.GetAllAccounts()
+  fullName: BankBackend.Service.IBankService.GetAllAccounts()
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.GetAllAccounts
+    name: GetAllAccounts
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAllAccounts
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.GetAllAccounts
+    name: GetAllAccounts
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAllAccounts
+  - name: (
+  - name: )
+- uid: BankBackend.Service.BankService.GetAccountByAccountId*
+  commentId: Overload:BankBackend.Service.BankService.GetAccountByAccountId
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetAccountByAccountId_System_Int32_
+  name: GetAccountByAccountId
+  nameWithType: BankService.GetAccountByAccountId
+  fullName: BankBackend.Service.BankService.GetAccountByAccountId
+- uid: BankBackend.Service.IBankService.GetAccountByAccountId(System.Int32)
+  commentId: M:BankBackend.Service.IBankService.GetAccountByAccountId(System.Int32)
+  parent: BankBackend.Service.IBankService
+  isExternal: true
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAccountByAccountId_System_Int32_
+  name: GetAccountByAccountId(int)
+  nameWithType: IBankService.GetAccountByAccountId(int)
+  fullName: BankBackend.Service.IBankService.GetAccountByAccountId(int)
+  nameWithType.vb: IBankService.GetAccountByAccountId(Integer)
+  fullName.vb: BankBackend.Service.IBankService.GetAccountByAccountId(Integer)
+  name.vb: GetAccountByAccountId(Integer)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.GetAccountByAccountId(System.Int32)
+    name: GetAccountByAccountId
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAccountByAccountId_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.GetAccountByAccountId(System.Int32)
+    name: GetAccountByAccountId
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAccountByAccountId_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: BankBackend.Service.BankService.GetTransactionsByUserId*
+  commentId: Overload:BankBackend.Service.BankService.GetTransactionsByUserId
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetTransactionsByUserId_System_Int32_
+  name: GetTransactionsByUserId
+  nameWithType: BankService.GetTransactionsByUserId
+  fullName: BankBackend.Service.BankService.GetTransactionsByUserId
+- uid: BankBackend.Service.IBankService.GetTransactionsByUserId(System.Int32)
+  commentId: M:BankBackend.Service.IBankService.GetTransactionsByUserId(System.Int32)
+  parent: BankBackend.Service.IBankService
+  isExternal: true
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetTransactionsByUserId_System_Int32_
+  name: GetTransactionsByUserId(int)
+  nameWithType: IBankService.GetTransactionsByUserId(int)
+  fullName: BankBackend.Service.IBankService.GetTransactionsByUserId(int)
+  nameWithType.vb: IBankService.GetTransactionsByUserId(Integer)
+  fullName.vb: BankBackend.Service.IBankService.GetTransactionsByUserId(Integer)
+  name.vb: GetTransactionsByUserId(Integer)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.GetTransactionsByUserId(System.Int32)
+    name: GetTransactionsByUserId
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetTransactionsByUserId_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.GetTransactionsByUserId(System.Int32)
+    name: GetTransactionsByUserId
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetTransactionsByUserId_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.List{BankBackend.Models.Transaction}
+  commentId: T:System.Collections.Generic.List{BankBackend.Models.Transaction}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Transaction>
+  nameWithType: List<Transaction>
+  fullName: System.Collections.Generic.List<BankBackend.Models.Transaction>
+  nameWithType.vb: List(Of Transaction)
+  fullName.vb: System.Collections.Generic.List(Of BankBackend.Models.Transaction)
+  name.vb: List(Of Transaction)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: BankBackend.Models.Transaction
+    name: Transaction
+    href: BankBackend.Models.Transaction.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BankBackend.Models.Transaction
+    name: Transaction
+    href: BankBackend.Models.Transaction.html
+  - name: )
+- uid: BankBackend.Service.BankService.GetTransactionsByAccountId*
+  commentId: Overload:BankBackend.Service.BankService.GetTransactionsByAccountId
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetTransactionsByAccountId_System_Int32_
+  name: GetTransactionsByAccountId
+  nameWithType: BankService.GetTransactionsByAccountId
+  fullName: BankBackend.Service.BankService.GetTransactionsByAccountId
+- uid: BankBackend.Service.IBankService.GetTransactionsByAccountId(System.Int32)
+  commentId: M:BankBackend.Service.IBankService.GetTransactionsByAccountId(System.Int32)
+  parent: BankBackend.Service.IBankService
+  isExternal: true
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetTransactionsByAccountId_System_Int32_
+  name: GetTransactionsByAccountId(int)
+  nameWithType: IBankService.GetTransactionsByAccountId(int)
+  fullName: BankBackend.Service.IBankService.GetTransactionsByAccountId(int)
+  nameWithType.vb: IBankService.GetTransactionsByAccountId(Integer)
+  fullName.vb: BankBackend.Service.IBankService.GetTransactionsByAccountId(Integer)
+  name.vb: GetTransactionsByAccountId(Integer)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.GetTransactionsByAccountId(System.Int32)
+    name: GetTransactionsByAccountId
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetTransactionsByAccountId_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.GetTransactionsByAccountId(System.Int32)
+    name: GetTransactionsByAccountId
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetTransactionsByAccountId_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: BankBackend.Service.BankService.Deposit*
+  commentId: Overload:BankBackend.Service.BankService.Deposit
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_Deposit_System_Int32_System_Int32_System_Double_
+  name: Deposit
+  nameWithType: BankService.Deposit
+  fullName: BankBackend.Service.BankService.Deposit
+- uid: BankBackend.Service.IBankService.Deposit(System.Int32,System.Int32,System.Double)
+  commentId: M:BankBackend.Service.IBankService.Deposit(System.Int32,System.Int32,System.Double)
+  parent: BankBackend.Service.IBankService
+  isExternal: true
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Deposit_System_Int32_System_Int32_System_Double_
+  name: Deposit(int, int, double)
+  nameWithType: IBankService.Deposit(int, int, double)
+  fullName: BankBackend.Service.IBankService.Deposit(int, int, double)
+  nameWithType.vb: IBankService.Deposit(Integer, Integer, Double)
+  fullName.vb: BankBackend.Service.IBankService.Deposit(Integer, Integer, Double)
+  name.vb: Deposit(Integer, Integer, Double)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.Deposit(System.Int32,System.Int32,System.Double)
+    name: Deposit
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Deposit_System_Int32_System_Int32_System_Double_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.Deposit(System.Int32,System.Int32,System.Double)
+    name: Deposit
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Deposit_System_Int32_System_Int32_System_Double_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BankBackend.Models.Transaction
+  commentId: T:BankBackend.Models.Transaction
+  parent: BankBackend.Models
+  href: BankBackend.Models.Transaction.html
+  name: Transaction
+  nameWithType: Transaction
+  fullName: BankBackend.Models.Transaction
+- uid: BankBackend.Service.BankService.Withdraw*
+  commentId: Overload:BankBackend.Service.BankService.Withdraw
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_Withdraw_System_Int32_System_Int32_System_Double_
+  name: Withdraw
+  nameWithType: BankService.Withdraw
+  fullName: BankBackend.Service.BankService.Withdraw
+- uid: BankBackend.Service.IBankService.Withdraw(System.Int32,System.Int32,System.Double)
+  commentId: M:BankBackend.Service.IBankService.Withdraw(System.Int32,System.Int32,System.Double)
+  parent: BankBackend.Service.IBankService
+  isExternal: true
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Withdraw_System_Int32_System_Int32_System_Double_
+  name: Withdraw(int, int, double)
+  nameWithType: IBankService.Withdraw(int, int, double)
+  fullName: BankBackend.Service.IBankService.Withdraw(int, int, double)
+  nameWithType.vb: IBankService.Withdraw(Integer, Integer, Double)
+  fullName.vb: BankBackend.Service.IBankService.Withdraw(Integer, Integer, Double)
+  name.vb: Withdraw(Integer, Integer, Double)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.Withdraw(System.Int32,System.Int32,System.Double)
+    name: Withdraw
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Withdraw_System_Int32_System_Int32_System_Double_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.Withdraw(System.Int32,System.Int32,System.Double)
+    name: Withdraw
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Withdraw_System_Int32_System_Int32_System_Double_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: BankBackend.Service.BankService.Transfer*
+  commentId: Overload:BankBackend.Service.BankService.Transfer
+  href: BankBackend.Service.BankService.html#BankBackend_Service_BankService_Transfer_System_Int32_System_Int32_System_Int32_System_Double_
+  name: Transfer
+  nameWithType: BankService.Transfer
+  fullName: BankBackend.Service.BankService.Transfer
+- uid: BankBackend.Service.IBankService.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+  commentId: M:BankBackend.Service.IBankService.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+  parent: BankBackend.Service.IBankService
+  isExternal: true
+  href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Transfer_System_Int32_System_Int32_System_Int32_System_Double_
+  name: Transfer(int, int, int, double)
+  nameWithType: IBankService.Transfer(int, int, int, double)
+  fullName: BankBackend.Service.IBankService.Transfer(int, int, int, double)
+  nameWithType.vb: IBankService.Transfer(Integer, Integer, Integer, Double)
+  fullName.vb: BankBackend.Service.IBankService.Transfer(Integer, Integer, Integer, Double)
+  name.vb: Transfer(Integer, Integer, Integer, Double)
+  spec.csharp:
+  - uid: BankBackend.Service.IBankService.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+    name: Transfer
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Transfer_System_Int32_System_Int32_System_Int32_System_Double_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: BankBackend.Service.IBankService.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+    name: Transfer
+    href: BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Transfer_System_Int32_System_Int32_System_Int32_System_Double_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )

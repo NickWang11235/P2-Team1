@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bank_Backend.Migrations
+  commentId: N:Bank_Backend.Migrations
+  id: Bank_Backend.Migrations
+  children:
+  - Bank_Backend.Migrations.Initial
+  langs:
+  - csharp
+  - vb
+  name: Bank_Backend.Migrations
+  nameWithType: Bank_Backend.Migrations
+  fullName: Bank_Backend.Migrations
+  type: Namespace
+  assemblies:
+  - BankBackend
+references:
+- uid: Bank_Backend.Migrations.Initial
+  commentId: T:Bank_Backend.Migrations.Initial
+  href: Bank_Backend.Migrations.Initial.html
+  name: Initial
+  nameWithType: Initial
+  fullName: Bank_Backend.Migrations.Initial

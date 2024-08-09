@@ -1,0 +1,117 @@
+### YamlMime:ManagedReference
+items:
+- uid: BankBackend.Service
+  commentId: N:BankBackend.Service
+  id: BankBackend.Service
+  children:
+  - BankBackend.Service.AccountIdNotFoundException
+  - BankBackend.Service.BankExceptions
+  - BankBackend.Service.BankService
+  - BankBackend.Service.IBankService
+  - BankBackend.Service.InsufficientFundsException
+  - BankBackend.Service.InvalidPasswordException
+  - BankBackend.Service.RepositoryException
+  - BankBackend.Service.UserIdNotFoundException
+  - BankBackend.Service.UserNotAuthorizedException
+  - BankBackend.Service.UsernameAlreadyExistsException
+  - BankBackend.Service.UsernameNotFoundException
+  langs:
+  - csharp
+  - vb
+  name: BankBackend.Service
+  nameWithType: BankBackend.Service
+  fullName: BankBackend.Service
+  type: Namespace
+  assemblies:
+  - BankBackend
+references:
+- uid: BankBackend.Service.BankService
+  commentId: T:BankBackend.Service.BankService
+  href: BankBackend.Service.BankService.html
+  name: BankService
+  nameWithType: BankService
+  fullName: BankBackend.Service.BankService
+- uid: BankBackend.Service.BankExceptions
+  commentId: T:BankBackend.Service.BankExceptions
+  parent: BankBackend.Service
+  href: BankBackend.Service.BankExceptions.html
+  name: BankExceptions
+  nameWithType: BankExceptions
+  fullName: BankBackend.Service.BankExceptions
+- uid: BankBackend.Service.InvalidPasswordException
+  commentId: T:BankBackend.Service.InvalidPasswordException
+  href: BankBackend.Service.InvalidPasswordException.html
+  name: InvalidPasswordException
+  nameWithType: InvalidPasswordException
+  fullName: BankBackend.Service.InvalidPasswordException
+- uid: BankBackend.Service.UsernameNotFoundException
+  commentId: T:BankBackend.Service.UsernameNotFoundException
+  href: BankBackend.Service.UsernameNotFoundException.html
+  name: UsernameNotFoundException
+  nameWithType: UsernameNotFoundException
+  fullName: BankBackend.Service.UsernameNotFoundException
+- uid: BankBackend.Service.UsernameAlreadyExistsException
+  commentId: T:BankBackend.Service.UsernameAlreadyExistsException
+  href: BankBackend.Service.UsernameAlreadyExistsException.html
+  name: UsernameAlreadyExistsException
+  nameWithType: UsernameAlreadyExistsException
+  fullName: BankBackend.Service.UsernameAlreadyExistsException
+- uid: BankBackend.Service.UserIdNotFoundException
+  commentId: T:BankBackend.Service.UserIdNotFoundException
+  href: BankBackend.Service.UserIdNotFoundException.html
+  name: UserIdNotFoundException
+  nameWithType: UserIdNotFoundException
+  fullName: BankBackend.Service.UserIdNotFoundException
+- uid: BankBackend.Service.UserNotAuthorizedException
+  commentId: T:BankBackend.Service.UserNotAuthorizedException
+  href: BankBackend.Service.UserNotAuthorizedException.html
+  name: UserNotAuthorizedException
+  nameWithType: UserNotAuthorizedException
+  fullName: BankBackend.Service.UserNotAuthorizedException
+- uid: BankBackend.Service.AccountIdNotFoundException
+  commentId: T:BankBackend.Service.AccountIdNotFoundException
+  href: BankBackend.Service.AccountIdNotFoundException.html
+  name: AccountIdNotFoundException
+  nameWithType: AccountIdNotFoundException
+  fullName: BankBackend.Service.AccountIdNotFoundException
+- uid: BankBackend.Service.InsufficientFundsException
+  commentId: T:BankBackend.Service.InsufficientFundsException
+  href: BankBackend.Service.InsufficientFundsException.html
+  name: InsufficientFundsException
+  nameWithType: InsufficientFundsException
+  fullName: BankBackend.Service.InsufficientFundsException
+- uid: BankBackend.Service.RepositoryException
+  commentId: T:BankBackend.Service.RepositoryException
+  href: BankBackend.Service.RepositoryException.html
+  name: RepositoryException
+  nameWithType: RepositoryException
+  fullName: BankBackend.Service.RepositoryException
+- uid: BankBackend.Service.IBankService
+  commentId: T:BankBackend.Service.IBankService
+  parent: BankBackend.Service
+  href: BankBackend.Service.IBankService.html
+  name: IBankService
+  nameWithType: IBankService
+  fullName: BankBackend.Service.IBankService
+- uid: BankBackend.Service
+  commentId: N:BankBackend.Service
+  href: BankBackend.html
+  name: BankBackend.Service
+  nameWithType: BankBackend.Service
+  fullName: BankBackend.Service
+  spec.csharp:
+  - uid: BankBackend
+    name: BankBackend
+    href: BankBackend.html
+  - name: .
+  - uid: BankBackend.Service
+    name: Service
+    href: BankBackend.Service.html
+  spec.vb:
+  - uid: BankBackend
+    name: BankBackend
+    href: BankBackend.html
+  - name: .
+  - uid: BankBackend.Service
+    name: Service
+    href: BankBackend.Service.html

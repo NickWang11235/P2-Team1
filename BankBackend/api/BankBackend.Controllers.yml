@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: BankBackend.Controllers
+  commentId: N:BankBackend.Controllers
+  id: BankBackend.Controllers
+  children:
+  - BankBackend.Controllers.AccountController
+  - BankBackend.Controllers.UsersController
+  langs:
+  - csharp
+  - vb
+  name: BankBackend.Controllers
+  nameWithType: BankBackend.Controllers
+  fullName: BankBackend.Controllers
+  type: Namespace
+  assemblies:
+  - BankBackend
+references:
+- uid: BankBackend.Controllers.AccountController
+  commentId: T:BankBackend.Controllers.AccountController
+  href: BankBackend.Controllers.AccountController.html
+  name: AccountController
+  nameWithType: AccountController
+  fullName: BankBackend.Controllers.AccountController
+- uid: BankBackend.Controllers.UsersController
+  commentId: T:BankBackend.Controllers.UsersController
+  href: BankBackend.Controllers.UsersController.html
+  name: UsersController
+  nameWithType: UsersController
+  fullName: BankBackend.Controllers.UsersController
