@@ -20,7 +20,7 @@ public interface IBankService
     public List<Account> GetAccountsByUserId(int userId);
     // Update the profile of a user.
     public User UpdateUserProfile(int userId, string newUsername, string newPassword);
-    public User AddAccountUser(int userId, int accountId);
+    public User AddAccountUser(int userId, int addedUser, int accountId);
     // Remove an account from a family.
     public User RemoveAccountUser(int userId, int accountId);
     // Createa a new account

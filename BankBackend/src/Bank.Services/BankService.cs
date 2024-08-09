@@ -279,6 +279,4 @@ public class BankService : IBankService
         _bankRepository.UpdateBalance(toAccountId, toAccount.Balance + amount);
         return _bankRepository.CreateTransaction(new Transaction(fromAccount, toAccount, amount));
     }
-
-
 }
