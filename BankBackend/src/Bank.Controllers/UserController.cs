@@ -113,7 +113,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpPatch("{userId}/add/{addedAccount}")]
-    public Account? AddAccountToUserById([FromRoute] int userId,[FromRoute] int addedAccount, [FromBody] int accountId)
+    public Account? AddAccountToUserById([FromRoute] int userId, [FromRoute] int addedAccount, [FromBody] int accountId)
     {
         try
         {
@@ -163,7 +163,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpPatch("{userId}/deposit")]
-    public Transaction? Deposit([FromRoute] int userId, int accoubtId, double amount)
+    public Transaction? Deposit([FromRoute] int userId, [FromQuery] int accoubtId, [FromQuery] double amount)
     {
         try
         {
@@ -187,7 +187,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpPatch("{userId}/withdraw")]
-    public Transaction? Withdraw([FromRoute] int userId, int accoubtId, double amount)
+    public Transaction? Withdraw([FromRoute] int userId, [FromQuery] int accoubtId, [FromQuery] double amount)
     {
         try
         {
@@ -217,7 +217,7 @@ public class UsersController : ControllerBase
 
 
     [HttpPatch("{userId}/transfer")]
-    public Transaction? Transfer([FromRoute] int userId, int fromAccountId, int toAccountId, double amount)
+    public Transaction? Transfer([FromRoute] int userId, [FromQuery] int fromAccountId, [FromQuery] int toAccountId, double amount)
     {
         try
         {

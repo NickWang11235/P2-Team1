@@ -7,22 +7,44 @@ public class BankService : IBankService
 {
     private readonly IBankRepository _bankRepository;
 
+    /// <summary>
+    /// constructor for dependency injection
+    /// </summary>
+    /// <param name="repository"></param>
     public BankService(IBankRepository repository)
     {
         _bankRepository = repository;
     }
 
+    /// <summary>
+    /// creates a user and returns the created user
+    /// if the given user has any an <c>UserId</c> other than 0 the <c>UserId</c> is ignored
+    /// </summary>
+    /// <param name="user"></param>
+    /// <returns>the created user</returns>
     public User CreateUser(User user)
     {
         user.UserId = 0;
         return _bankRepository.CreateUser(user);
     }
 
+    /// <summary>
+    /// finds all users
+    /// </summary>
+    /// <returns>all users</returns>
     public List<User> GetAllUsers()
     {
         return _bankRepository.GetAllUsers();
     }
 
+    /// <summary>
+    /// validates user loging with <c>username</c> and<c>password</c> 
+    /// </summary>
+    /// <param name="username"></param>
+    /// <param name="password"></param>
+    /// <returns>the logged in user if credentials are correct</returns>
+    /// <exception cref="UsernameNotFoundException">if user name does not exist</exception>
+    /// <exception cref="InvalidPasswordException">if password is incorrect</exception>
     public User ValidateLogin(string username, string password)
     {
         User? user = _bankRepository.GetUserByUsername(username);
@@ -39,6 +61,12 @@ public class BankService : IBankService
         return user;
     }
 
+    /// <summary>
+    /// finds a user by <c>username</c>
+    /// </summary>
+    /// <param name="username"></param>
+    /// <returns>user with the username</returns>
+    /// <exception cref="UsernameNotFoundException">if a user with the username does not exist</exception>
     public User GetUserByUsername(string username)
     {
         User? user = _bankRepository.GetUserByUsername(username);
@@ -49,6 +77,12 @@ public class BankService : IBankService
         return user;
     }
 
+    /// <summary>
+    /// finds a user by <c>userId</c>
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <returns></returns>
+    /// <exception cref="UserIdNotFoundException">if a user with the userId does not exist</exception>
     public User GetUserByUserId(int userId)
     {
         User? user = _bankRepository.GetUserByUserId(userId);
@@ -59,6 +93,12 @@ public class BankService : IBankService
         return user;
     }
 
+    /// <summary>
+    /// find 
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <returns></returns>
+    /// <exception cref="UserIdNotFoundException"></exception>
     public List<Account> GetAccountsByUserId(int userId)
     {
         List<Account>? accounts = _bankRepository.GetAccountsByUserId(userId);
