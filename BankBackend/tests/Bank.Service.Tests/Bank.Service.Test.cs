@@ -145,7 +145,7 @@ public class BankServiceTests
         _mockRepository.Setup(r => r.AddAccountToUser(accountId, userId)).Verifiable();
 
         // Act
-        var result = _bankService.AddAccountUser(userId, accountId);
+        var result = _bankService.AddAccountUser(userId, userId, accountId);
 
         // Assert
         Assert.NotNull(result);

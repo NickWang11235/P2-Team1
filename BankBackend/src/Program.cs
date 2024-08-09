@@ -3,6 +3,7 @@ using BankBackend.Repository;
 using BankBackend.Models;
 using Microsoft.EntityFrameworkCore;
 using BankBackend.Service;
+using System.Text.Json.Serialization;
 public class Program
 {
     public static void Main(string[] args)
@@ -12,14 +13,17 @@ public class Program
 
         BankRepository _bankRepository = new BankRepository(builder.Configuration.GetConnectionString("BankDB") ?? "");
 
-        // builder.Services.AddDbContext<BankContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("BankDB")));
+        builder.Services.AddDbContext<BankContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("BankDB")));
         builder.Services.AddScoped<IBankService>(repo => new BankService(_bankRepository));
 
-        builder.Services.AddControllers();
+        builder.Services.AddControllers().AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        });
+
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
-
-     builder.Services.AddCors();
+        builder.Services.AddCors();
 
         var app = builder.Build();
         if (app.Environment.IsDevelopment())
@@ -34,7 +38,15 @@ public class Program
 
         app.UseCors(options =>
             options.AllowAnyHeader()
-            .AllowAnyOrigin() //-- allow any origin
+            .AllowAnyOrigin()
+            // .WithOrigins("http://localhost")
+            .AllowAnyMethod()
+            // .AllowCredentials()
+        );
+
+        app.UseCors(options =>
+            options.AllowAnyHeader()
+            .AllowAnyOrigin()
             // .WithOrigins("http://localhost")
             .AllowAnyMethod()
             // .AllowCredentials()
