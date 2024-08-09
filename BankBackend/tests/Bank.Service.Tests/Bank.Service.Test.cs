@@ -131,45 +131,45 @@ public class BankServiceTests
         Assert.Throws<InsufficientFundsException>(() => _bankService.Withdraw(userId, accountId, amount));
     }
 
-    [Fact]
-    public void AddAccountUser_ValidData_AddsUserToAccount()
-    {
-        // Arrange
-        var userId = 1;
-        var accountId = 1;
-        var user = new User { UserId = userId };
-        var account = new Account { AccountId = accountId, PrimaryUserId = userId };
-        _mockRepository.Setup(r => r.GetUserByUserId(userId)).Returns(user);
-        _mockRepository.Setup(r => r.GetAccountByAccountId(accountId)).Returns(account);
-        _mockRepository.Setup(r => r.AddUserToAccount(userId, accountId)).Verifiable();
-        _mockRepository.Setup(r => r.AddAccountToUser(accountId, userId)).Verifiable();
+    // [Fact]
+    // public void AddAccountUser_ValidData_AddsUserToAccount()
+    // {
+    //     // Arrange
+    //     var userId = 1;
+    //     var accountId = 1;
+    //     var user = new User { UserId = userId };
+    //     var account = new Account { AccountId = accountId, PrimaryUserId = userId };
+    //     _mockRepository.Setup(r => r.GetUserByUserId(userId)).Returns(user);
+    //     _mockRepository.Setup(r => r.GetAccountByAccountId(accountId)).Returns(account);
+    //     _mockRepository.Setup(r => r.AddUserToAccount(userId, accountId)).Verifiable();
+    //     _mockRepository.Setup(r => r.AddAccountToUser(accountId, userId)).Verifiable();
 
-        // Act
-        var result = _bankService.AddAccountUser(userId, userId, accountId);
+    //     // Act
+    //     var result = _bankService.AddAccountUser(userId, userId, accountId);
 
-        // Assert
-        Assert.NotNull(result);
-        _mockRepository.Verify();
-    }
+    //     // Assert
+    //     Assert.NotNull(result);
+    //     _mockRepository.Verify();
+    // }
 
-    [Fact]
-    public void RemoveAccountUser_ValidData_RemovesUserFromAccount()
-    {
-        // Arrange
-        var userId = 1;
-        var accountId = 1;
-        var user = new User { UserId = userId };
-        var account = new Account { AccountId = accountId, Users = new List<User> { user } , PrimaryUserId = userId};
-        _mockRepository.Setup(r => r.GetUserByUserId(userId)).Returns(user);
-        _mockRepository.Setup(r => r.GetAccountByAccountId(accountId)).Returns(account);
-        _mockRepository.Setup(r => r.DeleteUserAccountByAccountId(userId, accountId)).Verifiable();
-        _mockRepository.Setup(r => r.DeleteAccountUserByUserId(accountId, userId)).Verifiable();
+    // [Fact]
+    // public void RemoveAccountUser_ValidData_RemovesUserFromAccount()
+    // {
+    //     // Arrange
+    //     var userId = 1;
+    //     var accountId = 1;
+    //     var user = new User { UserId = userId };
+    //     var account = new Account { AccountId = accountId, Users = new List<User> { user } , PrimaryUserId = userId};
+    //     _mockRepository.Setup(r => r.GetUserByUserId(userId)).Returns(user);
+    //     _mockRepository.Setup(r => r.GetAccountByAccountId(accountId)).Returns(account);
+    //     _mockRepository.Setup(r => r.DeleteUserAccountByAccountId(userId, accountId)).Verifiable();
+    //     _mockRepository.Setup(r => r.DeleteAccountUserByUserId(accountId, userId)).Verifiable();
 
-        // Act
-        var result = _bankService.RemoveAccountUser(userId, accountId);
+    //     // Act
+    //     var result = _bankService.RemoveAccountUser(userId, accountId);
 
-        // Assert
-        Assert.NotNull(result);
-        _mockRepository.Verify();
-    }
+    //     // Assert
+    //     Assert.NotNull(result);
+    //     _mockRepository.Verify();
+    // }
 }

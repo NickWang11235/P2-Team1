@@ -8,7 +8,7 @@
 
 
     <CoverletOutputFormat>cobertura</CoverletOutputFormat>
-    <CoverletExclude>[*BankBackend.Controllers*,*BankBackend.Models*,*BankBackend.Repository*,*BankBackend.Service*]</CoverletExclude>
+    <CoverletExclude>[*BankBackend.Migrations*, Program.cs, ]</CoverletExclude>
   </PropertyGroup>
 
   <ItemGroup>
