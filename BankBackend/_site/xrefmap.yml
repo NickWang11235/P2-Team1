@@ -1,0 +1,2431 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: BankBackend.Controllers
+  name: BankBackend.Controllers
+  href: api/BankBackend.Controllers.html
+  commentId: N:BankBackend.Controllers
+  fullName: BankBackend.Controllers
+  nameWithType: BankBackend.Controllers
+- uid: BankBackend.Controllers.AccountController
+  name: AccountController
+  href: api/BankBackend.Controllers.AccountController.html
+  commentId: T:BankBackend.Controllers.AccountController
+  fullName: BankBackend.Controllers.AccountController
+  nameWithType: AccountController
+- uid: BankBackend.Controllers.AccountController.#ctor(Microsoft.Extensions.Logging.ILogger{BankBackend.Controllers.AccountController},BankBackend.Service.IBankService)
+  name: AccountController(ILogger<AccountController>, IBankService)
+  href: api/BankBackend.Controllers.AccountController.html#BankBackend_Controllers_AccountController__ctor_Microsoft_Extensions_Logging_ILogger_BankBackend_Controllers_AccountController__BankBackend_Service_IBankService_
+  commentId: M:BankBackend.Controllers.AccountController.#ctor(Microsoft.Extensions.Logging.ILogger{BankBackend.Controllers.AccountController},BankBackend.Service.IBankService)
+  name.vb: New(ILogger(Of AccountController), IBankService)
+  fullName: BankBackend.Controllers.AccountController.AccountController(Microsoft.Extensions.Logging.ILogger<BankBackend.Controllers.AccountController>, BankBackend.Service.IBankService)
+  fullName.vb: BankBackend.Controllers.AccountController.New(Microsoft.Extensions.Logging.ILogger(Of BankBackend.Controllers.AccountController), BankBackend.Service.IBankService)
+  nameWithType: AccountController.AccountController(ILogger<AccountController>, IBankService)
+  nameWithType.vb: AccountController.New(ILogger(Of AccountController), IBankService)
+- uid: BankBackend.Controllers.AccountController.#ctor*
+  name: AccountController
+  href: api/BankBackend.Controllers.AccountController.html#BankBackend_Controllers_AccountController__ctor_
+  commentId: Overload:BankBackend.Controllers.AccountController.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Controllers.AccountController.AccountController
+  fullName.vb: BankBackend.Controllers.AccountController.New
+  nameWithType: AccountController.AccountController
+  nameWithType.vb: AccountController.New
+- uid: BankBackend.Controllers.AccountController.GetAllAccounts
+  name: GetAllAccounts()
+  href: api/BankBackend.Controllers.AccountController.html#BankBackend_Controllers_AccountController_GetAllAccounts
+  commentId: M:BankBackend.Controllers.AccountController.GetAllAccounts
+  fullName: BankBackend.Controllers.AccountController.GetAllAccounts()
+  nameWithType: AccountController.GetAllAccounts()
+- uid: BankBackend.Controllers.AccountController.GetAllAccounts*
+  name: GetAllAccounts
+  href: api/BankBackend.Controllers.AccountController.html#BankBackend_Controllers_AccountController_GetAllAccounts_
+  commentId: Overload:BankBackend.Controllers.AccountController.GetAllAccounts
+  isSpec: "True"
+  fullName: BankBackend.Controllers.AccountController.GetAllAccounts
+  nameWithType: AccountController.GetAllAccounts
+- uid: BankBackend.Controllers.AccountController.GetTransactionsByAccountId(System.Int32)
+  name: GetTransactionsByAccountId(int)
+  href: api/BankBackend.Controllers.AccountController.html#BankBackend_Controllers_AccountController_GetTransactionsByAccountId_System_Int32_
+  commentId: M:BankBackend.Controllers.AccountController.GetTransactionsByAccountId(System.Int32)
+  name.vb: GetTransactionsByAccountId(Integer)
+  fullName: BankBackend.Controllers.AccountController.GetTransactionsByAccountId(int)
+  fullName.vb: BankBackend.Controllers.AccountController.GetTransactionsByAccountId(Integer)
+  nameWithType: AccountController.GetTransactionsByAccountId(int)
+  nameWithType.vb: AccountController.GetTransactionsByAccountId(Integer)
+- uid: BankBackend.Controllers.AccountController.GetTransactionsByAccountId*
+  name: GetTransactionsByAccountId
+  href: api/BankBackend.Controllers.AccountController.html#BankBackend_Controllers_AccountController_GetTransactionsByAccountId_
+  commentId: Overload:BankBackend.Controllers.AccountController.GetTransactionsByAccountId
+  isSpec: "True"
+  fullName: BankBackend.Controllers.AccountController.GetTransactionsByAccountId
+  nameWithType: AccountController.GetTransactionsByAccountId
+- uid: BankBackend.Controllers.AccountController.PostAccount(BankBackend.Models.Account)
+  name: PostAccount(Account)
+  href: api/BankBackend.Controllers.AccountController.html#BankBackend_Controllers_AccountController_PostAccount_BankBackend_Models_Account_
+  commentId: M:BankBackend.Controllers.AccountController.PostAccount(BankBackend.Models.Account)
+  fullName: BankBackend.Controllers.AccountController.PostAccount(BankBackend.Models.Account)
+  nameWithType: AccountController.PostAccount(Account)
+- uid: BankBackend.Controllers.AccountController.PostAccount*
+  name: PostAccount
+  href: api/BankBackend.Controllers.AccountController.html#BankBackend_Controllers_AccountController_PostAccount_
+  commentId: Overload:BankBackend.Controllers.AccountController.PostAccount
+  isSpec: "True"
+  fullName: BankBackend.Controllers.AccountController.PostAccount
+  nameWithType: AccountController.PostAccount
+- uid: BankBackend.Controllers.UsersController
+  name: UsersController
+  href: api/BankBackend.Controllers.UsersController.html
+  commentId: T:BankBackend.Controllers.UsersController
+  fullName: BankBackend.Controllers.UsersController
+  nameWithType: UsersController
+- uid: BankBackend.Controllers.UsersController.#ctor(Microsoft.Extensions.Logging.ILogger{BankBackend.Controllers.UsersController},BankBackend.Service.IBankService)
+  name: UsersController(ILogger<UsersController>, IBankService)
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController__ctor_Microsoft_Extensions_Logging_ILogger_BankBackend_Controllers_UsersController__BankBackend_Service_IBankService_
+  commentId: M:BankBackend.Controllers.UsersController.#ctor(Microsoft.Extensions.Logging.ILogger{BankBackend.Controllers.UsersController},BankBackend.Service.IBankService)
+  name.vb: New(ILogger(Of UsersController), IBankService)
+  fullName: BankBackend.Controllers.UsersController.UsersController(Microsoft.Extensions.Logging.ILogger<BankBackend.Controllers.UsersController>, BankBackend.Service.IBankService)
+  fullName.vb: BankBackend.Controllers.UsersController.New(Microsoft.Extensions.Logging.ILogger(Of BankBackend.Controllers.UsersController), BankBackend.Service.IBankService)
+  nameWithType: UsersController.UsersController(ILogger<UsersController>, IBankService)
+  nameWithType.vb: UsersController.New(ILogger(Of UsersController), IBankService)
+- uid: BankBackend.Controllers.UsersController.#ctor*
+  name: UsersController
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController__ctor_
+  commentId: Overload:BankBackend.Controllers.UsersController.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Controllers.UsersController.UsersController
+  fullName.vb: BankBackend.Controllers.UsersController.New
+  nameWithType: UsersController.UsersController
+  nameWithType.vb: UsersController.New
+- uid: BankBackend.Controllers.UsersController.AddAccountToUserById(System.Int32,System.Int32,System.Int32)
+  name: AddAccountToUserById(int, int, int)
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_AddAccountToUserById_System_Int32_System_Int32_System_Int32_
+  commentId: M:BankBackend.Controllers.UsersController.AddAccountToUserById(System.Int32,System.Int32,System.Int32)
+  name.vb: AddAccountToUserById(Integer, Integer, Integer)
+  fullName: BankBackend.Controllers.UsersController.AddAccountToUserById(int, int, int)
+  fullName.vb: BankBackend.Controllers.UsersController.AddAccountToUserById(Integer, Integer, Integer)
+  nameWithType: UsersController.AddAccountToUserById(int, int, int)
+  nameWithType.vb: UsersController.AddAccountToUserById(Integer, Integer, Integer)
+- uid: BankBackend.Controllers.UsersController.AddAccountToUserById*
+  name: AddAccountToUserById
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_AddAccountToUserById_
+  commentId: Overload:BankBackend.Controllers.UsersController.AddAccountToUserById
+  isSpec: "True"
+  fullName: BankBackend.Controllers.UsersController.AddAccountToUserById
+  nameWithType: UsersController.AddAccountToUserById
+- uid: BankBackend.Controllers.UsersController.Deposit(System.Int32,System.Int32,System.Double)
+  name: Deposit(int, int, double)
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_Deposit_System_Int32_System_Int32_System_Double_
+  commentId: M:BankBackend.Controllers.UsersController.Deposit(System.Int32,System.Int32,System.Double)
+  name.vb: Deposit(Integer, Integer, Double)
+  fullName: BankBackend.Controllers.UsersController.Deposit(int, int, double)
+  fullName.vb: BankBackend.Controllers.UsersController.Deposit(Integer, Integer, Double)
+  nameWithType: UsersController.Deposit(int, int, double)
+  nameWithType.vb: UsersController.Deposit(Integer, Integer, Double)
+- uid: BankBackend.Controllers.UsersController.Deposit*
+  name: Deposit
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_Deposit_
+  commentId: Overload:BankBackend.Controllers.UsersController.Deposit
+  isSpec: "True"
+  fullName: BankBackend.Controllers.UsersController.Deposit
+  nameWithType: UsersController.Deposit
+- uid: BankBackend.Controllers.UsersController.GetAccountsByUserId(System.Int32)
+  name: GetAccountsByUserId(int)
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_GetAccountsByUserId_System_Int32_
+  commentId: M:BankBackend.Controllers.UsersController.GetAccountsByUserId(System.Int32)
+  name.vb: GetAccountsByUserId(Integer)
+  fullName: BankBackend.Controllers.UsersController.GetAccountsByUserId(int)
+  fullName.vb: BankBackend.Controllers.UsersController.GetAccountsByUserId(Integer)
+  nameWithType: UsersController.GetAccountsByUserId(int)
+  nameWithType.vb: UsersController.GetAccountsByUserId(Integer)
+- uid: BankBackend.Controllers.UsersController.GetAccountsByUserId*
+  name: GetAccountsByUserId
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_GetAccountsByUserId_
+  commentId: Overload:BankBackend.Controllers.UsersController.GetAccountsByUserId
+  isSpec: "True"
+  fullName: BankBackend.Controllers.UsersController.GetAccountsByUserId
+  nameWithType: UsersController.GetAccountsByUserId
+- uid: BankBackend.Controllers.UsersController.GetAllUsers
+  name: GetAllUsers()
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_GetAllUsers
+  commentId: M:BankBackend.Controllers.UsersController.GetAllUsers
+  fullName: BankBackend.Controllers.UsersController.GetAllUsers()
+  nameWithType: UsersController.GetAllUsers()
+- uid: BankBackend.Controllers.UsersController.GetAllUsers*
+  name: GetAllUsers
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_GetAllUsers_
+  commentId: Overload:BankBackend.Controllers.UsersController.GetAllUsers
+  isSpec: "True"
+  fullName: BankBackend.Controllers.UsersController.GetAllUsers
+  nameWithType: UsersController.GetAllUsers
+- uid: BankBackend.Controllers.UsersController.GetTransactionsByUserId(System.Int32)
+  name: GetTransactionsByUserId(int)
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_GetTransactionsByUserId_System_Int32_
+  commentId: M:BankBackend.Controllers.UsersController.GetTransactionsByUserId(System.Int32)
+  name.vb: GetTransactionsByUserId(Integer)
+  fullName: BankBackend.Controllers.UsersController.GetTransactionsByUserId(int)
+  fullName.vb: BankBackend.Controllers.UsersController.GetTransactionsByUserId(Integer)
+  nameWithType: UsersController.GetTransactionsByUserId(int)
+  nameWithType.vb: UsersController.GetTransactionsByUserId(Integer)
+- uid: BankBackend.Controllers.UsersController.GetTransactionsByUserId*
+  name: GetTransactionsByUserId
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_GetTransactionsByUserId_
+  commentId: Overload:BankBackend.Controllers.UsersController.GetTransactionsByUserId
+  isSpec: "True"
+  fullName: BankBackend.Controllers.UsersController.GetTransactionsByUserId
+  nameWithType: UsersController.GetTransactionsByUserId
+- uid: BankBackend.Controllers.UsersController.GetUsersById(System.Int32)
+  name: GetUsersById(int)
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_GetUsersById_System_Int32_
+  commentId: M:BankBackend.Controllers.UsersController.GetUsersById(System.Int32)
+  name.vb: GetUsersById(Integer)
+  fullName: BankBackend.Controllers.UsersController.GetUsersById(int)
+  fullName.vb: BankBackend.Controllers.UsersController.GetUsersById(Integer)
+  nameWithType: UsersController.GetUsersById(int)
+  nameWithType.vb: UsersController.GetUsersById(Integer)
+- uid: BankBackend.Controllers.UsersController.GetUsersById*
+  name: GetUsersById
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_GetUsersById_
+  commentId: Overload:BankBackend.Controllers.UsersController.GetUsersById
+  isSpec: "True"
+  fullName: BankBackend.Controllers.UsersController.GetUsersById
+  nameWithType: UsersController.GetUsersById
+- uid: BankBackend.Controllers.UsersController.Login(BankBackend.Models.User)
+  name: Login(User)
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_Login_BankBackend_Models_User_
+  commentId: M:BankBackend.Controllers.UsersController.Login(BankBackend.Models.User)
+  fullName: BankBackend.Controllers.UsersController.Login(BankBackend.Models.User)
+  nameWithType: UsersController.Login(User)
+- uid: BankBackend.Controllers.UsersController.Login*
+  name: Login
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_Login_
+  commentId: Overload:BankBackend.Controllers.UsersController.Login
+  isSpec: "True"
+  fullName: BankBackend.Controllers.UsersController.Login
+  nameWithType: UsersController.Login
+- uid: BankBackend.Controllers.UsersController.PostUser(BankBackend.Models.User)
+  name: PostUser(User)
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_PostUser_BankBackend_Models_User_
+  commentId: M:BankBackend.Controllers.UsersController.PostUser(BankBackend.Models.User)
+  fullName: BankBackend.Controllers.UsersController.PostUser(BankBackend.Models.User)
+  nameWithType: UsersController.PostUser(User)
+- uid: BankBackend.Controllers.UsersController.PostUser*
+  name: PostUser
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_PostUser_
+  commentId: Overload:BankBackend.Controllers.UsersController.PostUser
+  isSpec: "True"
+  fullName: BankBackend.Controllers.UsersController.PostUser
+  nameWithType: UsersController.PostUser
+- uid: BankBackend.Controllers.UsersController.RemoveUserFromAccountById(System.Int32,System.Int32)
+  name: RemoveUserFromAccountById(int, int)
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_RemoveUserFromAccountById_System_Int32_System_Int32_
+  commentId: M:BankBackend.Controllers.UsersController.RemoveUserFromAccountById(System.Int32,System.Int32)
+  name.vb: RemoveUserFromAccountById(Integer, Integer)
+  fullName: BankBackend.Controllers.UsersController.RemoveUserFromAccountById(int, int)
+  fullName.vb: BankBackend.Controllers.UsersController.RemoveUserFromAccountById(Integer, Integer)
+  nameWithType: UsersController.RemoveUserFromAccountById(int, int)
+  nameWithType.vb: UsersController.RemoveUserFromAccountById(Integer, Integer)
+- uid: BankBackend.Controllers.UsersController.RemoveUserFromAccountById*
+  name: RemoveUserFromAccountById
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_RemoveUserFromAccountById_
+  commentId: Overload:BankBackend.Controllers.UsersController.RemoveUserFromAccountById
+  isSpec: "True"
+  fullName: BankBackend.Controllers.UsersController.RemoveUserFromAccountById
+  nameWithType: UsersController.RemoveUserFromAccountById
+- uid: BankBackend.Controllers.UsersController.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+  name: Transfer(int, int, int, double)
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_Transfer_System_Int32_System_Int32_System_Int32_System_Double_
+  commentId: M:BankBackend.Controllers.UsersController.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+  name.vb: Transfer(Integer, Integer, Integer, Double)
+  fullName: BankBackend.Controllers.UsersController.Transfer(int, int, int, double)
+  fullName.vb: BankBackend.Controllers.UsersController.Transfer(Integer, Integer, Integer, Double)
+  nameWithType: UsersController.Transfer(int, int, int, double)
+  nameWithType.vb: UsersController.Transfer(Integer, Integer, Integer, Double)
+- uid: BankBackend.Controllers.UsersController.Transfer*
+  name: Transfer
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_Transfer_
+  commentId: Overload:BankBackend.Controllers.UsersController.Transfer
+  isSpec: "True"
+  fullName: BankBackend.Controllers.UsersController.Transfer
+  nameWithType: UsersController.Transfer
+- uid: BankBackend.Controllers.UsersController.UpdateUserInfo(System.Int32,BankBackend.Models.User)
+  name: UpdateUserInfo(int, User)
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_UpdateUserInfo_System_Int32_BankBackend_Models_User_
+  commentId: M:BankBackend.Controllers.UsersController.UpdateUserInfo(System.Int32,BankBackend.Models.User)
+  name.vb: UpdateUserInfo(Integer, User)
+  fullName: BankBackend.Controllers.UsersController.UpdateUserInfo(int, BankBackend.Models.User)
+  fullName.vb: BankBackend.Controllers.UsersController.UpdateUserInfo(Integer, BankBackend.Models.User)
+  nameWithType: UsersController.UpdateUserInfo(int, User)
+  nameWithType.vb: UsersController.UpdateUserInfo(Integer, User)
+- uid: BankBackend.Controllers.UsersController.UpdateUserInfo*
+  name: UpdateUserInfo
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_UpdateUserInfo_
+  commentId: Overload:BankBackend.Controllers.UsersController.UpdateUserInfo
+  isSpec: "True"
+  fullName: BankBackend.Controllers.UsersController.UpdateUserInfo
+  nameWithType: UsersController.UpdateUserInfo
+- uid: BankBackend.Controllers.UsersController.Withdraw(System.Int32,System.Int32,System.Double)
+  name: Withdraw(int, int, double)
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_Withdraw_System_Int32_System_Int32_System_Double_
+  commentId: M:BankBackend.Controllers.UsersController.Withdraw(System.Int32,System.Int32,System.Double)
+  name.vb: Withdraw(Integer, Integer, Double)
+  fullName: BankBackend.Controllers.UsersController.Withdraw(int, int, double)
+  fullName.vb: BankBackend.Controllers.UsersController.Withdraw(Integer, Integer, Double)
+  nameWithType: UsersController.Withdraw(int, int, double)
+  nameWithType.vb: UsersController.Withdraw(Integer, Integer, Double)
+- uid: BankBackend.Controllers.UsersController.Withdraw*
+  name: Withdraw
+  href: api/BankBackend.Controllers.UsersController.html#BankBackend_Controllers_UsersController_Withdraw_
+  commentId: Overload:BankBackend.Controllers.UsersController.Withdraw
+  isSpec: "True"
+  fullName: BankBackend.Controllers.UsersController.Withdraw
+  nameWithType: UsersController.Withdraw
+- uid: BankBackend.Models
+  name: BankBackend.Models
+  href: api/BankBackend.Models.html
+  commentId: N:BankBackend.Models
+  fullName: BankBackend.Models
+  nameWithType: BankBackend.Models
+- uid: BankBackend.Models.Account
+  name: Account
+  href: api/BankBackend.Models.Account.html
+  commentId: T:BankBackend.Models.Account
+  fullName: BankBackend.Models.Account
+  nameWithType: Account
+- uid: BankBackend.Models.Account.#ctor
+  name: Account()
+  href: api/BankBackend.Models.Account.html#BankBackend_Models_Account__ctor
+  commentId: M:BankBackend.Models.Account.#ctor
+  name.vb: New()
+  fullName: BankBackend.Models.Account.Account()
+  fullName.vb: BankBackend.Models.Account.New()
+  nameWithType: Account.Account()
+  nameWithType.vb: Account.New()
+- uid: BankBackend.Models.Account.#ctor*
+  name: Account
+  href: api/BankBackend.Models.Account.html#BankBackend_Models_Account__ctor_
+  commentId: Overload:BankBackend.Models.Account.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Models.Account.Account
+  fullName.vb: BankBackend.Models.Account.New
+  nameWithType: Account.Account
+  nameWithType.vb: Account.New
+- uid: BankBackend.Models.Account.AccountId
+  name: AccountId
+  href: api/BankBackend.Models.Account.html#BankBackend_Models_Account_AccountId
+  commentId: P:BankBackend.Models.Account.AccountId
+  fullName: BankBackend.Models.Account.AccountId
+  nameWithType: Account.AccountId
+- uid: BankBackend.Models.Account.AccountId*
+  name: AccountId
+  href: api/BankBackend.Models.Account.html#BankBackend_Models_Account_AccountId_
+  commentId: Overload:BankBackend.Models.Account.AccountId
+  isSpec: "True"
+  fullName: BankBackend.Models.Account.AccountId
+  nameWithType: Account.AccountId
+- uid: BankBackend.Models.Account.Balance
+  name: Balance
+  href: api/BankBackend.Models.Account.html#BankBackend_Models_Account_Balance
+  commentId: P:BankBackend.Models.Account.Balance
+  fullName: BankBackend.Models.Account.Balance
+  nameWithType: Account.Balance
+- uid: BankBackend.Models.Account.Balance*
+  name: Balance
+  href: api/BankBackend.Models.Account.html#BankBackend_Models_Account_Balance_
+  commentId: Overload:BankBackend.Models.Account.Balance
+  isSpec: "True"
+  fullName: BankBackend.Models.Account.Balance
+  nameWithType: Account.Balance
+- uid: BankBackend.Models.Account.PrimaryUserId
+  name: PrimaryUserId
+  href: api/BankBackend.Models.Account.html#BankBackend_Models_Account_PrimaryUserId
+  commentId: P:BankBackend.Models.Account.PrimaryUserId
+  fullName: BankBackend.Models.Account.PrimaryUserId
+  nameWithType: Account.PrimaryUserId
+- uid: BankBackend.Models.Account.PrimaryUserId*
+  name: PrimaryUserId
+  href: api/BankBackend.Models.Account.html#BankBackend_Models_Account_PrimaryUserId_
+  commentId: Overload:BankBackend.Models.Account.PrimaryUserId
+  isSpec: "True"
+  fullName: BankBackend.Models.Account.PrimaryUserId
+  nameWithType: Account.PrimaryUserId
+- uid: BankBackend.Models.Account.Type
+  name: Type
+  href: api/BankBackend.Models.Account.html#BankBackend_Models_Account_Type
+  commentId: P:BankBackend.Models.Account.Type
+  fullName: BankBackend.Models.Account.Type
+  nameWithType: Account.Type
+- uid: BankBackend.Models.Account.Type*
+  name: Type
+  href: api/BankBackend.Models.Account.html#BankBackend_Models_Account_Type_
+  commentId: Overload:BankBackend.Models.Account.Type
+  isSpec: "True"
+  fullName: BankBackend.Models.Account.Type
+  nameWithType: Account.Type
+- uid: BankBackend.Models.Account.Users
+  name: Users
+  href: api/BankBackend.Models.Account.html#BankBackend_Models_Account_Users
+  commentId: P:BankBackend.Models.Account.Users
+  fullName: BankBackend.Models.Account.Users
+  nameWithType: Account.Users
+- uid: BankBackend.Models.Account.Users*
+  name: Users
+  href: api/BankBackend.Models.Account.html#BankBackend_Models_Account_Users_
+  commentId: Overload:BankBackend.Models.Account.Users
+  isSpec: "True"
+  fullName: BankBackend.Models.Account.Users
+  nameWithType: Account.Users
+- uid: BankBackend.Models.AccountType
+  name: AccountType
+  href: api/BankBackend.Models.AccountType.html
+  commentId: T:BankBackend.Models.AccountType
+  fullName: BankBackend.Models.AccountType
+  nameWithType: AccountType
+- uid: BankBackend.Models.AccountType.CHECKING
+  name: CHECKING
+  href: api/BankBackend.Models.AccountType.html#BankBackend_Models_AccountType_CHECKING
+  commentId: F:BankBackend.Models.AccountType.CHECKING
+  fullName: BankBackend.Models.AccountType.CHECKING
+  nameWithType: AccountType.CHECKING
+- uid: BankBackend.Models.AccountType.CLOWN
+  name: CLOWN
+  href: api/BankBackend.Models.AccountType.html#BankBackend_Models_AccountType_CLOWN
+  commentId: F:BankBackend.Models.AccountType.CLOWN
+  fullName: BankBackend.Models.AccountType.CLOWN
+  nameWithType: AccountType.CLOWN
+- uid: BankBackend.Models.AccountType.SAVINGS
+  name: SAVINGS
+  href: api/BankBackend.Models.AccountType.html#BankBackend_Models_AccountType_SAVINGS
+  commentId: F:BankBackend.Models.AccountType.SAVINGS
+  fullName: BankBackend.Models.AccountType.SAVINGS
+  nameWithType: AccountType.SAVINGS
+- uid: BankBackend.Models.Transaction
+  name: Transaction
+  href: api/BankBackend.Models.Transaction.html
+  commentId: T:BankBackend.Models.Transaction
+  fullName: BankBackend.Models.Transaction
+  nameWithType: Transaction
+- uid: BankBackend.Models.Transaction.#ctor
+  name: Transaction()
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction__ctor
+  commentId: M:BankBackend.Models.Transaction.#ctor
+  name.vb: New()
+  fullName: BankBackend.Models.Transaction.Transaction()
+  fullName.vb: BankBackend.Models.Transaction.New()
+  nameWithType: Transaction.Transaction()
+  nameWithType.vb: Transaction.New()
+- uid: BankBackend.Models.Transaction.#ctor(BankBackend.Models.Account,BankBackend.Models.Account,System.Double)
+  name: Transaction(Account, Account, double)
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction__ctor_BankBackend_Models_Account_BankBackend_Models_Account_System_Double_
+  commentId: M:BankBackend.Models.Transaction.#ctor(BankBackend.Models.Account,BankBackend.Models.Account,System.Double)
+  name.vb: New(Account, Account, Double)
+  fullName: BankBackend.Models.Transaction.Transaction(BankBackend.Models.Account, BankBackend.Models.Account, double)
+  fullName.vb: BankBackend.Models.Transaction.New(BankBackend.Models.Account, BankBackend.Models.Account, Double)
+  nameWithType: Transaction.Transaction(Account, Account, double)
+  nameWithType.vb: Transaction.New(Account, Account, Double)
+- uid: BankBackend.Models.Transaction.#ctor(BankBackend.Models.Account,System.Double)
+  name: Transaction(Account, double)
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction__ctor_BankBackend_Models_Account_System_Double_
+  commentId: M:BankBackend.Models.Transaction.#ctor(BankBackend.Models.Account,System.Double)
+  name.vb: New(Account, Double)
+  fullName: BankBackend.Models.Transaction.Transaction(BankBackend.Models.Account, double)
+  fullName.vb: BankBackend.Models.Transaction.New(BankBackend.Models.Account, Double)
+  nameWithType: Transaction.Transaction(Account, double)
+  nameWithType.vb: Transaction.New(Account, Double)
+- uid: BankBackend.Models.Transaction.#ctor*
+  name: Transaction
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction__ctor_
+  commentId: Overload:BankBackend.Models.Transaction.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Models.Transaction.Transaction
+  fullName.vb: BankBackend.Models.Transaction.New
+  nameWithType: Transaction.Transaction
+  nameWithType.vb: Transaction.New
+- uid: BankBackend.Models.Transaction.Amount
+  name: Amount
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction_Amount
+  commentId: P:BankBackend.Models.Transaction.Amount
+  fullName: BankBackend.Models.Transaction.Amount
+  nameWithType: Transaction.Amount
+- uid: BankBackend.Models.Transaction.Amount*
+  name: Amount
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction_Amount_
+  commentId: Overload:BankBackend.Models.Transaction.Amount
+  isSpec: "True"
+  fullName: BankBackend.Models.Transaction.Amount
+  nameWithType: Transaction.Amount
+- uid: BankBackend.Models.Transaction.FromAccount
+  name: FromAccount
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction_FromAccount
+  commentId: P:BankBackend.Models.Transaction.FromAccount
+  fullName: BankBackend.Models.Transaction.FromAccount
+  nameWithType: Transaction.FromAccount
+- uid: BankBackend.Models.Transaction.FromAccount*
+  name: FromAccount
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction_FromAccount_
+  commentId: Overload:BankBackend.Models.Transaction.FromAccount
+  isSpec: "True"
+  fullName: BankBackend.Models.Transaction.FromAccount
+  nameWithType: Transaction.FromAccount
+- uid: BankBackend.Models.Transaction.Time
+  name: Time
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction_Time
+  commentId: P:BankBackend.Models.Transaction.Time
+  fullName: BankBackend.Models.Transaction.Time
+  nameWithType: Transaction.Time
+- uid: BankBackend.Models.Transaction.Time*
+  name: Time
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction_Time_
+  commentId: Overload:BankBackend.Models.Transaction.Time
+  isSpec: "True"
+  fullName: BankBackend.Models.Transaction.Time
+  nameWithType: Transaction.Time
+- uid: BankBackend.Models.Transaction.ToAccount
+  name: ToAccount
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction_ToAccount
+  commentId: P:BankBackend.Models.Transaction.ToAccount
+  fullName: BankBackend.Models.Transaction.ToAccount
+  nameWithType: Transaction.ToAccount
+- uid: BankBackend.Models.Transaction.ToAccount*
+  name: ToAccount
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction_ToAccount_
+  commentId: Overload:BankBackend.Models.Transaction.ToAccount
+  isSpec: "True"
+  fullName: BankBackend.Models.Transaction.ToAccount
+  nameWithType: Transaction.ToAccount
+- uid: BankBackend.Models.Transaction.TransactionId
+  name: TransactionId
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction_TransactionId
+  commentId: P:BankBackend.Models.Transaction.TransactionId
+  fullName: BankBackend.Models.Transaction.TransactionId
+  nameWithType: Transaction.TransactionId
+- uid: BankBackend.Models.Transaction.TransactionId*
+  name: TransactionId
+  href: api/BankBackend.Models.Transaction.html#BankBackend_Models_Transaction_TransactionId_
+  commentId: Overload:BankBackend.Models.Transaction.TransactionId
+  isSpec: "True"
+  fullName: BankBackend.Models.Transaction.TransactionId
+  nameWithType: Transaction.TransactionId
+- uid: BankBackend.Models.User
+  name: User
+  href: api/BankBackend.Models.User.html
+  commentId: T:BankBackend.Models.User
+  fullName: BankBackend.Models.User
+  nameWithType: User
+- uid: BankBackend.Models.User.#ctor
+  name: User()
+  href: api/BankBackend.Models.User.html#BankBackend_Models_User__ctor
+  commentId: M:BankBackend.Models.User.#ctor
+  name.vb: New()
+  fullName: BankBackend.Models.User.User()
+  fullName.vb: BankBackend.Models.User.New()
+  nameWithType: User.User()
+  nameWithType.vb: User.New()
+- uid: BankBackend.Models.User.#ctor(System.String,System.String,System.String)
+  name: User(string, string, string)
+  href: api/BankBackend.Models.User.html#BankBackend_Models_User__ctor_System_String_System_String_System_String_
+  commentId: M:BankBackend.Models.User.#ctor(System.String,System.String,System.String)
+  name.vb: New(String, String, String)
+  fullName: BankBackend.Models.User.User(string, string, string)
+  fullName.vb: BankBackend.Models.User.New(String, String, String)
+  nameWithType: User.User(string, string, string)
+  nameWithType.vb: User.New(String, String, String)
+- uid: BankBackend.Models.User.#ctor*
+  name: User
+  href: api/BankBackend.Models.User.html#BankBackend_Models_User__ctor_
+  commentId: Overload:BankBackend.Models.User.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Models.User.User
+  fullName.vb: BankBackend.Models.User.New
+  nameWithType: User.User
+  nameWithType.vb: User.New
+- uid: BankBackend.Models.User.Accounts
+  name: Accounts
+  href: api/BankBackend.Models.User.html#BankBackend_Models_User_Accounts
+  commentId: P:BankBackend.Models.User.Accounts
+  fullName: BankBackend.Models.User.Accounts
+  nameWithType: User.Accounts
+- uid: BankBackend.Models.User.Accounts*
+  name: Accounts
+  href: api/BankBackend.Models.User.html#BankBackend_Models_User_Accounts_
+  commentId: Overload:BankBackend.Models.User.Accounts
+  isSpec: "True"
+  fullName: BankBackend.Models.User.Accounts
+  nameWithType: User.Accounts
+- uid: BankBackend.Models.User.Name
+  name: Name
+  href: api/BankBackend.Models.User.html#BankBackend_Models_User_Name
+  commentId: P:BankBackend.Models.User.Name
+  fullName: BankBackend.Models.User.Name
+  nameWithType: User.Name
+- uid: BankBackend.Models.User.Name*
+  name: Name
+  href: api/BankBackend.Models.User.html#BankBackend_Models_User_Name_
+  commentId: Overload:BankBackend.Models.User.Name
+  isSpec: "True"
+  fullName: BankBackend.Models.User.Name
+  nameWithType: User.Name
+- uid: BankBackend.Models.User.Password
+  name: Password
+  href: api/BankBackend.Models.User.html#BankBackend_Models_User_Password
+  commentId: P:BankBackend.Models.User.Password
+  fullName: BankBackend.Models.User.Password
+  nameWithType: User.Password
+- uid: BankBackend.Models.User.Password*
+  name: Password
+  href: api/BankBackend.Models.User.html#BankBackend_Models_User_Password_
+  commentId: Overload:BankBackend.Models.User.Password
+  isSpec: "True"
+  fullName: BankBackend.Models.User.Password
+  nameWithType: User.Password
+- uid: BankBackend.Models.User.UserId
+  name: UserId
+  href: api/BankBackend.Models.User.html#BankBackend_Models_User_UserId
+  commentId: P:BankBackend.Models.User.UserId
+  fullName: BankBackend.Models.User.UserId
+  nameWithType: User.UserId
+- uid: BankBackend.Models.User.UserId*
+  name: UserId
+  href: api/BankBackend.Models.User.html#BankBackend_Models_User_UserId_
+  commentId: Overload:BankBackend.Models.User.UserId
+  isSpec: "True"
+  fullName: BankBackend.Models.User.UserId
+  nameWithType: User.UserId
+- uid: BankBackend.Models.User.Username
+  name: Username
+  href: api/BankBackend.Models.User.html#BankBackend_Models_User_Username
+  commentId: P:BankBackend.Models.User.Username
+  fullName: BankBackend.Models.User.Username
+  nameWithType: User.Username
+- uid: BankBackend.Models.User.Username*
+  name: Username
+  href: api/BankBackend.Models.User.html#BankBackend_Models_User_Username_
+  commentId: Overload:BankBackend.Models.User.Username
+  isSpec: "True"
+  fullName: BankBackend.Models.User.Username
+  nameWithType: User.Username
+- uid: BankBackend.Repository
+  name: BankBackend.Repository
+  href: api/BankBackend.Repository.html
+  commentId: N:BankBackend.Repository
+  fullName: BankBackend.Repository
+  nameWithType: BankBackend.Repository
+- uid: BankBackend.Repository.BankContext
+  name: BankContext
+  href: api/BankBackend.Repository.BankContext.html
+  commentId: T:BankBackend.Repository.BankContext
+  fullName: BankBackend.Repository.BankContext
+  nameWithType: BankContext
+- uid: BankBackend.Repository.BankContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{BankBackend.Repository.BankContext})
+  name: BankContext(DbContextOptions<BankContext>)
+  href: api/BankBackend.Repository.BankContext.html#BankBackend_Repository_BankContext__ctor_Microsoft_EntityFrameworkCore_DbContextOptions_BankBackend_Repository_BankContext__
+  commentId: M:BankBackend.Repository.BankContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{BankBackend.Repository.BankContext})
+  name.vb: New(DbContextOptions(Of BankContext))
+  fullName: BankBackend.Repository.BankContext.BankContext(Microsoft.EntityFrameworkCore.DbContextOptions<BankBackend.Repository.BankContext>)
+  fullName.vb: BankBackend.Repository.BankContext.New(Microsoft.EntityFrameworkCore.DbContextOptions(Of BankBackend.Repository.BankContext))
+  nameWithType: BankContext.BankContext(DbContextOptions<BankContext>)
+  nameWithType.vb: BankContext.New(DbContextOptions(Of BankContext))
+- uid: BankBackend.Repository.BankContext.#ctor*
+  name: BankContext
+  href: api/BankBackend.Repository.BankContext.html#BankBackend_Repository_BankContext__ctor_
+  commentId: Overload:BankBackend.Repository.BankContext.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Repository.BankContext.BankContext
+  fullName.vb: BankBackend.Repository.BankContext.New
+  nameWithType: BankContext.BankContext
+  nameWithType.vb: BankContext.New
+- uid: BankBackend.Repository.BankContext.Accounts
+  name: Accounts
+  href: api/BankBackend.Repository.BankContext.html#BankBackend_Repository_BankContext_Accounts
+  commentId: P:BankBackend.Repository.BankContext.Accounts
+  fullName: BankBackend.Repository.BankContext.Accounts
+  nameWithType: BankContext.Accounts
+- uid: BankBackend.Repository.BankContext.Accounts*
+  name: Accounts
+  href: api/BankBackend.Repository.BankContext.html#BankBackend_Repository_BankContext_Accounts_
+  commentId: Overload:BankBackend.Repository.BankContext.Accounts
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankContext.Accounts
+  nameWithType: BankContext.Accounts
+- uid: BankBackend.Repository.BankContext.Transactions
+  name: Transactions
+  href: api/BankBackend.Repository.BankContext.html#BankBackend_Repository_BankContext_Transactions
+  commentId: P:BankBackend.Repository.BankContext.Transactions
+  fullName: BankBackend.Repository.BankContext.Transactions
+  nameWithType: BankContext.Transactions
+- uid: BankBackend.Repository.BankContext.Transactions*
+  name: Transactions
+  href: api/BankBackend.Repository.BankContext.html#BankBackend_Repository_BankContext_Transactions_
+  commentId: Overload:BankBackend.Repository.BankContext.Transactions
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankContext.Transactions
+  nameWithType: BankContext.Transactions
+- uid: BankBackend.Repository.BankContext.Users
+  name: Users
+  href: api/BankBackend.Repository.BankContext.html#BankBackend_Repository_BankContext_Users
+  commentId: P:BankBackend.Repository.BankContext.Users
+  fullName: BankBackend.Repository.BankContext.Users
+  nameWithType: BankContext.Users
+- uid: BankBackend.Repository.BankContext.Users*
+  name: Users
+  href: api/BankBackend.Repository.BankContext.html#BankBackend_Repository_BankContext_Users_
+  commentId: Overload:BankBackend.Repository.BankContext.Users
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankContext.Users
+  nameWithType: BankContext.Users
+- uid: BankBackend.Repository.BankRepository
+  name: BankRepository
+  href: api/BankBackend.Repository.BankRepository.html
+  commentId: T:BankBackend.Repository.BankRepository
+  fullName: BankBackend.Repository.BankRepository
+  nameWithType: BankRepository
+- uid: BankBackend.Repository.BankRepository.#ctor(BankBackend.Repository.BankContext)
+  name: BankRepository(BankContext)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository__ctor_BankBackend_Repository_BankContext_
+  commentId: M:BankBackend.Repository.BankRepository.#ctor(BankBackend.Repository.BankContext)
+  name.vb: New(BankContext)
+  fullName: BankBackend.Repository.BankRepository.BankRepository(BankBackend.Repository.BankContext)
+  fullName.vb: BankBackend.Repository.BankRepository.New(BankBackend.Repository.BankContext)
+  nameWithType: BankRepository.BankRepository(BankContext)
+  nameWithType.vb: BankRepository.New(BankContext)
+- uid: BankBackend.Repository.BankRepository.#ctor(System.String)
+  name: BankRepository(string)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository__ctor_System_String_
+  commentId: M:BankBackend.Repository.BankRepository.#ctor(System.String)
+  name.vb: New(String)
+  fullName: BankBackend.Repository.BankRepository.BankRepository(string)
+  fullName.vb: BankBackend.Repository.BankRepository.New(String)
+  nameWithType: BankRepository.BankRepository(string)
+  nameWithType.vb: BankRepository.New(String)
+- uid: BankBackend.Repository.BankRepository.#ctor*
+  name: BankRepository
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository__ctor_
+  commentId: Overload:BankBackend.Repository.BankRepository.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Repository.BankRepository.BankRepository
+  fullName.vb: BankBackend.Repository.BankRepository.New
+  nameWithType: BankRepository.BankRepository
+  nameWithType.vb: BankRepository.New
+- uid: BankBackend.Repository.BankRepository.AddAccountToUser(System.Int32,System.Int32)
+  name: AddAccountToUser(int, int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_AddAccountToUser_System_Int32_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.AddAccountToUser(System.Int32,System.Int32)
+  name.vb: AddAccountToUser(Integer, Integer)
+  fullName: BankBackend.Repository.BankRepository.AddAccountToUser(int, int)
+  fullName.vb: BankBackend.Repository.BankRepository.AddAccountToUser(Integer, Integer)
+  nameWithType: BankRepository.AddAccountToUser(int, int)
+  nameWithType.vb: BankRepository.AddAccountToUser(Integer, Integer)
+- uid: BankBackend.Repository.BankRepository.AddAccountToUser*
+  name: AddAccountToUser
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_AddAccountToUser_
+  commentId: Overload:BankBackend.Repository.BankRepository.AddAccountToUser
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.AddAccountToUser
+  nameWithType: BankRepository.AddAccountToUser
+- uid: BankBackend.Repository.BankRepository.AddUserToAccount(System.Int32,System.Int32)
+  name: AddUserToAccount(int, int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_AddUserToAccount_System_Int32_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.AddUserToAccount(System.Int32,System.Int32)
+  name.vb: AddUserToAccount(Integer, Integer)
+  fullName: BankBackend.Repository.BankRepository.AddUserToAccount(int, int)
+  fullName.vb: BankBackend.Repository.BankRepository.AddUserToAccount(Integer, Integer)
+  nameWithType: BankRepository.AddUserToAccount(int, int)
+  nameWithType.vb: BankRepository.AddUserToAccount(Integer, Integer)
+- uid: BankBackend.Repository.BankRepository.AddUserToAccount*
+  name: AddUserToAccount
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_AddUserToAccount_
+  commentId: Overload:BankBackend.Repository.BankRepository.AddUserToAccount
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.AddUserToAccount
+  nameWithType: BankRepository.AddUserToAccount
+- uid: BankBackend.Repository.BankRepository.CreateAccount(BankBackend.Models.Account)
+  name: CreateAccount(Account)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_CreateAccount_BankBackend_Models_Account_
+  commentId: M:BankBackend.Repository.BankRepository.CreateAccount(BankBackend.Models.Account)
+  fullName: BankBackend.Repository.BankRepository.CreateAccount(BankBackend.Models.Account)
+  nameWithType: BankRepository.CreateAccount(Account)
+- uid: BankBackend.Repository.BankRepository.CreateAccount*
+  name: CreateAccount
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_CreateAccount_
+  commentId: Overload:BankBackend.Repository.BankRepository.CreateAccount
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.CreateAccount
+  nameWithType: BankRepository.CreateAccount
+- uid: BankBackend.Repository.BankRepository.CreateTransaction(BankBackend.Models.Transaction)
+  name: CreateTransaction(Transaction)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_CreateTransaction_BankBackend_Models_Transaction_
+  commentId: M:BankBackend.Repository.BankRepository.CreateTransaction(BankBackend.Models.Transaction)
+  fullName: BankBackend.Repository.BankRepository.CreateTransaction(BankBackend.Models.Transaction)
+  nameWithType: BankRepository.CreateTransaction(Transaction)
+- uid: BankBackend.Repository.BankRepository.CreateTransaction*
+  name: CreateTransaction
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_CreateTransaction_
+  commentId: Overload:BankBackend.Repository.BankRepository.CreateTransaction
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.CreateTransaction
+  nameWithType: BankRepository.CreateTransaction
+- uid: BankBackend.Repository.BankRepository.CreateUser(BankBackend.Models.User)
+  name: CreateUser(User)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_CreateUser_BankBackend_Models_User_
+  commentId: M:BankBackend.Repository.BankRepository.CreateUser(BankBackend.Models.User)
+  fullName: BankBackend.Repository.BankRepository.CreateUser(BankBackend.Models.User)
+  nameWithType: BankRepository.CreateUser(User)
+- uid: BankBackend.Repository.BankRepository.CreateUser*
+  name: CreateUser
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_CreateUser_
+  commentId: Overload:BankBackend.Repository.BankRepository.CreateUser
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.CreateUser
+  nameWithType: BankRepository.CreateUser
+- uid: BankBackend.Repository.BankRepository.DeleteAccountById(System.Int32)
+  name: DeleteAccountById(int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_DeleteAccountById_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.DeleteAccountById(System.Int32)
+  name.vb: DeleteAccountById(Integer)
+  fullName: BankBackend.Repository.BankRepository.DeleteAccountById(int)
+  fullName.vb: BankBackend.Repository.BankRepository.DeleteAccountById(Integer)
+  nameWithType: BankRepository.DeleteAccountById(int)
+  nameWithType.vb: BankRepository.DeleteAccountById(Integer)
+- uid: BankBackend.Repository.BankRepository.DeleteAccountById*
+  name: DeleteAccountById
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_DeleteAccountById_
+  commentId: Overload:BankBackend.Repository.BankRepository.DeleteAccountById
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.DeleteAccountById
+  nameWithType: BankRepository.DeleteAccountById
+- uid: BankBackend.Repository.BankRepository.DeleteAccountUserByUserId(System.Int32,System.Int32)
+  name: DeleteAccountUserByUserId(int, int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_DeleteAccountUserByUserId_System_Int32_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.DeleteAccountUserByUserId(System.Int32,System.Int32)
+  name.vb: DeleteAccountUserByUserId(Integer, Integer)
+  fullName: BankBackend.Repository.BankRepository.DeleteAccountUserByUserId(int, int)
+  fullName.vb: BankBackend.Repository.BankRepository.DeleteAccountUserByUserId(Integer, Integer)
+  nameWithType: BankRepository.DeleteAccountUserByUserId(int, int)
+  nameWithType.vb: BankRepository.DeleteAccountUserByUserId(Integer, Integer)
+- uid: BankBackend.Repository.BankRepository.DeleteAccountUserByUserId*
+  name: DeleteAccountUserByUserId
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_DeleteAccountUserByUserId_
+  commentId: Overload:BankBackend.Repository.BankRepository.DeleteAccountUserByUserId
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.DeleteAccountUserByUserId
+  nameWithType: BankRepository.DeleteAccountUserByUserId
+- uid: BankBackend.Repository.BankRepository.DeleteTransactionByTransactionId(System.Int32)
+  name: DeleteTransactionByTransactionId(int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_DeleteTransactionByTransactionId_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.DeleteTransactionByTransactionId(System.Int32)
+  name.vb: DeleteTransactionByTransactionId(Integer)
+  fullName: BankBackend.Repository.BankRepository.DeleteTransactionByTransactionId(int)
+  fullName.vb: BankBackend.Repository.BankRepository.DeleteTransactionByTransactionId(Integer)
+  nameWithType: BankRepository.DeleteTransactionByTransactionId(int)
+  nameWithType.vb: BankRepository.DeleteTransactionByTransactionId(Integer)
+- uid: BankBackend.Repository.BankRepository.DeleteTransactionByTransactionId*
+  name: DeleteTransactionByTransactionId
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_DeleteTransactionByTransactionId_
+  commentId: Overload:BankBackend.Repository.BankRepository.DeleteTransactionByTransactionId
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.DeleteTransactionByTransactionId
+  nameWithType: BankRepository.DeleteTransactionByTransactionId
+- uid: BankBackend.Repository.BankRepository.DeleteUserAccountByAccountId(System.Int32,System.Int32)
+  name: DeleteUserAccountByAccountId(int, int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_DeleteUserAccountByAccountId_System_Int32_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.DeleteUserAccountByAccountId(System.Int32,System.Int32)
+  name.vb: DeleteUserAccountByAccountId(Integer, Integer)
+  fullName: BankBackend.Repository.BankRepository.DeleteUserAccountByAccountId(int, int)
+  fullName.vb: BankBackend.Repository.BankRepository.DeleteUserAccountByAccountId(Integer, Integer)
+  nameWithType: BankRepository.DeleteUserAccountByAccountId(int, int)
+  nameWithType.vb: BankRepository.DeleteUserAccountByAccountId(Integer, Integer)
+- uid: BankBackend.Repository.BankRepository.DeleteUserAccountByAccountId*
+  name: DeleteUserAccountByAccountId
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_DeleteUserAccountByAccountId_
+  commentId: Overload:BankBackend.Repository.BankRepository.DeleteUserAccountByAccountId
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.DeleteUserAccountByAccountId
+  nameWithType: BankRepository.DeleteUserAccountByAccountId
+- uid: BankBackend.Repository.BankRepository.DeleteUserById(System.Int32)
+  name: DeleteUserById(int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_DeleteUserById_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.DeleteUserById(System.Int32)
+  name.vb: DeleteUserById(Integer)
+  fullName: BankBackend.Repository.BankRepository.DeleteUserById(int)
+  fullName.vb: BankBackend.Repository.BankRepository.DeleteUserById(Integer)
+  nameWithType: BankRepository.DeleteUserById(int)
+  nameWithType.vb: BankRepository.DeleteUserById(Integer)
+- uid: BankBackend.Repository.BankRepository.DeleteUserById*
+  name: DeleteUserById
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_DeleteUserById_
+  commentId: Overload:BankBackend.Repository.BankRepository.DeleteUserById
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.DeleteUserById
+  nameWithType: BankRepository.DeleteUserById
+- uid: BankBackend.Repository.BankRepository.GetAccountByAccountId(System.Int32)
+  name: GetAccountByAccountId(int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetAccountByAccountId_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.GetAccountByAccountId(System.Int32)
+  name.vb: GetAccountByAccountId(Integer)
+  fullName: BankBackend.Repository.BankRepository.GetAccountByAccountId(int)
+  fullName.vb: BankBackend.Repository.BankRepository.GetAccountByAccountId(Integer)
+  nameWithType: BankRepository.GetAccountByAccountId(int)
+  nameWithType.vb: BankRepository.GetAccountByAccountId(Integer)
+- uid: BankBackend.Repository.BankRepository.GetAccountByAccountId*
+  name: GetAccountByAccountId
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetAccountByAccountId_
+  commentId: Overload:BankBackend.Repository.BankRepository.GetAccountByAccountId
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.GetAccountByAccountId
+  nameWithType: BankRepository.GetAccountByAccountId
+- uid: BankBackend.Repository.BankRepository.GetAccountsByUserId(System.Int32)
+  name: GetAccountsByUserId(int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetAccountsByUserId_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.GetAccountsByUserId(System.Int32)
+  name.vb: GetAccountsByUserId(Integer)
+  fullName: BankBackend.Repository.BankRepository.GetAccountsByUserId(int)
+  fullName.vb: BankBackend.Repository.BankRepository.GetAccountsByUserId(Integer)
+  nameWithType: BankRepository.GetAccountsByUserId(int)
+  nameWithType.vb: BankRepository.GetAccountsByUserId(Integer)
+- uid: BankBackend.Repository.BankRepository.GetAccountsByUserId*
+  name: GetAccountsByUserId
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetAccountsByUserId_
+  commentId: Overload:BankBackend.Repository.BankRepository.GetAccountsByUserId
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.GetAccountsByUserId
+  nameWithType: BankRepository.GetAccountsByUserId
+- uid: BankBackend.Repository.BankRepository.GetAllAccounts
+  name: GetAllAccounts()
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetAllAccounts
+  commentId: M:BankBackend.Repository.BankRepository.GetAllAccounts
+  fullName: BankBackend.Repository.BankRepository.GetAllAccounts()
+  nameWithType: BankRepository.GetAllAccounts()
+- uid: BankBackend.Repository.BankRepository.GetAllAccounts*
+  name: GetAllAccounts
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetAllAccounts_
+  commentId: Overload:BankBackend.Repository.BankRepository.GetAllAccounts
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.GetAllAccounts
+  nameWithType: BankRepository.GetAllAccounts
+- uid: BankBackend.Repository.BankRepository.GetAllTransactions
+  name: GetAllTransactions()
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetAllTransactions
+  commentId: M:BankBackend.Repository.BankRepository.GetAllTransactions
+  fullName: BankBackend.Repository.BankRepository.GetAllTransactions()
+  nameWithType: BankRepository.GetAllTransactions()
+- uid: BankBackend.Repository.BankRepository.GetAllTransactions*
+  name: GetAllTransactions
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetAllTransactions_
+  commentId: Overload:BankBackend.Repository.BankRepository.GetAllTransactions
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.GetAllTransactions
+  nameWithType: BankRepository.GetAllTransactions
+- uid: BankBackend.Repository.BankRepository.GetAllUsers
+  name: GetAllUsers()
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetAllUsers
+  commentId: M:BankBackend.Repository.BankRepository.GetAllUsers
+  fullName: BankBackend.Repository.BankRepository.GetAllUsers()
+  nameWithType: BankRepository.GetAllUsers()
+- uid: BankBackend.Repository.BankRepository.GetAllUsers*
+  name: GetAllUsers
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetAllUsers_
+  commentId: Overload:BankBackend.Repository.BankRepository.GetAllUsers
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.GetAllUsers
+  nameWithType: BankRepository.GetAllUsers
+- uid: BankBackend.Repository.BankRepository.GetPrimaryAccountsByUserId(System.Int32)
+  name: GetPrimaryAccountsByUserId(int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetPrimaryAccountsByUserId_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.GetPrimaryAccountsByUserId(System.Int32)
+  name.vb: GetPrimaryAccountsByUserId(Integer)
+  fullName: BankBackend.Repository.BankRepository.GetPrimaryAccountsByUserId(int)
+  fullName.vb: BankBackend.Repository.BankRepository.GetPrimaryAccountsByUserId(Integer)
+  nameWithType: BankRepository.GetPrimaryAccountsByUserId(int)
+  nameWithType.vb: BankRepository.GetPrimaryAccountsByUserId(Integer)
+- uid: BankBackend.Repository.BankRepository.GetPrimaryAccountsByUserId*
+  name: GetPrimaryAccountsByUserId
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetPrimaryAccountsByUserId_
+  commentId: Overload:BankBackend.Repository.BankRepository.GetPrimaryAccountsByUserId
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.GetPrimaryAccountsByUserId
+  nameWithType: BankRepository.GetPrimaryAccountsByUserId
+- uid: BankBackend.Repository.BankRepository.GetTransactionByTransactionId(System.Int32)
+  name: GetTransactionByTransactionId(int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetTransactionByTransactionId_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.GetTransactionByTransactionId(System.Int32)
+  name.vb: GetTransactionByTransactionId(Integer)
+  fullName: BankBackend.Repository.BankRepository.GetTransactionByTransactionId(int)
+  fullName.vb: BankBackend.Repository.BankRepository.GetTransactionByTransactionId(Integer)
+  nameWithType: BankRepository.GetTransactionByTransactionId(int)
+  nameWithType.vb: BankRepository.GetTransactionByTransactionId(Integer)
+- uid: BankBackend.Repository.BankRepository.GetTransactionByTransactionId*
+  name: GetTransactionByTransactionId
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetTransactionByTransactionId_
+  commentId: Overload:BankBackend.Repository.BankRepository.GetTransactionByTransactionId
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.GetTransactionByTransactionId
+  nameWithType: BankRepository.GetTransactionByTransactionId
+- uid: BankBackend.Repository.BankRepository.GetTransactionsByFromAccountId(System.Int32)
+  name: GetTransactionsByFromAccountId(int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetTransactionsByFromAccountId_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.GetTransactionsByFromAccountId(System.Int32)
+  name.vb: GetTransactionsByFromAccountId(Integer)
+  fullName: BankBackend.Repository.BankRepository.GetTransactionsByFromAccountId(int)
+  fullName.vb: BankBackend.Repository.BankRepository.GetTransactionsByFromAccountId(Integer)
+  nameWithType: BankRepository.GetTransactionsByFromAccountId(int)
+  nameWithType.vb: BankRepository.GetTransactionsByFromAccountId(Integer)
+- uid: BankBackend.Repository.BankRepository.GetTransactionsByFromAccountId*
+  name: GetTransactionsByFromAccountId
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetTransactionsByFromAccountId_
+  commentId: Overload:BankBackend.Repository.BankRepository.GetTransactionsByFromAccountId
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.GetTransactionsByFromAccountId
+  nameWithType: BankRepository.GetTransactionsByFromAccountId
+- uid: BankBackend.Repository.BankRepository.GetTransactionsByToAccountId(System.Int32)
+  name: GetTransactionsByToAccountId(int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetTransactionsByToAccountId_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.GetTransactionsByToAccountId(System.Int32)
+  name.vb: GetTransactionsByToAccountId(Integer)
+  fullName: BankBackend.Repository.BankRepository.GetTransactionsByToAccountId(int)
+  fullName.vb: BankBackend.Repository.BankRepository.GetTransactionsByToAccountId(Integer)
+  nameWithType: BankRepository.GetTransactionsByToAccountId(int)
+  nameWithType.vb: BankRepository.GetTransactionsByToAccountId(Integer)
+- uid: BankBackend.Repository.BankRepository.GetTransactionsByToAccountId*
+  name: GetTransactionsByToAccountId
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetTransactionsByToAccountId_
+  commentId: Overload:BankBackend.Repository.BankRepository.GetTransactionsByToAccountId
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.GetTransactionsByToAccountId
+  nameWithType: BankRepository.GetTransactionsByToAccountId
+- uid: BankBackend.Repository.BankRepository.GetUserByUserId(System.Int32)
+  name: GetUserByUserId(int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetUserByUserId_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.GetUserByUserId(System.Int32)
+  name.vb: GetUserByUserId(Integer)
+  fullName: BankBackend.Repository.BankRepository.GetUserByUserId(int)
+  fullName.vb: BankBackend.Repository.BankRepository.GetUserByUserId(Integer)
+  nameWithType: BankRepository.GetUserByUserId(int)
+  nameWithType.vb: BankRepository.GetUserByUserId(Integer)
+- uid: BankBackend.Repository.BankRepository.GetUserByUserId*
+  name: GetUserByUserId
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetUserByUserId_
+  commentId: Overload:BankBackend.Repository.BankRepository.GetUserByUserId
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.GetUserByUserId
+  nameWithType: BankRepository.GetUserByUserId
+- uid: BankBackend.Repository.BankRepository.GetUserByUsername(System.String)
+  name: GetUserByUsername(string)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetUserByUsername_System_String_
+  commentId: M:BankBackend.Repository.BankRepository.GetUserByUsername(System.String)
+  name.vb: GetUserByUsername(String)
+  fullName: BankBackend.Repository.BankRepository.GetUserByUsername(string)
+  fullName.vb: BankBackend.Repository.BankRepository.GetUserByUsername(String)
+  nameWithType: BankRepository.GetUserByUsername(string)
+  nameWithType.vb: BankRepository.GetUserByUsername(String)
+- uid: BankBackend.Repository.BankRepository.GetUserByUsername*
+  name: GetUserByUsername
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetUserByUsername_
+  commentId: Overload:BankBackend.Repository.BankRepository.GetUserByUsername
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.GetUserByUsername
+  nameWithType: BankRepository.GetUserByUsername
+- uid: BankBackend.Repository.BankRepository.GetUsersByAccountId(System.Int32)
+  name: GetUsersByAccountId(int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetUsersByAccountId_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.GetUsersByAccountId(System.Int32)
+  name.vb: GetUsersByAccountId(Integer)
+  fullName: BankBackend.Repository.BankRepository.GetUsersByAccountId(int)
+  fullName.vb: BankBackend.Repository.BankRepository.GetUsersByAccountId(Integer)
+  nameWithType: BankRepository.GetUsersByAccountId(int)
+  nameWithType.vb: BankRepository.GetUsersByAccountId(Integer)
+- uid: BankBackend.Repository.BankRepository.GetUsersByAccountId*
+  name: GetUsersByAccountId
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_GetUsersByAccountId_
+  commentId: Overload:BankBackend.Repository.BankRepository.GetUsersByAccountId
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.GetUsersByAccountId
+  nameWithType: BankRepository.GetUsersByAccountId
+- uid: BankBackend.Repository.BankRepository.UpdateBalance(System.Int32,System.Double)
+  name: UpdateBalance(int, double)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_UpdateBalance_System_Int32_System_Double_
+  commentId: M:BankBackend.Repository.BankRepository.UpdateBalance(System.Int32,System.Double)
+  name.vb: UpdateBalance(Integer, Double)
+  fullName: BankBackend.Repository.BankRepository.UpdateBalance(int, double)
+  fullName.vb: BankBackend.Repository.BankRepository.UpdateBalance(Integer, Double)
+  nameWithType: BankRepository.UpdateBalance(int, double)
+  nameWithType.vb: BankRepository.UpdateBalance(Integer, Double)
+- uid: BankBackend.Repository.BankRepository.UpdateBalance*
+  name: UpdateBalance
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_UpdateBalance_
+  commentId: Overload:BankBackend.Repository.BankRepository.UpdateBalance
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.UpdateBalance
+  nameWithType: BankRepository.UpdateBalance
+- uid: BankBackend.Repository.BankRepository.UpdatePassword(System.Int32,System.String)
+  name: UpdatePassword(int, string)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_UpdatePassword_System_Int32_System_String_
+  commentId: M:BankBackend.Repository.BankRepository.UpdatePassword(System.Int32,System.String)
+  name.vb: UpdatePassword(Integer, String)
+  fullName: BankBackend.Repository.BankRepository.UpdatePassword(int, string)
+  fullName.vb: BankBackend.Repository.BankRepository.UpdatePassword(Integer, String)
+  nameWithType: BankRepository.UpdatePassword(int, string)
+  nameWithType.vb: BankRepository.UpdatePassword(Integer, String)
+- uid: BankBackend.Repository.BankRepository.UpdatePassword*
+  name: UpdatePassword
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_UpdatePassword_
+  commentId: Overload:BankBackend.Repository.BankRepository.UpdatePassword
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.UpdatePassword
+  nameWithType: BankRepository.UpdatePassword
+- uid: BankBackend.Repository.BankRepository.UpdatePrimaryUser(System.Int32,System.Int32)
+  name: UpdatePrimaryUser(int, int)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_UpdatePrimaryUser_System_Int32_System_Int32_
+  commentId: M:BankBackend.Repository.BankRepository.UpdatePrimaryUser(System.Int32,System.Int32)
+  name.vb: UpdatePrimaryUser(Integer, Integer)
+  fullName: BankBackend.Repository.BankRepository.UpdatePrimaryUser(int, int)
+  fullName.vb: BankBackend.Repository.BankRepository.UpdatePrimaryUser(Integer, Integer)
+  nameWithType: BankRepository.UpdatePrimaryUser(int, int)
+  nameWithType.vb: BankRepository.UpdatePrimaryUser(Integer, Integer)
+- uid: BankBackend.Repository.BankRepository.UpdatePrimaryUser*
+  name: UpdatePrimaryUser
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_UpdatePrimaryUser_
+  commentId: Overload:BankBackend.Repository.BankRepository.UpdatePrimaryUser
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.UpdatePrimaryUser
+  nameWithType: BankRepository.UpdatePrimaryUser
+- uid: BankBackend.Repository.BankRepository.UpdateUsername(System.Int32,System.String)
+  name: UpdateUsername(int, string)
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_UpdateUsername_System_Int32_System_String_
+  commentId: M:BankBackend.Repository.BankRepository.UpdateUsername(System.Int32,System.String)
+  name.vb: UpdateUsername(Integer, String)
+  fullName: BankBackend.Repository.BankRepository.UpdateUsername(int, string)
+  fullName.vb: BankBackend.Repository.BankRepository.UpdateUsername(Integer, String)
+  nameWithType: BankRepository.UpdateUsername(int, string)
+  nameWithType.vb: BankRepository.UpdateUsername(Integer, String)
+- uid: BankBackend.Repository.BankRepository.UpdateUsername*
+  name: UpdateUsername
+  href: api/BankBackend.Repository.BankRepository.html#BankBackend_Repository_BankRepository_UpdateUsername_
+  commentId: Overload:BankBackend.Repository.BankRepository.UpdateUsername
+  isSpec: "True"
+  fullName: BankBackend.Repository.BankRepository.UpdateUsername
+  nameWithType: BankRepository.UpdateUsername
+- uid: BankBackend.Repository.IBankRepository
+  name: IBankRepository
+  href: api/BankBackend.Repository.IBankRepository.html
+  commentId: T:BankBackend.Repository.IBankRepository
+  fullName: BankBackend.Repository.IBankRepository
+  nameWithType: IBankRepository
+- uid: BankBackend.Repository.IBankRepository.AddAccountToUser(System.Int32,System.Int32)
+  name: AddAccountToUser(int, int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_AddAccountToUser_System_Int32_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.AddAccountToUser(System.Int32,System.Int32)
+  name.vb: AddAccountToUser(Integer, Integer)
+  fullName: BankBackend.Repository.IBankRepository.AddAccountToUser(int, int)
+  fullName.vb: BankBackend.Repository.IBankRepository.AddAccountToUser(Integer, Integer)
+  nameWithType: IBankRepository.AddAccountToUser(int, int)
+  nameWithType.vb: IBankRepository.AddAccountToUser(Integer, Integer)
+- uid: BankBackend.Repository.IBankRepository.AddAccountToUser*
+  name: AddAccountToUser
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_AddAccountToUser_
+  commentId: Overload:BankBackend.Repository.IBankRepository.AddAccountToUser
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.AddAccountToUser
+  nameWithType: IBankRepository.AddAccountToUser
+- uid: BankBackend.Repository.IBankRepository.AddUserToAccount(System.Int32,System.Int32)
+  name: AddUserToAccount(int, int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_AddUserToAccount_System_Int32_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.AddUserToAccount(System.Int32,System.Int32)
+  name.vb: AddUserToAccount(Integer, Integer)
+  fullName: BankBackend.Repository.IBankRepository.AddUserToAccount(int, int)
+  fullName.vb: BankBackend.Repository.IBankRepository.AddUserToAccount(Integer, Integer)
+  nameWithType: IBankRepository.AddUserToAccount(int, int)
+  nameWithType.vb: IBankRepository.AddUserToAccount(Integer, Integer)
+- uid: BankBackend.Repository.IBankRepository.AddUserToAccount*
+  name: AddUserToAccount
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_AddUserToAccount_
+  commentId: Overload:BankBackend.Repository.IBankRepository.AddUserToAccount
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.AddUserToAccount
+  nameWithType: IBankRepository.AddUserToAccount
+- uid: BankBackend.Repository.IBankRepository.CreateAccount(BankBackend.Models.Account)
+  name: CreateAccount(Account)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_CreateAccount_BankBackend_Models_Account_
+  commentId: M:BankBackend.Repository.IBankRepository.CreateAccount(BankBackend.Models.Account)
+  fullName: BankBackend.Repository.IBankRepository.CreateAccount(BankBackend.Models.Account)
+  nameWithType: IBankRepository.CreateAccount(Account)
+- uid: BankBackend.Repository.IBankRepository.CreateAccount*
+  name: CreateAccount
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_CreateAccount_
+  commentId: Overload:BankBackend.Repository.IBankRepository.CreateAccount
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.CreateAccount
+  nameWithType: IBankRepository.CreateAccount
+- uid: BankBackend.Repository.IBankRepository.CreateTransaction(BankBackend.Models.Transaction)
+  name: CreateTransaction(Transaction)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_CreateTransaction_BankBackend_Models_Transaction_
+  commentId: M:BankBackend.Repository.IBankRepository.CreateTransaction(BankBackend.Models.Transaction)
+  fullName: BankBackend.Repository.IBankRepository.CreateTransaction(BankBackend.Models.Transaction)
+  nameWithType: IBankRepository.CreateTransaction(Transaction)
+- uid: BankBackend.Repository.IBankRepository.CreateTransaction*
+  name: CreateTransaction
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_CreateTransaction_
+  commentId: Overload:BankBackend.Repository.IBankRepository.CreateTransaction
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.CreateTransaction
+  nameWithType: IBankRepository.CreateTransaction
+- uid: BankBackend.Repository.IBankRepository.CreateUser(BankBackend.Models.User)
+  name: CreateUser(User)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_CreateUser_BankBackend_Models_User_
+  commentId: M:BankBackend.Repository.IBankRepository.CreateUser(BankBackend.Models.User)
+  fullName: BankBackend.Repository.IBankRepository.CreateUser(BankBackend.Models.User)
+  nameWithType: IBankRepository.CreateUser(User)
+- uid: BankBackend.Repository.IBankRepository.CreateUser*
+  name: CreateUser
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_CreateUser_
+  commentId: Overload:BankBackend.Repository.IBankRepository.CreateUser
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.CreateUser
+  nameWithType: IBankRepository.CreateUser
+- uid: BankBackend.Repository.IBankRepository.DeleteAccountById(System.Int32)
+  name: DeleteAccountById(int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_DeleteAccountById_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.DeleteAccountById(System.Int32)
+  name.vb: DeleteAccountById(Integer)
+  fullName: BankBackend.Repository.IBankRepository.DeleteAccountById(int)
+  fullName.vb: BankBackend.Repository.IBankRepository.DeleteAccountById(Integer)
+  nameWithType: IBankRepository.DeleteAccountById(int)
+  nameWithType.vb: IBankRepository.DeleteAccountById(Integer)
+- uid: BankBackend.Repository.IBankRepository.DeleteAccountById*
+  name: DeleteAccountById
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_DeleteAccountById_
+  commentId: Overload:BankBackend.Repository.IBankRepository.DeleteAccountById
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.DeleteAccountById
+  nameWithType: IBankRepository.DeleteAccountById
+- uid: BankBackend.Repository.IBankRepository.DeleteAccountUserByUserId(System.Int32,System.Int32)
+  name: DeleteAccountUserByUserId(int, int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_DeleteAccountUserByUserId_System_Int32_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.DeleteAccountUserByUserId(System.Int32,System.Int32)
+  name.vb: DeleteAccountUserByUserId(Integer, Integer)
+  fullName: BankBackend.Repository.IBankRepository.DeleteAccountUserByUserId(int, int)
+  fullName.vb: BankBackend.Repository.IBankRepository.DeleteAccountUserByUserId(Integer, Integer)
+  nameWithType: IBankRepository.DeleteAccountUserByUserId(int, int)
+  nameWithType.vb: IBankRepository.DeleteAccountUserByUserId(Integer, Integer)
+- uid: BankBackend.Repository.IBankRepository.DeleteAccountUserByUserId*
+  name: DeleteAccountUserByUserId
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_DeleteAccountUserByUserId_
+  commentId: Overload:BankBackend.Repository.IBankRepository.DeleteAccountUserByUserId
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.DeleteAccountUserByUserId
+  nameWithType: IBankRepository.DeleteAccountUserByUserId
+- uid: BankBackend.Repository.IBankRepository.DeleteTransactionByTransactionId(System.Int32)
+  name: DeleteTransactionByTransactionId(int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_DeleteTransactionByTransactionId_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.DeleteTransactionByTransactionId(System.Int32)
+  name.vb: DeleteTransactionByTransactionId(Integer)
+  fullName: BankBackend.Repository.IBankRepository.DeleteTransactionByTransactionId(int)
+  fullName.vb: BankBackend.Repository.IBankRepository.DeleteTransactionByTransactionId(Integer)
+  nameWithType: IBankRepository.DeleteTransactionByTransactionId(int)
+  nameWithType.vb: IBankRepository.DeleteTransactionByTransactionId(Integer)
+- uid: BankBackend.Repository.IBankRepository.DeleteTransactionByTransactionId*
+  name: DeleteTransactionByTransactionId
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_DeleteTransactionByTransactionId_
+  commentId: Overload:BankBackend.Repository.IBankRepository.DeleteTransactionByTransactionId
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.DeleteTransactionByTransactionId
+  nameWithType: IBankRepository.DeleteTransactionByTransactionId
+- uid: BankBackend.Repository.IBankRepository.DeleteUserAccountByAccountId(System.Int32,System.Int32)
+  name: DeleteUserAccountByAccountId(int, int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_DeleteUserAccountByAccountId_System_Int32_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.DeleteUserAccountByAccountId(System.Int32,System.Int32)
+  name.vb: DeleteUserAccountByAccountId(Integer, Integer)
+  fullName: BankBackend.Repository.IBankRepository.DeleteUserAccountByAccountId(int, int)
+  fullName.vb: BankBackend.Repository.IBankRepository.DeleteUserAccountByAccountId(Integer, Integer)
+  nameWithType: IBankRepository.DeleteUserAccountByAccountId(int, int)
+  nameWithType.vb: IBankRepository.DeleteUserAccountByAccountId(Integer, Integer)
+- uid: BankBackend.Repository.IBankRepository.DeleteUserAccountByAccountId*
+  name: DeleteUserAccountByAccountId
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_DeleteUserAccountByAccountId_
+  commentId: Overload:BankBackend.Repository.IBankRepository.DeleteUserAccountByAccountId
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.DeleteUserAccountByAccountId
+  nameWithType: IBankRepository.DeleteUserAccountByAccountId
+- uid: BankBackend.Repository.IBankRepository.DeleteUserById(System.Int32)
+  name: DeleteUserById(int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_DeleteUserById_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.DeleteUserById(System.Int32)
+  name.vb: DeleteUserById(Integer)
+  fullName: BankBackend.Repository.IBankRepository.DeleteUserById(int)
+  fullName.vb: BankBackend.Repository.IBankRepository.DeleteUserById(Integer)
+  nameWithType: IBankRepository.DeleteUserById(int)
+  nameWithType.vb: IBankRepository.DeleteUserById(Integer)
+- uid: BankBackend.Repository.IBankRepository.DeleteUserById*
+  name: DeleteUserById
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_DeleteUserById_
+  commentId: Overload:BankBackend.Repository.IBankRepository.DeleteUserById
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.DeleteUserById
+  nameWithType: IBankRepository.DeleteUserById
+- uid: BankBackend.Repository.IBankRepository.GetAccountByAccountId(System.Int32)
+  name: GetAccountByAccountId(int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetAccountByAccountId_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.GetAccountByAccountId(System.Int32)
+  name.vb: GetAccountByAccountId(Integer)
+  fullName: BankBackend.Repository.IBankRepository.GetAccountByAccountId(int)
+  fullName.vb: BankBackend.Repository.IBankRepository.GetAccountByAccountId(Integer)
+  nameWithType: IBankRepository.GetAccountByAccountId(int)
+  nameWithType.vb: IBankRepository.GetAccountByAccountId(Integer)
+- uid: BankBackend.Repository.IBankRepository.GetAccountByAccountId*
+  name: GetAccountByAccountId
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetAccountByAccountId_
+  commentId: Overload:BankBackend.Repository.IBankRepository.GetAccountByAccountId
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.GetAccountByAccountId
+  nameWithType: IBankRepository.GetAccountByAccountId
+- uid: BankBackend.Repository.IBankRepository.GetAccountsByUserId(System.Int32)
+  name: GetAccountsByUserId(int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetAccountsByUserId_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.GetAccountsByUserId(System.Int32)
+  name.vb: GetAccountsByUserId(Integer)
+  fullName: BankBackend.Repository.IBankRepository.GetAccountsByUserId(int)
+  fullName.vb: BankBackend.Repository.IBankRepository.GetAccountsByUserId(Integer)
+  nameWithType: IBankRepository.GetAccountsByUserId(int)
+  nameWithType.vb: IBankRepository.GetAccountsByUserId(Integer)
+- uid: BankBackend.Repository.IBankRepository.GetAccountsByUserId*
+  name: GetAccountsByUserId
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetAccountsByUserId_
+  commentId: Overload:BankBackend.Repository.IBankRepository.GetAccountsByUserId
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.GetAccountsByUserId
+  nameWithType: IBankRepository.GetAccountsByUserId
+- uid: BankBackend.Repository.IBankRepository.GetAllAccounts
+  name: GetAllAccounts()
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetAllAccounts
+  commentId: M:BankBackend.Repository.IBankRepository.GetAllAccounts
+  fullName: BankBackend.Repository.IBankRepository.GetAllAccounts()
+  nameWithType: IBankRepository.GetAllAccounts()
+- uid: BankBackend.Repository.IBankRepository.GetAllAccounts*
+  name: GetAllAccounts
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetAllAccounts_
+  commentId: Overload:BankBackend.Repository.IBankRepository.GetAllAccounts
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.GetAllAccounts
+  nameWithType: IBankRepository.GetAllAccounts
+- uid: BankBackend.Repository.IBankRepository.GetAllTransactions
+  name: GetAllTransactions()
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetAllTransactions
+  commentId: M:BankBackend.Repository.IBankRepository.GetAllTransactions
+  fullName: BankBackend.Repository.IBankRepository.GetAllTransactions()
+  nameWithType: IBankRepository.GetAllTransactions()
+- uid: BankBackend.Repository.IBankRepository.GetAllTransactions*
+  name: GetAllTransactions
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetAllTransactions_
+  commentId: Overload:BankBackend.Repository.IBankRepository.GetAllTransactions
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.GetAllTransactions
+  nameWithType: IBankRepository.GetAllTransactions
+- uid: BankBackend.Repository.IBankRepository.GetAllUsers
+  name: GetAllUsers()
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetAllUsers
+  commentId: M:BankBackend.Repository.IBankRepository.GetAllUsers
+  fullName: BankBackend.Repository.IBankRepository.GetAllUsers()
+  nameWithType: IBankRepository.GetAllUsers()
+- uid: BankBackend.Repository.IBankRepository.GetAllUsers*
+  name: GetAllUsers
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetAllUsers_
+  commentId: Overload:BankBackend.Repository.IBankRepository.GetAllUsers
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.GetAllUsers
+  nameWithType: IBankRepository.GetAllUsers
+- uid: BankBackend.Repository.IBankRepository.GetPrimaryAccountsByUserId(System.Int32)
+  name: GetPrimaryAccountsByUserId(int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetPrimaryAccountsByUserId_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.GetPrimaryAccountsByUserId(System.Int32)
+  name.vb: GetPrimaryAccountsByUserId(Integer)
+  fullName: BankBackend.Repository.IBankRepository.GetPrimaryAccountsByUserId(int)
+  fullName.vb: BankBackend.Repository.IBankRepository.GetPrimaryAccountsByUserId(Integer)
+  nameWithType: IBankRepository.GetPrimaryAccountsByUserId(int)
+  nameWithType.vb: IBankRepository.GetPrimaryAccountsByUserId(Integer)
+- uid: BankBackend.Repository.IBankRepository.GetPrimaryAccountsByUserId*
+  name: GetPrimaryAccountsByUserId
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetPrimaryAccountsByUserId_
+  commentId: Overload:BankBackend.Repository.IBankRepository.GetPrimaryAccountsByUserId
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.GetPrimaryAccountsByUserId
+  nameWithType: IBankRepository.GetPrimaryAccountsByUserId
+- uid: BankBackend.Repository.IBankRepository.GetTransactionByTransactionId(System.Int32)
+  name: GetTransactionByTransactionId(int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetTransactionByTransactionId_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.GetTransactionByTransactionId(System.Int32)
+  name.vb: GetTransactionByTransactionId(Integer)
+  fullName: BankBackend.Repository.IBankRepository.GetTransactionByTransactionId(int)
+  fullName.vb: BankBackend.Repository.IBankRepository.GetTransactionByTransactionId(Integer)
+  nameWithType: IBankRepository.GetTransactionByTransactionId(int)
+  nameWithType.vb: IBankRepository.GetTransactionByTransactionId(Integer)
+- uid: BankBackend.Repository.IBankRepository.GetTransactionByTransactionId*
+  name: GetTransactionByTransactionId
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetTransactionByTransactionId_
+  commentId: Overload:BankBackend.Repository.IBankRepository.GetTransactionByTransactionId
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.GetTransactionByTransactionId
+  nameWithType: IBankRepository.GetTransactionByTransactionId
+- uid: BankBackend.Repository.IBankRepository.GetTransactionsByFromAccountId(System.Int32)
+  name: GetTransactionsByFromAccountId(int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetTransactionsByFromAccountId_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.GetTransactionsByFromAccountId(System.Int32)
+  name.vb: GetTransactionsByFromAccountId(Integer)
+  fullName: BankBackend.Repository.IBankRepository.GetTransactionsByFromAccountId(int)
+  fullName.vb: BankBackend.Repository.IBankRepository.GetTransactionsByFromAccountId(Integer)
+  nameWithType: IBankRepository.GetTransactionsByFromAccountId(int)
+  nameWithType.vb: IBankRepository.GetTransactionsByFromAccountId(Integer)
+- uid: BankBackend.Repository.IBankRepository.GetTransactionsByFromAccountId*
+  name: GetTransactionsByFromAccountId
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetTransactionsByFromAccountId_
+  commentId: Overload:BankBackend.Repository.IBankRepository.GetTransactionsByFromAccountId
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.GetTransactionsByFromAccountId
+  nameWithType: IBankRepository.GetTransactionsByFromAccountId
+- uid: BankBackend.Repository.IBankRepository.GetTransactionsByToAccountId(System.Int32)
+  name: GetTransactionsByToAccountId(int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetTransactionsByToAccountId_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.GetTransactionsByToAccountId(System.Int32)
+  name.vb: GetTransactionsByToAccountId(Integer)
+  fullName: BankBackend.Repository.IBankRepository.GetTransactionsByToAccountId(int)
+  fullName.vb: BankBackend.Repository.IBankRepository.GetTransactionsByToAccountId(Integer)
+  nameWithType: IBankRepository.GetTransactionsByToAccountId(int)
+  nameWithType.vb: IBankRepository.GetTransactionsByToAccountId(Integer)
+- uid: BankBackend.Repository.IBankRepository.GetTransactionsByToAccountId*
+  name: GetTransactionsByToAccountId
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetTransactionsByToAccountId_
+  commentId: Overload:BankBackend.Repository.IBankRepository.GetTransactionsByToAccountId
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.GetTransactionsByToAccountId
+  nameWithType: IBankRepository.GetTransactionsByToAccountId
+- uid: BankBackend.Repository.IBankRepository.GetUserByUserId(System.Int32)
+  name: GetUserByUserId(int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetUserByUserId_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.GetUserByUserId(System.Int32)
+  name.vb: GetUserByUserId(Integer)
+  fullName: BankBackend.Repository.IBankRepository.GetUserByUserId(int)
+  fullName.vb: BankBackend.Repository.IBankRepository.GetUserByUserId(Integer)
+  nameWithType: IBankRepository.GetUserByUserId(int)
+  nameWithType.vb: IBankRepository.GetUserByUserId(Integer)
+- uid: BankBackend.Repository.IBankRepository.GetUserByUserId*
+  name: GetUserByUserId
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetUserByUserId_
+  commentId: Overload:BankBackend.Repository.IBankRepository.GetUserByUserId
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.GetUserByUserId
+  nameWithType: IBankRepository.GetUserByUserId
+- uid: BankBackend.Repository.IBankRepository.GetUserByUsername(System.String)
+  name: GetUserByUsername(string)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetUserByUsername_System_String_
+  commentId: M:BankBackend.Repository.IBankRepository.GetUserByUsername(System.String)
+  name.vb: GetUserByUsername(String)
+  fullName: BankBackend.Repository.IBankRepository.GetUserByUsername(string)
+  fullName.vb: BankBackend.Repository.IBankRepository.GetUserByUsername(String)
+  nameWithType: IBankRepository.GetUserByUsername(string)
+  nameWithType.vb: IBankRepository.GetUserByUsername(String)
+- uid: BankBackend.Repository.IBankRepository.GetUserByUsername*
+  name: GetUserByUsername
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetUserByUsername_
+  commentId: Overload:BankBackend.Repository.IBankRepository.GetUserByUsername
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.GetUserByUsername
+  nameWithType: IBankRepository.GetUserByUsername
+- uid: BankBackend.Repository.IBankRepository.GetUsersByAccountId(System.Int32)
+  name: GetUsersByAccountId(int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetUsersByAccountId_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.GetUsersByAccountId(System.Int32)
+  name.vb: GetUsersByAccountId(Integer)
+  fullName: BankBackend.Repository.IBankRepository.GetUsersByAccountId(int)
+  fullName.vb: BankBackend.Repository.IBankRepository.GetUsersByAccountId(Integer)
+  nameWithType: IBankRepository.GetUsersByAccountId(int)
+  nameWithType.vb: IBankRepository.GetUsersByAccountId(Integer)
+- uid: BankBackend.Repository.IBankRepository.GetUsersByAccountId*
+  name: GetUsersByAccountId
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_GetUsersByAccountId_
+  commentId: Overload:BankBackend.Repository.IBankRepository.GetUsersByAccountId
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.GetUsersByAccountId
+  nameWithType: IBankRepository.GetUsersByAccountId
+- uid: BankBackend.Repository.IBankRepository.UpdateBalance(System.Int32,System.Double)
+  name: UpdateBalance(int, double)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_UpdateBalance_System_Int32_System_Double_
+  commentId: M:BankBackend.Repository.IBankRepository.UpdateBalance(System.Int32,System.Double)
+  name.vb: UpdateBalance(Integer, Double)
+  fullName: BankBackend.Repository.IBankRepository.UpdateBalance(int, double)
+  fullName.vb: BankBackend.Repository.IBankRepository.UpdateBalance(Integer, Double)
+  nameWithType: IBankRepository.UpdateBalance(int, double)
+  nameWithType.vb: IBankRepository.UpdateBalance(Integer, Double)
+- uid: BankBackend.Repository.IBankRepository.UpdateBalance*
+  name: UpdateBalance
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_UpdateBalance_
+  commentId: Overload:BankBackend.Repository.IBankRepository.UpdateBalance
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.UpdateBalance
+  nameWithType: IBankRepository.UpdateBalance
+- uid: BankBackend.Repository.IBankRepository.UpdatePassword(System.Int32,System.String)
+  name: UpdatePassword(int, string)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_UpdatePassword_System_Int32_System_String_
+  commentId: M:BankBackend.Repository.IBankRepository.UpdatePassword(System.Int32,System.String)
+  name.vb: UpdatePassword(Integer, String)
+  fullName: BankBackend.Repository.IBankRepository.UpdatePassword(int, string)
+  fullName.vb: BankBackend.Repository.IBankRepository.UpdatePassword(Integer, String)
+  nameWithType: IBankRepository.UpdatePassword(int, string)
+  nameWithType.vb: IBankRepository.UpdatePassword(Integer, String)
+- uid: BankBackend.Repository.IBankRepository.UpdatePassword*
+  name: UpdatePassword
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_UpdatePassword_
+  commentId: Overload:BankBackend.Repository.IBankRepository.UpdatePassword
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.UpdatePassword
+  nameWithType: IBankRepository.UpdatePassword
+- uid: BankBackend.Repository.IBankRepository.UpdatePrimaryUser(System.Int32,System.Int32)
+  name: UpdatePrimaryUser(int, int)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_UpdatePrimaryUser_System_Int32_System_Int32_
+  commentId: M:BankBackend.Repository.IBankRepository.UpdatePrimaryUser(System.Int32,System.Int32)
+  name.vb: UpdatePrimaryUser(Integer, Integer)
+  fullName: BankBackend.Repository.IBankRepository.UpdatePrimaryUser(int, int)
+  fullName.vb: BankBackend.Repository.IBankRepository.UpdatePrimaryUser(Integer, Integer)
+  nameWithType: IBankRepository.UpdatePrimaryUser(int, int)
+  nameWithType.vb: IBankRepository.UpdatePrimaryUser(Integer, Integer)
+- uid: BankBackend.Repository.IBankRepository.UpdatePrimaryUser*
+  name: UpdatePrimaryUser
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_UpdatePrimaryUser_
+  commentId: Overload:BankBackend.Repository.IBankRepository.UpdatePrimaryUser
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.UpdatePrimaryUser
+  nameWithType: IBankRepository.UpdatePrimaryUser
+- uid: BankBackend.Repository.IBankRepository.UpdateUsername(System.Int32,System.String)
+  name: UpdateUsername(int, string)
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_UpdateUsername_System_Int32_System_String_
+  commentId: M:BankBackend.Repository.IBankRepository.UpdateUsername(System.Int32,System.String)
+  name.vb: UpdateUsername(Integer, String)
+  fullName: BankBackend.Repository.IBankRepository.UpdateUsername(int, string)
+  fullName.vb: BankBackend.Repository.IBankRepository.UpdateUsername(Integer, String)
+  nameWithType: IBankRepository.UpdateUsername(int, string)
+  nameWithType.vb: IBankRepository.UpdateUsername(Integer, String)
+- uid: BankBackend.Repository.IBankRepository.UpdateUsername*
+  name: UpdateUsername
+  href: api/BankBackend.Repository.IBankRepository.html#BankBackend_Repository_IBankRepository_UpdateUsername_
+  commentId: Overload:BankBackend.Repository.IBankRepository.UpdateUsername
+  isSpec: "True"
+  fullName: BankBackend.Repository.IBankRepository.UpdateUsername
+  nameWithType: IBankRepository.UpdateUsername
+- uid: BankBackend.Service
+  name: BankBackend.Service
+  href: api/BankBackend.Service.html
+  commentId: N:BankBackend.Service
+  fullName: BankBackend.Service
+  nameWithType: BankBackend.Service
+- uid: BankBackend.Service.AccountIdNotFoundException
+  name: AccountIdNotFoundException
+  href: api/BankBackend.Service.AccountIdNotFoundException.html
+  commentId: T:BankBackend.Service.AccountIdNotFoundException
+  fullName: BankBackend.Service.AccountIdNotFoundException
+  nameWithType: AccountIdNotFoundException
+- uid: BankBackend.Service.AccountIdNotFoundException.#ctor
+  name: AccountIdNotFoundException()
+  href: api/BankBackend.Service.AccountIdNotFoundException.html#BankBackend_Service_AccountIdNotFoundException__ctor
+  commentId: M:BankBackend.Service.AccountIdNotFoundException.#ctor
+  name.vb: New()
+  fullName: BankBackend.Service.AccountIdNotFoundException.AccountIdNotFoundException()
+  fullName.vb: BankBackend.Service.AccountIdNotFoundException.New()
+  nameWithType: AccountIdNotFoundException.AccountIdNotFoundException()
+  nameWithType.vb: AccountIdNotFoundException.New()
+- uid: BankBackend.Service.AccountIdNotFoundException.#ctor(System.String)
+  name: AccountIdNotFoundException(string)
+  href: api/BankBackend.Service.AccountIdNotFoundException.html#BankBackend_Service_AccountIdNotFoundException__ctor_System_String_
+  commentId: M:BankBackend.Service.AccountIdNotFoundException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: BankBackend.Service.AccountIdNotFoundException.AccountIdNotFoundException(string)
+  fullName.vb: BankBackend.Service.AccountIdNotFoundException.New(String)
+  nameWithType: AccountIdNotFoundException.AccountIdNotFoundException(string)
+  nameWithType.vb: AccountIdNotFoundException.New(String)
+- uid: BankBackend.Service.AccountIdNotFoundException.#ctor*
+  name: AccountIdNotFoundException
+  href: api/BankBackend.Service.AccountIdNotFoundException.html#BankBackend_Service_AccountIdNotFoundException__ctor_
+  commentId: Overload:BankBackend.Service.AccountIdNotFoundException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Service.AccountIdNotFoundException.AccountIdNotFoundException
+  fullName.vb: BankBackend.Service.AccountIdNotFoundException.New
+  nameWithType: AccountIdNotFoundException.AccountIdNotFoundException
+  nameWithType.vb: AccountIdNotFoundException.New
+- uid: BankBackend.Service.BankExceptions
+  name: BankExceptions
+  href: api/BankBackend.Service.BankExceptions.html
+  commentId: T:BankBackend.Service.BankExceptions
+  fullName: BankBackend.Service.BankExceptions
+  nameWithType: BankExceptions
+- uid: BankBackend.Service.BankExceptions.#ctor
+  name: BankExceptions()
+  href: api/BankBackend.Service.BankExceptions.html#BankBackend_Service_BankExceptions__ctor
+  commentId: M:BankBackend.Service.BankExceptions.#ctor
+  name.vb: New()
+  fullName: BankBackend.Service.BankExceptions.BankExceptions()
+  fullName.vb: BankBackend.Service.BankExceptions.New()
+  nameWithType: BankExceptions.BankExceptions()
+  nameWithType.vb: BankExceptions.New()
+- uid: BankBackend.Service.BankExceptions.#ctor(System.String)
+  name: BankExceptions(string)
+  href: api/BankBackend.Service.BankExceptions.html#BankBackend_Service_BankExceptions__ctor_System_String_
+  commentId: M:BankBackend.Service.BankExceptions.#ctor(System.String)
+  name.vb: New(String)
+  fullName: BankBackend.Service.BankExceptions.BankExceptions(string)
+  fullName.vb: BankBackend.Service.BankExceptions.New(String)
+  nameWithType: BankExceptions.BankExceptions(string)
+  nameWithType.vb: BankExceptions.New(String)
+- uid: BankBackend.Service.BankExceptions.#ctor*
+  name: BankExceptions
+  href: api/BankBackend.Service.BankExceptions.html#BankBackend_Service_BankExceptions__ctor_
+  commentId: Overload:BankBackend.Service.BankExceptions.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Service.BankExceptions.BankExceptions
+  fullName.vb: BankBackend.Service.BankExceptions.New
+  nameWithType: BankExceptions.BankExceptions
+  nameWithType.vb: BankExceptions.New
+- uid: BankBackend.Service.BankService
+  name: BankService
+  href: api/BankBackend.Service.BankService.html
+  commentId: T:BankBackend.Service.BankService
+  fullName: BankBackend.Service.BankService
+  nameWithType: BankService
+- uid: BankBackend.Service.BankService.#ctor(BankBackend.Repository.IBankRepository)
+  name: BankService(IBankRepository)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService__ctor_BankBackend_Repository_IBankRepository_
+  commentId: M:BankBackend.Service.BankService.#ctor(BankBackend.Repository.IBankRepository)
+  name.vb: New(IBankRepository)
+  fullName: BankBackend.Service.BankService.BankService(BankBackend.Repository.IBankRepository)
+  fullName.vb: BankBackend.Service.BankService.New(BankBackend.Repository.IBankRepository)
+  nameWithType: BankService.BankService(IBankRepository)
+  nameWithType.vb: BankService.New(IBankRepository)
+- uid: BankBackend.Service.BankService.#ctor*
+  name: BankService
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService__ctor_
+  commentId: Overload:BankBackend.Service.BankService.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Service.BankService.BankService
+  fullName.vb: BankBackend.Service.BankService.New
+  nameWithType: BankService.BankService
+  nameWithType.vb: BankService.New
+- uid: BankBackend.Service.BankService.AddAccountUser(System.Int32,System.Int32,System.Int32)
+  name: AddAccountUser(int, int, int)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_AddAccountUser_System_Int32_System_Int32_System_Int32_
+  commentId: M:BankBackend.Service.BankService.AddAccountUser(System.Int32,System.Int32,System.Int32)
+  name.vb: AddAccountUser(Integer, Integer, Integer)
+  fullName: BankBackend.Service.BankService.AddAccountUser(int, int, int)
+  fullName.vb: BankBackend.Service.BankService.AddAccountUser(Integer, Integer, Integer)
+  nameWithType: BankService.AddAccountUser(int, int, int)
+  nameWithType.vb: BankService.AddAccountUser(Integer, Integer, Integer)
+- uid: BankBackend.Service.BankService.AddAccountUser*
+  name: AddAccountUser
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_AddAccountUser_
+  commentId: Overload:BankBackend.Service.BankService.AddAccountUser
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.AddAccountUser
+  nameWithType: BankService.AddAccountUser
+- uid: BankBackend.Service.BankService.CreateAccount(BankBackend.Models.Account)
+  name: CreateAccount(Account)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_CreateAccount_BankBackend_Models_Account_
+  commentId: M:BankBackend.Service.BankService.CreateAccount(BankBackend.Models.Account)
+  fullName: BankBackend.Service.BankService.CreateAccount(BankBackend.Models.Account)
+  nameWithType: BankService.CreateAccount(Account)
+- uid: BankBackend.Service.BankService.CreateAccount*
+  name: CreateAccount
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_CreateAccount_
+  commentId: Overload:BankBackend.Service.BankService.CreateAccount
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.CreateAccount
+  nameWithType: BankService.CreateAccount
+- uid: BankBackend.Service.BankService.CreateUser(BankBackend.Models.User)
+  name: CreateUser(User)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_CreateUser_BankBackend_Models_User_
+  commentId: M:BankBackend.Service.BankService.CreateUser(BankBackend.Models.User)
+  fullName: BankBackend.Service.BankService.CreateUser(BankBackend.Models.User)
+  nameWithType: BankService.CreateUser(User)
+- uid: BankBackend.Service.BankService.CreateUser*
+  name: CreateUser
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_CreateUser_
+  commentId: Overload:BankBackend.Service.BankService.CreateUser
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.CreateUser
+  nameWithType: BankService.CreateUser
+- uid: BankBackend.Service.BankService.Deposit(System.Int32,System.Int32,System.Double)
+  name: Deposit(int, int, double)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_Deposit_System_Int32_System_Int32_System_Double_
+  commentId: M:BankBackend.Service.BankService.Deposit(System.Int32,System.Int32,System.Double)
+  name.vb: Deposit(Integer, Integer, Double)
+  fullName: BankBackend.Service.BankService.Deposit(int, int, double)
+  fullName.vb: BankBackend.Service.BankService.Deposit(Integer, Integer, Double)
+  nameWithType: BankService.Deposit(int, int, double)
+  nameWithType.vb: BankService.Deposit(Integer, Integer, Double)
+- uid: BankBackend.Service.BankService.Deposit*
+  name: Deposit
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_Deposit_
+  commentId: Overload:BankBackend.Service.BankService.Deposit
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.Deposit
+  nameWithType: BankService.Deposit
+- uid: BankBackend.Service.BankService.GetAccountByAccountId(System.Int32)
+  name: GetAccountByAccountId(int)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetAccountByAccountId_System_Int32_
+  commentId: M:BankBackend.Service.BankService.GetAccountByAccountId(System.Int32)
+  name.vb: GetAccountByAccountId(Integer)
+  fullName: BankBackend.Service.BankService.GetAccountByAccountId(int)
+  fullName.vb: BankBackend.Service.BankService.GetAccountByAccountId(Integer)
+  nameWithType: BankService.GetAccountByAccountId(int)
+  nameWithType.vb: BankService.GetAccountByAccountId(Integer)
+- uid: BankBackend.Service.BankService.GetAccountByAccountId*
+  name: GetAccountByAccountId
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetAccountByAccountId_
+  commentId: Overload:BankBackend.Service.BankService.GetAccountByAccountId
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.GetAccountByAccountId
+  nameWithType: BankService.GetAccountByAccountId
+- uid: BankBackend.Service.BankService.GetAccountsByUserId(System.Int32)
+  name: GetAccountsByUserId(int)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetAccountsByUserId_System_Int32_
+  commentId: M:BankBackend.Service.BankService.GetAccountsByUserId(System.Int32)
+  name.vb: GetAccountsByUserId(Integer)
+  fullName: BankBackend.Service.BankService.GetAccountsByUserId(int)
+  fullName.vb: BankBackend.Service.BankService.GetAccountsByUserId(Integer)
+  nameWithType: BankService.GetAccountsByUserId(int)
+  nameWithType.vb: BankService.GetAccountsByUserId(Integer)
+- uid: BankBackend.Service.BankService.GetAccountsByUserId*
+  name: GetAccountsByUserId
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetAccountsByUserId_
+  commentId: Overload:BankBackend.Service.BankService.GetAccountsByUserId
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.GetAccountsByUserId
+  nameWithType: BankService.GetAccountsByUserId
+- uid: BankBackend.Service.BankService.GetAllAccounts
+  name: GetAllAccounts()
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetAllAccounts
+  commentId: M:BankBackend.Service.BankService.GetAllAccounts
+  fullName: BankBackend.Service.BankService.GetAllAccounts()
+  nameWithType: BankService.GetAllAccounts()
+- uid: BankBackend.Service.BankService.GetAllAccounts*
+  name: GetAllAccounts
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetAllAccounts_
+  commentId: Overload:BankBackend.Service.BankService.GetAllAccounts
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.GetAllAccounts
+  nameWithType: BankService.GetAllAccounts
+- uid: BankBackend.Service.BankService.GetAllUsers
+  name: GetAllUsers()
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetAllUsers
+  commentId: M:BankBackend.Service.BankService.GetAllUsers
+  fullName: BankBackend.Service.BankService.GetAllUsers()
+  nameWithType: BankService.GetAllUsers()
+- uid: BankBackend.Service.BankService.GetAllUsers*
+  name: GetAllUsers
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetAllUsers_
+  commentId: Overload:BankBackend.Service.BankService.GetAllUsers
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.GetAllUsers
+  nameWithType: BankService.GetAllUsers
+- uid: BankBackend.Service.BankService.GetTransactionsByAccountId(System.Int32)
+  name: GetTransactionsByAccountId(int)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetTransactionsByAccountId_System_Int32_
+  commentId: M:BankBackend.Service.BankService.GetTransactionsByAccountId(System.Int32)
+  name.vb: GetTransactionsByAccountId(Integer)
+  fullName: BankBackend.Service.BankService.GetTransactionsByAccountId(int)
+  fullName.vb: BankBackend.Service.BankService.GetTransactionsByAccountId(Integer)
+  nameWithType: BankService.GetTransactionsByAccountId(int)
+  nameWithType.vb: BankService.GetTransactionsByAccountId(Integer)
+- uid: BankBackend.Service.BankService.GetTransactionsByAccountId*
+  name: GetTransactionsByAccountId
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetTransactionsByAccountId_
+  commentId: Overload:BankBackend.Service.BankService.GetTransactionsByAccountId
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.GetTransactionsByAccountId
+  nameWithType: BankService.GetTransactionsByAccountId
+- uid: BankBackend.Service.BankService.GetTransactionsByUserId(System.Int32)
+  name: GetTransactionsByUserId(int)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetTransactionsByUserId_System_Int32_
+  commentId: M:BankBackend.Service.BankService.GetTransactionsByUserId(System.Int32)
+  name.vb: GetTransactionsByUserId(Integer)
+  fullName: BankBackend.Service.BankService.GetTransactionsByUserId(int)
+  fullName.vb: BankBackend.Service.BankService.GetTransactionsByUserId(Integer)
+  nameWithType: BankService.GetTransactionsByUserId(int)
+  nameWithType.vb: BankService.GetTransactionsByUserId(Integer)
+- uid: BankBackend.Service.BankService.GetTransactionsByUserId*
+  name: GetTransactionsByUserId
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetTransactionsByUserId_
+  commentId: Overload:BankBackend.Service.BankService.GetTransactionsByUserId
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.GetTransactionsByUserId
+  nameWithType: BankService.GetTransactionsByUserId
+- uid: BankBackend.Service.BankService.GetUserByUserId(System.Int32)
+  name: GetUserByUserId(int)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetUserByUserId_System_Int32_
+  commentId: M:BankBackend.Service.BankService.GetUserByUserId(System.Int32)
+  name.vb: GetUserByUserId(Integer)
+  fullName: BankBackend.Service.BankService.GetUserByUserId(int)
+  fullName.vb: BankBackend.Service.BankService.GetUserByUserId(Integer)
+  nameWithType: BankService.GetUserByUserId(int)
+  nameWithType.vb: BankService.GetUserByUserId(Integer)
+- uid: BankBackend.Service.BankService.GetUserByUserId*
+  name: GetUserByUserId
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetUserByUserId_
+  commentId: Overload:BankBackend.Service.BankService.GetUserByUserId
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.GetUserByUserId
+  nameWithType: BankService.GetUserByUserId
+- uid: BankBackend.Service.BankService.GetUserByUsername(System.String)
+  name: GetUserByUsername(string)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetUserByUsername_System_String_
+  commentId: M:BankBackend.Service.BankService.GetUserByUsername(System.String)
+  name.vb: GetUserByUsername(String)
+  fullName: BankBackend.Service.BankService.GetUserByUsername(string)
+  fullName.vb: BankBackend.Service.BankService.GetUserByUsername(String)
+  nameWithType: BankService.GetUserByUsername(string)
+  nameWithType.vb: BankService.GetUserByUsername(String)
+- uid: BankBackend.Service.BankService.GetUserByUsername*
+  name: GetUserByUsername
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_GetUserByUsername_
+  commentId: Overload:BankBackend.Service.BankService.GetUserByUsername
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.GetUserByUsername
+  nameWithType: BankService.GetUserByUsername
+- uid: BankBackend.Service.BankService.RemoveAccountUser(System.Int32,System.Int32)
+  name: RemoveAccountUser(int, int)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_RemoveAccountUser_System_Int32_System_Int32_
+  commentId: M:BankBackend.Service.BankService.RemoveAccountUser(System.Int32,System.Int32)
+  name.vb: RemoveAccountUser(Integer, Integer)
+  fullName: BankBackend.Service.BankService.RemoveAccountUser(int, int)
+  fullName.vb: BankBackend.Service.BankService.RemoveAccountUser(Integer, Integer)
+  nameWithType: BankService.RemoveAccountUser(int, int)
+  nameWithType.vb: BankService.RemoveAccountUser(Integer, Integer)
+- uid: BankBackend.Service.BankService.RemoveAccountUser*
+  name: RemoveAccountUser
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_RemoveAccountUser_
+  commentId: Overload:BankBackend.Service.BankService.RemoveAccountUser
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.RemoveAccountUser
+  nameWithType: BankService.RemoveAccountUser
+- uid: BankBackend.Service.BankService.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+  name: Transfer(int, int, int, double)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_Transfer_System_Int32_System_Int32_System_Int32_System_Double_
+  commentId: M:BankBackend.Service.BankService.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+  name.vb: Transfer(Integer, Integer, Integer, Double)
+  fullName: BankBackend.Service.BankService.Transfer(int, int, int, double)
+  fullName.vb: BankBackend.Service.BankService.Transfer(Integer, Integer, Integer, Double)
+  nameWithType: BankService.Transfer(int, int, int, double)
+  nameWithType.vb: BankService.Transfer(Integer, Integer, Integer, Double)
+- uid: BankBackend.Service.BankService.Transfer*
+  name: Transfer
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_Transfer_
+  commentId: Overload:BankBackend.Service.BankService.Transfer
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.Transfer
+  nameWithType: BankService.Transfer
+- uid: BankBackend.Service.BankService.UpdateUserProfile(System.Int32,System.String,System.String)
+  name: UpdateUserProfile(int, string, string)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_UpdateUserProfile_System_Int32_System_String_System_String_
+  commentId: M:BankBackend.Service.BankService.UpdateUserProfile(System.Int32,System.String,System.String)
+  name.vb: UpdateUserProfile(Integer, String, String)
+  fullName: BankBackend.Service.BankService.UpdateUserProfile(int, string, string)
+  fullName.vb: BankBackend.Service.BankService.UpdateUserProfile(Integer, String, String)
+  nameWithType: BankService.UpdateUserProfile(int, string, string)
+  nameWithType.vb: BankService.UpdateUserProfile(Integer, String, String)
+- uid: BankBackend.Service.BankService.UpdateUserProfile*
+  name: UpdateUserProfile
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_UpdateUserProfile_
+  commentId: Overload:BankBackend.Service.BankService.UpdateUserProfile
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.UpdateUserProfile
+  nameWithType: BankService.UpdateUserProfile
+- uid: BankBackend.Service.BankService.ValidateLogin(System.String,System.String)
+  name: ValidateLogin(string, string)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_ValidateLogin_System_String_System_String_
+  commentId: M:BankBackend.Service.BankService.ValidateLogin(System.String,System.String)
+  name.vb: ValidateLogin(String, String)
+  fullName: BankBackend.Service.BankService.ValidateLogin(string, string)
+  fullName.vb: BankBackend.Service.BankService.ValidateLogin(String, String)
+  nameWithType: BankService.ValidateLogin(string, string)
+  nameWithType.vb: BankService.ValidateLogin(String, String)
+- uid: BankBackend.Service.BankService.ValidateLogin*
+  name: ValidateLogin
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_ValidateLogin_
+  commentId: Overload:BankBackend.Service.BankService.ValidateLogin
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.ValidateLogin
+  nameWithType: BankService.ValidateLogin
+- uid: BankBackend.Service.BankService.Withdraw(System.Int32,System.Int32,System.Double)
+  name: Withdraw(int, int, double)
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_Withdraw_System_Int32_System_Int32_System_Double_
+  commentId: M:BankBackend.Service.BankService.Withdraw(System.Int32,System.Int32,System.Double)
+  name.vb: Withdraw(Integer, Integer, Double)
+  fullName: BankBackend.Service.BankService.Withdraw(int, int, double)
+  fullName.vb: BankBackend.Service.BankService.Withdraw(Integer, Integer, Double)
+  nameWithType: BankService.Withdraw(int, int, double)
+  nameWithType.vb: BankService.Withdraw(Integer, Integer, Double)
+- uid: BankBackend.Service.BankService.Withdraw*
+  name: Withdraw
+  href: api/BankBackend.Service.BankService.html#BankBackend_Service_BankService_Withdraw_
+  commentId: Overload:BankBackend.Service.BankService.Withdraw
+  isSpec: "True"
+  fullName: BankBackend.Service.BankService.Withdraw
+  nameWithType: BankService.Withdraw
+- uid: BankBackend.Service.IBankService
+  name: IBankService
+  href: api/BankBackend.Service.IBankService.html
+  commentId: T:BankBackend.Service.IBankService
+  fullName: BankBackend.Service.IBankService
+  nameWithType: IBankService
+- uid: BankBackend.Service.IBankService.AddAccountUser(System.Int32,System.Int32,System.Int32)
+  name: AddAccountUser(int, int, int)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_AddAccountUser_System_Int32_System_Int32_System_Int32_
+  commentId: M:BankBackend.Service.IBankService.AddAccountUser(System.Int32,System.Int32,System.Int32)
+  name.vb: AddAccountUser(Integer, Integer, Integer)
+  fullName: BankBackend.Service.IBankService.AddAccountUser(int, int, int)
+  fullName.vb: BankBackend.Service.IBankService.AddAccountUser(Integer, Integer, Integer)
+  nameWithType: IBankService.AddAccountUser(int, int, int)
+  nameWithType.vb: IBankService.AddAccountUser(Integer, Integer, Integer)
+- uid: BankBackend.Service.IBankService.AddAccountUser*
+  name: AddAccountUser
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_AddAccountUser_
+  commentId: Overload:BankBackend.Service.IBankService.AddAccountUser
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.AddAccountUser
+  nameWithType: IBankService.AddAccountUser
+- uid: BankBackend.Service.IBankService.CreateAccount(BankBackend.Models.Account)
+  name: CreateAccount(Account)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_CreateAccount_BankBackend_Models_Account_
+  commentId: M:BankBackend.Service.IBankService.CreateAccount(BankBackend.Models.Account)
+  fullName: BankBackend.Service.IBankService.CreateAccount(BankBackend.Models.Account)
+  nameWithType: IBankService.CreateAccount(Account)
+- uid: BankBackend.Service.IBankService.CreateAccount*
+  name: CreateAccount
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_CreateAccount_
+  commentId: Overload:BankBackend.Service.IBankService.CreateAccount
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.CreateAccount
+  nameWithType: IBankService.CreateAccount
+- uid: BankBackend.Service.IBankService.CreateUser(BankBackend.Models.User)
+  name: CreateUser(User)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_CreateUser_BankBackend_Models_User_
+  commentId: M:BankBackend.Service.IBankService.CreateUser(BankBackend.Models.User)
+  fullName: BankBackend.Service.IBankService.CreateUser(BankBackend.Models.User)
+  nameWithType: IBankService.CreateUser(User)
+- uid: BankBackend.Service.IBankService.CreateUser*
+  name: CreateUser
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_CreateUser_
+  commentId: Overload:BankBackend.Service.IBankService.CreateUser
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.CreateUser
+  nameWithType: IBankService.CreateUser
+- uid: BankBackend.Service.IBankService.Deposit(System.Int32,System.Int32,System.Double)
+  name: Deposit(int, int, double)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Deposit_System_Int32_System_Int32_System_Double_
+  commentId: M:BankBackend.Service.IBankService.Deposit(System.Int32,System.Int32,System.Double)
+  name.vb: Deposit(Integer, Integer, Double)
+  fullName: BankBackend.Service.IBankService.Deposit(int, int, double)
+  fullName.vb: BankBackend.Service.IBankService.Deposit(Integer, Integer, Double)
+  nameWithType: IBankService.Deposit(int, int, double)
+  nameWithType.vb: IBankService.Deposit(Integer, Integer, Double)
+- uid: BankBackend.Service.IBankService.Deposit*
+  name: Deposit
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Deposit_
+  commentId: Overload:BankBackend.Service.IBankService.Deposit
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.Deposit
+  nameWithType: IBankService.Deposit
+- uid: BankBackend.Service.IBankService.GetAccountByAccountId(System.Int32)
+  name: GetAccountByAccountId(int)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAccountByAccountId_System_Int32_
+  commentId: M:BankBackend.Service.IBankService.GetAccountByAccountId(System.Int32)
+  name.vb: GetAccountByAccountId(Integer)
+  fullName: BankBackend.Service.IBankService.GetAccountByAccountId(int)
+  fullName.vb: BankBackend.Service.IBankService.GetAccountByAccountId(Integer)
+  nameWithType: IBankService.GetAccountByAccountId(int)
+  nameWithType.vb: IBankService.GetAccountByAccountId(Integer)
+- uid: BankBackend.Service.IBankService.GetAccountByAccountId*
+  name: GetAccountByAccountId
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAccountByAccountId_
+  commentId: Overload:BankBackend.Service.IBankService.GetAccountByAccountId
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.GetAccountByAccountId
+  nameWithType: IBankService.GetAccountByAccountId
+- uid: BankBackend.Service.IBankService.GetAccountsByUserId(System.Int32)
+  name: GetAccountsByUserId(int)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAccountsByUserId_System_Int32_
+  commentId: M:BankBackend.Service.IBankService.GetAccountsByUserId(System.Int32)
+  name.vb: GetAccountsByUserId(Integer)
+  fullName: BankBackend.Service.IBankService.GetAccountsByUserId(int)
+  fullName.vb: BankBackend.Service.IBankService.GetAccountsByUserId(Integer)
+  nameWithType: IBankService.GetAccountsByUserId(int)
+  nameWithType.vb: IBankService.GetAccountsByUserId(Integer)
+- uid: BankBackend.Service.IBankService.GetAccountsByUserId*
+  name: GetAccountsByUserId
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAccountsByUserId_
+  commentId: Overload:BankBackend.Service.IBankService.GetAccountsByUserId
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.GetAccountsByUserId
+  nameWithType: IBankService.GetAccountsByUserId
+- uid: BankBackend.Service.IBankService.GetAllAccounts
+  name: GetAllAccounts()
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAllAccounts
+  commentId: M:BankBackend.Service.IBankService.GetAllAccounts
+  fullName: BankBackend.Service.IBankService.GetAllAccounts()
+  nameWithType: IBankService.GetAllAccounts()
+- uid: BankBackend.Service.IBankService.GetAllAccounts*
+  name: GetAllAccounts
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAllAccounts_
+  commentId: Overload:BankBackend.Service.IBankService.GetAllAccounts
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.GetAllAccounts
+  nameWithType: IBankService.GetAllAccounts
+- uid: BankBackend.Service.IBankService.GetAllUsers
+  name: GetAllUsers()
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAllUsers
+  commentId: M:BankBackend.Service.IBankService.GetAllUsers
+  fullName: BankBackend.Service.IBankService.GetAllUsers()
+  nameWithType: IBankService.GetAllUsers()
+- uid: BankBackend.Service.IBankService.GetAllUsers*
+  name: GetAllUsers
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetAllUsers_
+  commentId: Overload:BankBackend.Service.IBankService.GetAllUsers
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.GetAllUsers
+  nameWithType: IBankService.GetAllUsers
+- uid: BankBackend.Service.IBankService.GetTransactionsByAccountId(System.Int32)
+  name: GetTransactionsByAccountId(int)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetTransactionsByAccountId_System_Int32_
+  commentId: M:BankBackend.Service.IBankService.GetTransactionsByAccountId(System.Int32)
+  name.vb: GetTransactionsByAccountId(Integer)
+  fullName: BankBackend.Service.IBankService.GetTransactionsByAccountId(int)
+  fullName.vb: BankBackend.Service.IBankService.GetTransactionsByAccountId(Integer)
+  nameWithType: IBankService.GetTransactionsByAccountId(int)
+  nameWithType.vb: IBankService.GetTransactionsByAccountId(Integer)
+- uid: BankBackend.Service.IBankService.GetTransactionsByAccountId*
+  name: GetTransactionsByAccountId
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetTransactionsByAccountId_
+  commentId: Overload:BankBackend.Service.IBankService.GetTransactionsByAccountId
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.GetTransactionsByAccountId
+  nameWithType: IBankService.GetTransactionsByAccountId
+- uid: BankBackend.Service.IBankService.GetTransactionsByUserId(System.Int32)
+  name: GetTransactionsByUserId(int)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetTransactionsByUserId_System_Int32_
+  commentId: M:BankBackend.Service.IBankService.GetTransactionsByUserId(System.Int32)
+  name.vb: GetTransactionsByUserId(Integer)
+  fullName: BankBackend.Service.IBankService.GetTransactionsByUserId(int)
+  fullName.vb: BankBackend.Service.IBankService.GetTransactionsByUserId(Integer)
+  nameWithType: IBankService.GetTransactionsByUserId(int)
+  nameWithType.vb: IBankService.GetTransactionsByUserId(Integer)
+- uid: BankBackend.Service.IBankService.GetTransactionsByUserId*
+  name: GetTransactionsByUserId
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetTransactionsByUserId_
+  commentId: Overload:BankBackend.Service.IBankService.GetTransactionsByUserId
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.GetTransactionsByUserId
+  nameWithType: IBankService.GetTransactionsByUserId
+- uid: BankBackend.Service.IBankService.GetUserByUserId(System.Int32)
+  name: GetUserByUserId(int)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetUserByUserId_System_Int32_
+  commentId: M:BankBackend.Service.IBankService.GetUserByUserId(System.Int32)
+  name.vb: GetUserByUserId(Integer)
+  fullName: BankBackend.Service.IBankService.GetUserByUserId(int)
+  fullName.vb: BankBackend.Service.IBankService.GetUserByUserId(Integer)
+  nameWithType: IBankService.GetUserByUserId(int)
+  nameWithType.vb: IBankService.GetUserByUserId(Integer)
+- uid: BankBackend.Service.IBankService.GetUserByUserId*
+  name: GetUserByUserId
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetUserByUserId_
+  commentId: Overload:BankBackend.Service.IBankService.GetUserByUserId
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.GetUserByUserId
+  nameWithType: IBankService.GetUserByUserId
+- uid: BankBackend.Service.IBankService.GetUserByUsername(System.String)
+  name: GetUserByUsername(string)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetUserByUsername_System_String_
+  commentId: M:BankBackend.Service.IBankService.GetUserByUsername(System.String)
+  name.vb: GetUserByUsername(String)
+  fullName: BankBackend.Service.IBankService.GetUserByUsername(string)
+  fullName.vb: BankBackend.Service.IBankService.GetUserByUsername(String)
+  nameWithType: IBankService.GetUserByUsername(string)
+  nameWithType.vb: IBankService.GetUserByUsername(String)
+- uid: BankBackend.Service.IBankService.GetUserByUsername*
+  name: GetUserByUsername
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_GetUserByUsername_
+  commentId: Overload:BankBackend.Service.IBankService.GetUserByUsername
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.GetUserByUsername
+  nameWithType: IBankService.GetUserByUsername
+- uid: BankBackend.Service.IBankService.RemoveAccountUser(System.Int32,System.Int32)
+  name: RemoveAccountUser(int, int)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_RemoveAccountUser_System_Int32_System_Int32_
+  commentId: M:BankBackend.Service.IBankService.RemoveAccountUser(System.Int32,System.Int32)
+  name.vb: RemoveAccountUser(Integer, Integer)
+  fullName: BankBackend.Service.IBankService.RemoveAccountUser(int, int)
+  fullName.vb: BankBackend.Service.IBankService.RemoveAccountUser(Integer, Integer)
+  nameWithType: IBankService.RemoveAccountUser(int, int)
+  nameWithType.vb: IBankService.RemoveAccountUser(Integer, Integer)
+- uid: BankBackend.Service.IBankService.RemoveAccountUser*
+  name: RemoveAccountUser
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_RemoveAccountUser_
+  commentId: Overload:BankBackend.Service.IBankService.RemoveAccountUser
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.RemoveAccountUser
+  nameWithType: IBankService.RemoveAccountUser
+- uid: BankBackend.Service.IBankService.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+  name: Transfer(int, int, int, double)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Transfer_System_Int32_System_Int32_System_Int32_System_Double_
+  commentId: M:BankBackend.Service.IBankService.Transfer(System.Int32,System.Int32,System.Int32,System.Double)
+  name.vb: Transfer(Integer, Integer, Integer, Double)
+  fullName: BankBackend.Service.IBankService.Transfer(int, int, int, double)
+  fullName.vb: BankBackend.Service.IBankService.Transfer(Integer, Integer, Integer, Double)
+  nameWithType: IBankService.Transfer(int, int, int, double)
+  nameWithType.vb: IBankService.Transfer(Integer, Integer, Integer, Double)
+- uid: BankBackend.Service.IBankService.Transfer*
+  name: Transfer
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Transfer_
+  commentId: Overload:BankBackend.Service.IBankService.Transfer
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.Transfer
+  nameWithType: IBankService.Transfer
+- uid: BankBackend.Service.IBankService.UpdateUserProfile(System.Int32,System.String,System.String)
+  name: UpdateUserProfile(int, string, string)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_UpdateUserProfile_System_Int32_System_String_System_String_
+  commentId: M:BankBackend.Service.IBankService.UpdateUserProfile(System.Int32,System.String,System.String)
+  name.vb: UpdateUserProfile(Integer, String, String)
+  fullName: BankBackend.Service.IBankService.UpdateUserProfile(int, string, string)
+  fullName.vb: BankBackend.Service.IBankService.UpdateUserProfile(Integer, String, String)
+  nameWithType: IBankService.UpdateUserProfile(int, string, string)
+  nameWithType.vb: IBankService.UpdateUserProfile(Integer, String, String)
+- uid: BankBackend.Service.IBankService.UpdateUserProfile*
+  name: UpdateUserProfile
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_UpdateUserProfile_
+  commentId: Overload:BankBackend.Service.IBankService.UpdateUserProfile
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.UpdateUserProfile
+  nameWithType: IBankService.UpdateUserProfile
+- uid: BankBackend.Service.IBankService.ValidateLogin(System.String,System.String)
+  name: ValidateLogin(string, string)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_ValidateLogin_System_String_System_String_
+  commentId: M:BankBackend.Service.IBankService.ValidateLogin(System.String,System.String)
+  name.vb: ValidateLogin(String, String)
+  fullName: BankBackend.Service.IBankService.ValidateLogin(string, string)
+  fullName.vb: BankBackend.Service.IBankService.ValidateLogin(String, String)
+  nameWithType: IBankService.ValidateLogin(string, string)
+  nameWithType.vb: IBankService.ValidateLogin(String, String)
+- uid: BankBackend.Service.IBankService.ValidateLogin*
+  name: ValidateLogin
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_ValidateLogin_
+  commentId: Overload:BankBackend.Service.IBankService.ValidateLogin
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.ValidateLogin
+  nameWithType: IBankService.ValidateLogin
+- uid: BankBackend.Service.IBankService.Withdraw(System.Int32,System.Int32,System.Double)
+  name: Withdraw(int, int, double)
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Withdraw_System_Int32_System_Int32_System_Double_
+  commentId: M:BankBackend.Service.IBankService.Withdraw(System.Int32,System.Int32,System.Double)
+  name.vb: Withdraw(Integer, Integer, Double)
+  fullName: BankBackend.Service.IBankService.Withdraw(int, int, double)
+  fullName.vb: BankBackend.Service.IBankService.Withdraw(Integer, Integer, Double)
+  nameWithType: IBankService.Withdraw(int, int, double)
+  nameWithType.vb: IBankService.Withdraw(Integer, Integer, Double)
+- uid: BankBackend.Service.IBankService.Withdraw*
+  name: Withdraw
+  href: api/BankBackend.Service.IBankService.html#BankBackend_Service_IBankService_Withdraw_
+  commentId: Overload:BankBackend.Service.IBankService.Withdraw
+  isSpec: "True"
+  fullName: BankBackend.Service.IBankService.Withdraw
+  nameWithType: IBankService.Withdraw
+- uid: BankBackend.Service.InsufficientFundsException
+  name: InsufficientFundsException
+  href: api/BankBackend.Service.InsufficientFundsException.html
+  commentId: T:BankBackend.Service.InsufficientFundsException
+  fullName: BankBackend.Service.InsufficientFundsException
+  nameWithType: InsufficientFundsException
+- uid: BankBackend.Service.InsufficientFundsException.#ctor
+  name: InsufficientFundsException()
+  href: api/BankBackend.Service.InsufficientFundsException.html#BankBackend_Service_InsufficientFundsException__ctor
+  commentId: M:BankBackend.Service.InsufficientFundsException.#ctor
+  name.vb: New()
+  fullName: BankBackend.Service.InsufficientFundsException.InsufficientFundsException()
+  fullName.vb: BankBackend.Service.InsufficientFundsException.New()
+  nameWithType: InsufficientFundsException.InsufficientFundsException()
+  nameWithType.vb: InsufficientFundsException.New()
+- uid: BankBackend.Service.InsufficientFundsException.#ctor(System.String)
+  name: InsufficientFundsException(string)
+  href: api/BankBackend.Service.InsufficientFundsException.html#BankBackend_Service_InsufficientFundsException__ctor_System_String_
+  commentId: M:BankBackend.Service.InsufficientFundsException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: BankBackend.Service.InsufficientFundsException.InsufficientFundsException(string)
+  fullName.vb: BankBackend.Service.InsufficientFundsException.New(String)
+  nameWithType: InsufficientFundsException.InsufficientFundsException(string)
+  nameWithType.vb: InsufficientFundsException.New(String)
+- uid: BankBackend.Service.InsufficientFundsException.#ctor*
+  name: InsufficientFundsException
+  href: api/BankBackend.Service.InsufficientFundsException.html#BankBackend_Service_InsufficientFundsException__ctor_
+  commentId: Overload:BankBackend.Service.InsufficientFundsException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Service.InsufficientFundsException.InsufficientFundsException
+  fullName.vb: BankBackend.Service.InsufficientFundsException.New
+  nameWithType: InsufficientFundsException.InsufficientFundsException
+  nameWithType.vb: InsufficientFundsException.New
+- uid: BankBackend.Service.InvalidPasswordException
+  name: InvalidPasswordException
+  href: api/BankBackend.Service.InvalidPasswordException.html
+  commentId: T:BankBackend.Service.InvalidPasswordException
+  fullName: BankBackend.Service.InvalidPasswordException
+  nameWithType: InvalidPasswordException
+- uid: BankBackend.Service.InvalidPasswordException.#ctor
+  name: InvalidPasswordException()
+  href: api/BankBackend.Service.InvalidPasswordException.html#BankBackend_Service_InvalidPasswordException__ctor
+  commentId: M:BankBackend.Service.InvalidPasswordException.#ctor
+  name.vb: New()
+  fullName: BankBackend.Service.InvalidPasswordException.InvalidPasswordException()
+  fullName.vb: BankBackend.Service.InvalidPasswordException.New()
+  nameWithType: InvalidPasswordException.InvalidPasswordException()
+  nameWithType.vb: InvalidPasswordException.New()
+- uid: BankBackend.Service.InvalidPasswordException.#ctor(System.String)
+  name: InvalidPasswordException(string)
+  href: api/BankBackend.Service.InvalidPasswordException.html#BankBackend_Service_InvalidPasswordException__ctor_System_String_
+  commentId: M:BankBackend.Service.InvalidPasswordException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: BankBackend.Service.InvalidPasswordException.InvalidPasswordException(string)
+  fullName.vb: BankBackend.Service.InvalidPasswordException.New(String)
+  nameWithType: InvalidPasswordException.InvalidPasswordException(string)
+  nameWithType.vb: InvalidPasswordException.New(String)
+- uid: BankBackend.Service.InvalidPasswordException.#ctor*
+  name: InvalidPasswordException
+  href: api/BankBackend.Service.InvalidPasswordException.html#BankBackend_Service_InvalidPasswordException__ctor_
+  commentId: Overload:BankBackend.Service.InvalidPasswordException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Service.InvalidPasswordException.InvalidPasswordException
+  fullName.vb: BankBackend.Service.InvalidPasswordException.New
+  nameWithType: InvalidPasswordException.InvalidPasswordException
+  nameWithType.vb: InvalidPasswordException.New
+- uid: BankBackend.Service.RepositoryException
+  name: RepositoryException
+  href: api/BankBackend.Service.RepositoryException.html
+  commentId: T:BankBackend.Service.RepositoryException
+  fullName: BankBackend.Service.RepositoryException
+  nameWithType: RepositoryException
+- uid: BankBackend.Service.RepositoryException.#ctor
+  name: RepositoryException()
+  href: api/BankBackend.Service.RepositoryException.html#BankBackend_Service_RepositoryException__ctor
+  commentId: M:BankBackend.Service.RepositoryException.#ctor
+  name.vb: New()
+  fullName: BankBackend.Service.RepositoryException.RepositoryException()
+  fullName.vb: BankBackend.Service.RepositoryException.New()
+  nameWithType: RepositoryException.RepositoryException()
+  nameWithType.vb: RepositoryException.New()
+- uid: BankBackend.Service.RepositoryException.#ctor(System.String)
+  name: RepositoryException(string)
+  href: api/BankBackend.Service.RepositoryException.html#BankBackend_Service_RepositoryException__ctor_System_String_
+  commentId: M:BankBackend.Service.RepositoryException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: BankBackend.Service.RepositoryException.RepositoryException(string)
+  fullName.vb: BankBackend.Service.RepositoryException.New(String)
+  nameWithType: RepositoryException.RepositoryException(string)
+  nameWithType.vb: RepositoryException.New(String)
+- uid: BankBackend.Service.RepositoryException.#ctor*
+  name: RepositoryException
+  href: api/BankBackend.Service.RepositoryException.html#BankBackend_Service_RepositoryException__ctor_
+  commentId: Overload:BankBackend.Service.RepositoryException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Service.RepositoryException.RepositoryException
+  fullName.vb: BankBackend.Service.RepositoryException.New
+  nameWithType: RepositoryException.RepositoryException
+  nameWithType.vb: RepositoryException.New
+- uid: BankBackend.Service.UserIdNotFoundException
+  name: UserIdNotFoundException
+  href: api/BankBackend.Service.UserIdNotFoundException.html
+  commentId: T:BankBackend.Service.UserIdNotFoundException
+  fullName: BankBackend.Service.UserIdNotFoundException
+  nameWithType: UserIdNotFoundException
+- uid: BankBackend.Service.UserIdNotFoundException.#ctor
+  name: UserIdNotFoundException()
+  href: api/BankBackend.Service.UserIdNotFoundException.html#BankBackend_Service_UserIdNotFoundException__ctor
+  commentId: M:BankBackend.Service.UserIdNotFoundException.#ctor
+  name.vb: New()
+  fullName: BankBackend.Service.UserIdNotFoundException.UserIdNotFoundException()
+  fullName.vb: BankBackend.Service.UserIdNotFoundException.New()
+  nameWithType: UserIdNotFoundException.UserIdNotFoundException()
+  nameWithType.vb: UserIdNotFoundException.New()
+- uid: BankBackend.Service.UserIdNotFoundException.#ctor(System.String)
+  name: UserIdNotFoundException(string)
+  href: api/BankBackend.Service.UserIdNotFoundException.html#BankBackend_Service_UserIdNotFoundException__ctor_System_String_
+  commentId: M:BankBackend.Service.UserIdNotFoundException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: BankBackend.Service.UserIdNotFoundException.UserIdNotFoundException(string)
+  fullName.vb: BankBackend.Service.UserIdNotFoundException.New(String)
+  nameWithType: UserIdNotFoundException.UserIdNotFoundException(string)
+  nameWithType.vb: UserIdNotFoundException.New(String)
+- uid: BankBackend.Service.UserIdNotFoundException.#ctor*
+  name: UserIdNotFoundException
+  href: api/BankBackend.Service.UserIdNotFoundException.html#BankBackend_Service_UserIdNotFoundException__ctor_
+  commentId: Overload:BankBackend.Service.UserIdNotFoundException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Service.UserIdNotFoundException.UserIdNotFoundException
+  fullName.vb: BankBackend.Service.UserIdNotFoundException.New
+  nameWithType: UserIdNotFoundException.UserIdNotFoundException
+  nameWithType.vb: UserIdNotFoundException.New
+- uid: BankBackend.Service.UserNotAuthorizedException
+  name: UserNotAuthorizedException
+  href: api/BankBackend.Service.UserNotAuthorizedException.html
+  commentId: T:BankBackend.Service.UserNotAuthorizedException
+  fullName: BankBackend.Service.UserNotAuthorizedException
+  nameWithType: UserNotAuthorizedException
+- uid: BankBackend.Service.UserNotAuthorizedException.#ctor
+  name: UserNotAuthorizedException()
+  href: api/BankBackend.Service.UserNotAuthorizedException.html#BankBackend_Service_UserNotAuthorizedException__ctor
+  commentId: M:BankBackend.Service.UserNotAuthorizedException.#ctor
+  name.vb: New()
+  fullName: BankBackend.Service.UserNotAuthorizedException.UserNotAuthorizedException()
+  fullName.vb: BankBackend.Service.UserNotAuthorizedException.New()
+  nameWithType: UserNotAuthorizedException.UserNotAuthorizedException()
+  nameWithType.vb: UserNotAuthorizedException.New()
+- uid: BankBackend.Service.UserNotAuthorizedException.#ctor(System.String)
+  name: UserNotAuthorizedException(string)
+  href: api/BankBackend.Service.UserNotAuthorizedException.html#BankBackend_Service_UserNotAuthorizedException__ctor_System_String_
+  commentId: M:BankBackend.Service.UserNotAuthorizedException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: BankBackend.Service.UserNotAuthorizedException.UserNotAuthorizedException(string)
+  fullName.vb: BankBackend.Service.UserNotAuthorizedException.New(String)
+  nameWithType: UserNotAuthorizedException.UserNotAuthorizedException(string)
+  nameWithType.vb: UserNotAuthorizedException.New(String)
+- uid: BankBackend.Service.UserNotAuthorizedException.#ctor*
+  name: UserNotAuthorizedException
+  href: api/BankBackend.Service.UserNotAuthorizedException.html#BankBackend_Service_UserNotAuthorizedException__ctor_
+  commentId: Overload:BankBackend.Service.UserNotAuthorizedException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Service.UserNotAuthorizedException.UserNotAuthorizedException
+  fullName.vb: BankBackend.Service.UserNotAuthorizedException.New
+  nameWithType: UserNotAuthorizedException.UserNotAuthorizedException
+  nameWithType.vb: UserNotAuthorizedException.New
+- uid: BankBackend.Service.UsernameAlreadyExistsException
+  name: UsernameAlreadyExistsException
+  href: api/BankBackend.Service.UsernameAlreadyExistsException.html
+  commentId: T:BankBackend.Service.UsernameAlreadyExistsException
+  fullName: BankBackend.Service.UsernameAlreadyExistsException
+  nameWithType: UsernameAlreadyExistsException
+- uid: BankBackend.Service.UsernameAlreadyExistsException.#ctor
+  name: UsernameAlreadyExistsException()
+  href: api/BankBackend.Service.UsernameAlreadyExistsException.html#BankBackend_Service_UsernameAlreadyExistsException__ctor
+  commentId: M:BankBackend.Service.UsernameAlreadyExistsException.#ctor
+  name.vb: New()
+  fullName: BankBackend.Service.UsernameAlreadyExistsException.UsernameAlreadyExistsException()
+  fullName.vb: BankBackend.Service.UsernameAlreadyExistsException.New()
+  nameWithType: UsernameAlreadyExistsException.UsernameAlreadyExistsException()
+  nameWithType.vb: UsernameAlreadyExistsException.New()
+- uid: BankBackend.Service.UsernameAlreadyExistsException.#ctor(System.String)
+  name: UsernameAlreadyExistsException(string)
+  href: api/BankBackend.Service.UsernameAlreadyExistsException.html#BankBackend_Service_UsernameAlreadyExistsException__ctor_System_String_
+  commentId: M:BankBackend.Service.UsernameAlreadyExistsException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: BankBackend.Service.UsernameAlreadyExistsException.UsernameAlreadyExistsException(string)
+  fullName.vb: BankBackend.Service.UsernameAlreadyExistsException.New(String)
+  nameWithType: UsernameAlreadyExistsException.UsernameAlreadyExistsException(string)
+  nameWithType.vb: UsernameAlreadyExistsException.New(String)
+- uid: BankBackend.Service.UsernameAlreadyExistsException.#ctor*
+  name: UsernameAlreadyExistsException
+  href: api/BankBackend.Service.UsernameAlreadyExistsException.html#BankBackend_Service_UsernameAlreadyExistsException__ctor_
+  commentId: Overload:BankBackend.Service.UsernameAlreadyExistsException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Service.UsernameAlreadyExistsException.UsernameAlreadyExistsException
+  fullName.vb: BankBackend.Service.UsernameAlreadyExistsException.New
+  nameWithType: UsernameAlreadyExistsException.UsernameAlreadyExistsException
+  nameWithType.vb: UsernameAlreadyExistsException.New
+- uid: BankBackend.Service.UsernameNotFoundException
+  name: UsernameNotFoundException
+  href: api/BankBackend.Service.UsernameNotFoundException.html
+  commentId: T:BankBackend.Service.UsernameNotFoundException
+  fullName: BankBackend.Service.UsernameNotFoundException
+  nameWithType: UsernameNotFoundException
+- uid: BankBackend.Service.UsernameNotFoundException.#ctor
+  name: UsernameNotFoundException()
+  href: api/BankBackend.Service.UsernameNotFoundException.html#BankBackend_Service_UsernameNotFoundException__ctor
+  commentId: M:BankBackend.Service.UsernameNotFoundException.#ctor
+  name.vb: New()
+  fullName: BankBackend.Service.UsernameNotFoundException.UsernameNotFoundException()
+  fullName.vb: BankBackend.Service.UsernameNotFoundException.New()
+  nameWithType: UsernameNotFoundException.UsernameNotFoundException()
+  nameWithType.vb: UsernameNotFoundException.New()
+- uid: BankBackend.Service.UsernameNotFoundException.#ctor(System.String)
+  name: UsernameNotFoundException(string)
+  href: api/BankBackend.Service.UsernameNotFoundException.html#BankBackend_Service_UsernameNotFoundException__ctor_System_String_
+  commentId: M:BankBackend.Service.UsernameNotFoundException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: BankBackend.Service.UsernameNotFoundException.UsernameNotFoundException(string)
+  fullName.vb: BankBackend.Service.UsernameNotFoundException.New(String)
+  nameWithType: UsernameNotFoundException.UsernameNotFoundException(string)
+  nameWithType.vb: UsernameNotFoundException.New(String)
+- uid: BankBackend.Service.UsernameNotFoundException.#ctor*
+  name: UsernameNotFoundException
+  href: api/BankBackend.Service.UsernameNotFoundException.html#BankBackend_Service_UsernameNotFoundException__ctor_
+  commentId: Overload:BankBackend.Service.UsernameNotFoundException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BankBackend.Service.UsernameNotFoundException.UsernameNotFoundException
+  fullName.vb: BankBackend.Service.UsernameNotFoundException.New
+  nameWithType: UsernameNotFoundException.UsernameNotFoundException
+  nameWithType.vb: UsernameNotFoundException.New
+- uid: Bank_Backend.Migrations
+  name: Bank_Backend.Migrations
+  href: api/Bank_Backend.Migrations.html
+  commentId: N:Bank_Backend.Migrations
+  fullName: Bank_Backend.Migrations
+  nameWithType: Bank_Backend.Migrations
+- uid: Bank_Backend.Migrations.Initial
+  name: Initial
+  href: api/Bank_Backend.Migrations.Initial.html
+  commentId: T:Bank_Backend.Migrations.Initial
+  fullName: Bank_Backend.Migrations.Initial
+  nameWithType: Initial
+- uid: Bank_Backend.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  name: BuildTargetModel(ModelBuilder)
+  href: api/Bank_Backend.Migrations.Initial.html#Bank_Backend_Migrations_Initial_BuildTargetModel_Microsoft_EntityFrameworkCore_ModelBuilder_
+  commentId: M:Bank_Backend.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  fullName: Bank_Backend.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  nameWithType: Initial.BuildTargetModel(ModelBuilder)
+- uid: Bank_Backend.Migrations.Initial.BuildTargetModel*
+  name: BuildTargetModel
+  href: api/Bank_Backend.Migrations.Initial.html#Bank_Backend_Migrations_Initial_BuildTargetModel_
+  commentId: Overload:Bank_Backend.Migrations.Initial.BuildTargetModel
+  isSpec: "True"
+  fullName: Bank_Backend.Migrations.Initial.BuildTargetModel
+  nameWithType: Initial.BuildTargetModel
+- uid: Bank_Backend.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  name: Down(MigrationBuilder)
+  href: api/Bank_Backend.Migrations.Initial.html#Bank_Backend_Migrations_Initial_Down_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  commentId: M:Bank_Backend.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  fullName: Bank_Backend.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  nameWithType: Initial.Down(MigrationBuilder)
+- uid: Bank_Backend.Migrations.Initial.Down*
+  name: Down
+  href: api/Bank_Backend.Migrations.Initial.html#Bank_Backend_Migrations_Initial_Down_
+  commentId: Overload:Bank_Backend.Migrations.Initial.Down
+  isSpec: "True"
+  fullName: Bank_Backend.Migrations.Initial.Down
+  nameWithType: Initial.Down
+- uid: Bank_Backend.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  name: Up(MigrationBuilder)
+  href: api/Bank_Backend.Migrations.Initial.html#Bank_Backend_Migrations_Initial_Up_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  commentId: M:Bank_Backend.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  fullName: Bank_Backend.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  nameWithType: Initial.Up(MigrationBuilder)
+- uid: Bank_Backend.Migrations.Initial.Up*
+  name: Up
+  href: api/Bank_Backend.Migrations.Initial.html#Bank_Backend_Migrations_Initial_Up_
+  commentId: Overload:Bank_Backend.Migrations.Initial.Up
+  isSpec: "True"
+  fullName: Bank_Backend.Migrations.Initial.Up
+  nameWithType: Initial.Up

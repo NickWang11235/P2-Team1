@@ -1,0 +1,348 @@
+{
+  "source_base_path": "/home/nickw/Documents/Revature/P2-Team1/BankBackend",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Controllers.AccountController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Controllers.AccountController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Controllers.UsersController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Controllers.UsersController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Models.Account.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Models.Account.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Models.AccountType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Models.AccountType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Models.Transaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Models.Transaction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Models.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Models.User.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Repository.BankContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Repository.BankContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Repository.BankRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Repository.BankRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Repository.IBankRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Repository.IBankRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Repository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Repository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Service.AccountIdNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Service.AccountIdNotFoundException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Service.BankExceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Service.BankExceptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Service.BankService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Service.BankService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Service.IBankService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Service.IBankService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Service.InsufficientFundsException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Service.InsufficientFundsException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Service.InvalidPasswordException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Service.InvalidPasswordException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Service.RepositoryException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Service.RepositoryException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Service.UserIdNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Service.UserIdNotFoundException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Service.UserNotAuthorizedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Service.UserNotAuthorizedException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Service.UsernameAlreadyExistsException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Service.UsernameAlreadyExistsException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Service.UsernameNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Service.UsernameNotFoundException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BankBackend.Service.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BankBackend.Service.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bank_Backend.Migrations.Initial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bank_Backend.Migrations.Initial.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bank_Backend.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bank_Backend.Migrations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
