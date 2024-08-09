@@ -30,6 +30,12 @@ namespace BankBackend.Service
         public UserIdNotFoundException(string message) : base(message) { }
     }
 
+    public class UserNotAuthorizedException : BankExceptions
+    {
+        public UserNotAuthorizedException() : base() { }
+        public UserNotAuthorizedException(string message) : base(message) { }
+    }
+
     public class AccountIdNotFoundException : BankExceptions
     {
         public AccountIdNotFoundException() : base() { }

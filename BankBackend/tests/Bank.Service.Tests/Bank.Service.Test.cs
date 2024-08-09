@@ -38,7 +38,7 @@ public class BankServiceTests
         // Arrange
         var username = "DVader";
         var password = "ihatesand";
-        _mockRepository.Setup(r => r.GetUserByUsername(username)).Returns((User)null);
+        _mockRepository.Setup(r => r.GetUserByUsername(username)).Returns((User?)null);
 
         // Act & Assert
         Assert.Throws<UsernameNotFoundException>(() => _bankService.ValidateLogin(username, password));
@@ -78,37 +78,41 @@ public class BankServiceTests
     {
         // Arrange
         var userId = 1;
-        _mockRepository.Setup(r => r.GetUserByUserId(userId)).Returns((User)null);
+        _mockRepository.Setup(r => r.GetUserByUserId(userId)).Returns((User?)null);
 
         // Act & Assert
         Assert.Throws<UserIdNotFoundException>(() => _bankService.GetUserByUserId(userId));
     }
 
-[Fact]
-public void Deposit_ValidAccount_IncreasesBalance()
-{
-    // Arrange
-    var accountId = 1;
-    var amount = 100.0;
-    var initialBalance = 200.0;
-    var updatedBalance = initialBalance + amount;
+    [Fact]
+    public void Deposit_ValidAccount_IncreasesBalance()
+    {
+        // Arrange
+        var accountId = 1;
+        var amount = 100.0;
+        var initialBalance = 200.0;
+        var updatedBalance = initialBalance + amount;
 
-    var account = new Account { AccountId = accountId, Balance = initialBalance };
-    var updatedAccount = new Account { AccountId = accountId, Balance = updatedBalance };
+        var userId = 1;
+        List<User> users = new List<User>();
+        users.Add(new User { UserId = userId });
 
-    _mockRepository.Setup(r => r.GetAccountByAccountId(accountId)).Returns(account);
-    _mockRepository.Setup(r => r.UpdateBalance(accountId, updatedBalance)).Returns(updatedAccount);
-    _mockRepository.Setup(r => r.CreateTransaction(It.IsAny<Transaction>())).Returns(new Transaction { FromAccount = account, Amount = amount });
+        var account = new Account { AccountId = accountId, Balance = initialBalance, Users = users };
+        var updatedAccount = new Account { AccountId = accountId, Balance = updatedBalance };
 
-    // Act
-    var result = _bankService.Deposit(accountId, amount);
+        _mockRepository.Setup(r => r.GetAccountByAccountId(accountId)).Returns(account);
+        _mockRepository.Setup(r => r.UpdateBalance(accountId, updatedBalance)).Returns(updatedAccount);
+        _mockRepository.Setup(r => r.CreateTransaction(It.IsAny<Transaction>())).Returns(new Transaction { FromAccount = account, Amount = amount });
 
-    // Assert
-    _mockRepository.Verify(r => r.UpdateBalance(accountId, updatedBalance), Times.Once);
-    _mockRepository.Verify(r => r.CreateTransaction(It.IsAny<Transaction>()), Times.Once);
-    
-    Assert.Equal(amount, result.Amount);
-}
+        // Act
+        var result = _bankService.Deposit(userId, accountId, amount);
+
+        // Assert
+        _mockRepository.Verify(r => r.UpdateBalance(accountId, updatedBalance), Times.Once);
+        _mockRepository.Verify(r => r.CreateTransaction(It.IsAny<Transaction>()), Times.Once);
+
+        Assert.Equal(amount, result.Amount);
+    }
 
     [Fact]
     public void Withdraw_InsufficientFunds_ThrowsInsufficientFundsException()
@@ -116,11 +120,15 @@ public void Deposit_ValidAccount_IncreasesBalance()
         // Arrange
         var accountId = 1;
         var amount = 100.0;
-        var account = new Account { AccountId = accountId, Balance = 50.0 };
+
+        var userId = 1;
+        List<User> users = new List<User>();
+        users.Add(new User { UserId = userId });
+        var account = new Account { AccountId = accountId, Balance = 50.0, Users = users };
         _mockRepository.Setup(r => r.GetAccountByAccountId(accountId)).Returns(account);
 
         // Act & Assert
-        Assert.Throws<InsufficientFundsException>(() => _bankService.Withdraw(accountId, amount));
+        Assert.Throws<InsufficientFundsException>(() => _bankService.Withdraw(userId, accountId, amount));
     }
 
     [Fact]
@@ -130,7 +138,7 @@ public void Deposit_ValidAccount_IncreasesBalance()
         var userId = 1;
         var accountId = 1;
         var user = new User { UserId = userId };
-        var account = new Account { AccountId = accountId };
+        var account = new Account { AccountId = accountId, PrimaryUserId = userId };
         _mockRepository.Setup(r => r.GetUserByUserId(userId)).Returns(user);
         _mockRepository.Setup(r => r.GetAccountByAccountId(accountId)).Returns(account);
         _mockRepository.Setup(r => r.AddUserToAccount(userId, accountId)).Verifiable();
@@ -151,7 +159,7 @@ public void Deposit_ValidAccount_IncreasesBalance()
         var userId = 1;
         var accountId = 1;
         var user = new User { UserId = userId };
-        var account = new Account { AccountId = accountId, Users = new List<User> { user } };
+        var account = new Account { AccountId = accountId, Users = new List<User> { user } , PrimaryUserId = userId};
         _mockRepository.Setup(r => r.GetUserByUserId(userId)).Returns(user);
         _mockRepository.Setup(r => r.GetAccountByAccountId(accountId)).Returns(account);
         _mockRepository.Setup(r => r.DeleteUserAccountByAccountId(userId, accountId)).Verifiable();
