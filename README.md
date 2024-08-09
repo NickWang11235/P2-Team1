@@ -45,11 +45,13 @@ Our project is a comprehensive full-stack banking application designed to offer 
 
 ## Getting started
 
+## Setting up the frontend
+
 ## Prerequsites 
 - To run the frontend server you will need `node` and `npm`
 
+### Setting up frontend server
 
-## Setting up the frontend
 To set up the frontend you will need to ensure `node` and `npm` are installed on your computer. You can find instructions to install them [here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 Once `node` and `npm` are installed, navigate to the directory `Bank-FrontEnd` and run the command
