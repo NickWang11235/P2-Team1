@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { User, Account, Transaction } from "../models/dtos";
 
 export const AccountSummaryDetails = (props) => {
-    const [balance, setBalance] = useState(props.account.Balance);
+    const [balance, setBalance] = useState(props.account.balance);
 
     const handleWithdraw = () => {
         const amount = parseFloat(prompt('Enter amount to withdraw:'));
