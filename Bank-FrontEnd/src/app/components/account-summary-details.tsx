@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { User, Account, Transaction } from "../models/dtos";
+import { CurrentUserContext } from '../page';
 
 export const AccountSummaryDetails = (props) => {
     const [balance, setBalance] = useState(props.account.Balance);
+
+    const baseUri = 'http://localhost:5203/';
+    const {currentUser} = useContext(CurrentUserContext);
+
 
     const handleWithdraw = () => {
         const amount = parseFloat(prompt('Enter amount to withdraw:'));
@@ -17,7 +22,18 @@ export const AccountSummaryDetails = (props) => {
         }
 
         // Update the balance
-        setBalance(balance - amount);
+        
+        fetch(baseUri+`Users/${currentUser.UserId}/withdraw?accountId=${props.account.accountId}&amount=${amount}`,{
+            method:"PATCH",
+            headers:{
+                'Content-Type':'application/json;charset=UTF-8'
+            },
+        })
+        .then((response)=>response.json())
+        .then((data)=>{
+            setBalance(data.amount);
+            console.log(data);
+        })
     };
 
     const handleDeposit = () => {
@@ -28,7 +44,18 @@ export const AccountSummaryDetails = (props) => {
         }
 
         // Update the balance
-        setBalance(balance + amount);
+        
+        fetch(baseUri+`Users/${currentUser.UserId}/deposit?accountId=${props.account.accountId}&amount=${amount}`,{
+            method:"PATCH",
+            headers:{
+                'Content-Type':'application/json;charset=UTF-8'
+            },
+        })
+        .then((response)=>response.json())
+        .then((data)=>{
+            setBalance(data.amount);
+            console.log(data);
+        })
     };
 
     return (
