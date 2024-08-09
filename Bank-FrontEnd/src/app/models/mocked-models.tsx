@@ -7,7 +7,7 @@ export const user1: User ={
     Password: 'notPassword123!',
     Name: "Mr. Whiskers",
     Accounts: [],
-    ImageUrl: "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    // ImageUrl: "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
 };
 
 
@@ -16,7 +16,7 @@ export const user2: User ={
     Password: 'notPassword123!',
     Name: "Lil' Fretcho",
     Accounts: [],
-    ImageUrl: "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg",
+    // ImageUrl: "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg",
 };
 
 

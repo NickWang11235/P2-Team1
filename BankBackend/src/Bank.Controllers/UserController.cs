@@ -135,7 +135,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpPatch("{userId}/deposite")]
-    public Transaction? Deposite([FromRoute]int userId,[FromBody] int accoubtId,[FromBody] double amount)
+    public Transaction? Deposite(int userId, int accoubtId, double amount)
     {
         try
         {
@@ -159,7 +159,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpPatch("{userId}/withdraw")]
-    public Transaction? Withdraw([FromRoute]int userId,[FromBody] int accoubtId,[FromBody] double amount)
+    public Transaction? Withdraw(int userId, int accoubtId, double amount)
     {
         try
         {
@@ -189,7 +189,7 @@ public class UsersController : ControllerBase
 
 
     [HttpPatch("{userId}/transfer")]
-    public Transaction? Transfer([FromRoute] int userId,[FromBody] int fromAccountId,[FromBody] int toAccountId, double amount)
+    public Transaction? Transfer([FromRoute] int userId, int fromAccountId, int toAccountId, double amount)
     {
         try
         {

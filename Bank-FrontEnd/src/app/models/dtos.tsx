@@ -15,6 +15,15 @@
    //  ImageUrl: string,
  }
 
+ 
+export interface Userd {
+   userId:number,
+   username:string,
+   password:string,
+   name: string,
+   accounts: Account[],
+}
+
  export interface Transaction{
     TransactionId: number,
     FromAccount: Account,

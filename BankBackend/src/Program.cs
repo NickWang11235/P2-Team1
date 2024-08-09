@@ -19,6 +19,8 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
+     builder.Services.AddCors();
+
         var app = builder.Build();
         if (app.Environment.IsDevelopment())
         {
@@ -27,12 +29,16 @@ public class Program
         }
 
         app.UseHttpsRedirection();
-
         app.UseAuthorization();
-
-
         app.MapControllers();
 
+        app.UseCors(options =>
+            options.AllowAnyHeader()
+            .AllowAnyOrigin() //-- allow any origin
+            // .WithOrigins("http://localhost")
+            .AllowAnyMethod()
+            // .AllowCredentials()
+        );
         app.Run();
         // Console.WriteLine("Hello!");
     }

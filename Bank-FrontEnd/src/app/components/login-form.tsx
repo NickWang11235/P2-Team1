@@ -1,13 +1,19 @@
 import { useState, useContext, createContext, useEffect } from "react";
-import { User } from "../models/dtos";
+import { Userd } from "../models/dtos";
 import { user1, user2 } from "../models/mocked-models";
 import { CurrentUserContext } from "../page";
+
 
 export default function LoginForm() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [userToSubmit,setUserToSubmit] = useState<User>({Username:"",Password:""});
-    const baseUri = 'localhost:3000/';
+    const [userToSubmit,setUserToSubmit] = useState<Userd>({
+                                                        userId:0,
+                                                        username:"",
+                                                        password:"",
+                                                        name: "",
+                                                        accounts: []});
+    const baseUri = 'http://localhost:5203/';
 
     const {
         currentUser,
@@ -19,12 +25,15 @@ export default function LoginForm() {
     const handleLogin = () => {
 
 
-        fetch(baseUri+"login",{
+        fetch(baseUri+"Users/login",{
             method:"POST",
+            // mode: "no-cors",
             headers:{
-                "Content-Type":"application/json",
+                'Content-Type':'application/json;charset=UTF-8',
+                // 'Access-Control-Allow-Origin': null,
             },
             body: JSON.stringify(userToSubmit),
+            // body: userToSubmit,
             })
             .then((response)=> response.json())
             .then((data)=>{
@@ -45,6 +54,19 @@ export default function LoginForm() {
     };
 
     const consoleThePrint = () =>
+
+        fetch(baseUri+"Users",{
+            method:"GET",
+            mode: "no-cors",
+            headers:{
+                "Content-Type":"application/json",
+                // 'Access-Control-Allow-Origin': null,
+            },
+            })
+            .then((response)=> response.json())
+            .then((data)=>{
+                console.log(data);
+            })
     {
 
     }
@@ -58,13 +80,19 @@ export default function LoginForm() {
                             <span>Username:</span>
                             <input
                                 type="text"
-                                value={userToSubmit.Username}
+                                value={userToSubmit.username}
                                 // value={username}
                                 // onChange={(e) => setUsername(e.target.value)}
                                 onChange={(e) => {
-                                    setUserToSubmit({Username:e.target.value,Password:userToSubmit.Password});
+                                    setUserToSubmit({
+                                        userId:0,
+                                        username:e.target.value,
+                                        password:userToSubmit.password,
+                                        name: "",
+                                        accounts: []});
                                     // console.log(userToSubmit.Username);
                                     // console.log(userToSubmit.Password);
+                                    console.log(JSON.stringify(userToSubmit));
                                 }}
                             />
                         </label>
@@ -74,12 +102,18 @@ export default function LoginForm() {
                             <span>Password:</span>
                             <input
                                 type="password"
-                                value={userToSubmit.Password}
+                                value={userToSubmit.password}
                                 // onChange={(e) => setPassword(e.target.value)}
                                 onChange={(e) => {
-                                    setUserToSubmit({Username:userToSubmit.Username,Password:e.target.value});
+                                    setUserToSubmit({
+                                        userId:0,
+                                        username:userToSubmit.username,
+                                        password:e.target.value,
+                                        name: "",
+                                        accounts: []});
                                     // console.log(userToSubmit.Username);
                                     // console.log(userToSubmit.Password);
+                                    console.log(JSON.stringify(userToSubmit));
                                 }}
                             />
                         </label>
