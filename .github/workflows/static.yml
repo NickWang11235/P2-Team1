@@ -35,7 +35,7 @@ jobs:
         dotnet-version: 8.x
 
     - run: dotnet tool update -g docfx
-    - run: docfx BankBackend/src/docfx.json
+    - run: docfx BankBackend/docfx.json
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
