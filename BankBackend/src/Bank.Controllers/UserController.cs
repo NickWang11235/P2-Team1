@@ -111,13 +111,13 @@ public class UsersController : ControllerBase
             return null;
         }
     }
-    
-    [HttpPatch("{userId}/add/{addedAccount}")]
-    public Account? AddAccountToUserById([FromRoute] int userId, [FromRoute] int addedAccount, [FromBody] int accountId)
+
+    [HttpPatch("{userId}/add/{addedUser}")]
+    public Account? AddAccountToUserById([FromRoute] int userId, [FromRoute] int addedUser, [FromBody] int accountId)
     {
         try
         {
-            _bankService.AddAccountUser(userId, addedAccount, accountId);
+            _bankService.AddAccountUser(userId, addedUser, accountId);
             return _bankService.GetAccountByAccountId(accountId);
         }
         catch (UserIdNotFoundException)
@@ -163,11 +163,11 @@ public class UsersController : ControllerBase
     }
 
     [HttpPatch("{userId}/deposit")]
-    public Transaction? Deposit([FromRoute] int userId, [FromQuery] int accoubtId, [FromQuery] double amount)
+    public Transaction? Deposit([FromRoute] int userId, [FromQuery] int accountId, [FromQuery] double amount)
     {
         try
         {
-            return _bankService.Deposit(userId, accoubtId, amount);
+            return _bankService.Deposit(userId, accountId, amount);
         }
         catch (AccountIdNotFoundException)
         {
@@ -187,11 +187,11 @@ public class UsersController : ControllerBase
     }
 
     [HttpPatch("{userId}/withdraw")]
-    public Transaction? Withdraw([FromRoute] int userId, [FromQuery] int accoubtId, [FromQuery] double amount)
+    public Transaction? Withdraw([FromRoute] int userId, [FromQuery] int accountId, [FromQuery] double amount)
     {
         try
         {
-            return _bankService.Withdraw(userId, accoubtId, amount);
+            return _bankService.Withdraw(userId, accountId, amount);
         }
         catch (AccountIdNotFoundException)
         {
