@@ -112,7 +112,7 @@ public class UsersController : ControllerBase
         }
     }
 
-    [HttpPatch("{userId}/add")]
+    [HttpPatch("{userId}/add/{addedAccount}")]
     public Account? AddAccountToUserById([FromRoute] int userId, [FromBody] int accountId)
     {
         try
