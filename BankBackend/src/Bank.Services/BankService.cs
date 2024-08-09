@@ -90,9 +90,9 @@ public class BankService : IBankService
         return user;
     }
 
-    public User AddAccountUser(int userId, int accountId)
+    public User AddAccountUser(int userId, int addedUser, int accountId)
     {
-        User? user = _bankRepository.GetUserByUserId(userId);
+        User? user = _bankRepository.GetUserByUserId(addedUser);
         Account? account = _bankRepository.GetAccountByAccountId(accountId);
 
         if (user == null)
@@ -116,7 +116,7 @@ public class BankService : IBankService
         }
 
 
-        _bankRepository.AddUserToAccount(userId, accountId);
+        _bankRepository.AddUserToAccount(addedUser, accountId);
         // _bankRepository.AddAccountToUser(accountId, userId);
         return user;
     }
