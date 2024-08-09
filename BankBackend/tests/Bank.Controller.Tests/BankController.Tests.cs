@@ -33,7 +33,7 @@ namespace BankBackend.Tests.Controllers
             };
             _mockBankService.Setup(service => service.CreateAccount(account)).Returns(account);
 
-            var controller = new AccountController(null, _mockBankService.Object);
+            var controller = new AccountController(new Mock<ILogger<AccountController>>().Object, _mockBankService.Object);
 
             // Act
             var result = controller.PostAccount(account);
@@ -59,7 +59,7 @@ namespace BankBackend.Tests.Controllers
             };
             _mockBankService.Setup(service => service.GetAllAccounts()).Returns(accounts);
 
-            var controller = new AccountController(null, _mockBankService.Object);
+            var controller = new AccountController(new Mock<ILogger<AccountController>>().Object, _mockBankService.Object);
 
             // Act
             var result = controller.GetAllAccounts();
@@ -81,7 +81,7 @@ namespace BankBackend.Tests.Controllers
 
             _mockBankService.Setup(service => service.GetTransactionsByAccountId(accountId)).Returns(transactions);
 
-            var controller = new AccountController(null, _mockBankService.Object);
+            var controller = new AccountController(new Mock<ILogger<AccountController>>().Object, _mockBankService.Object);
 
             // Act
             var result = controller.GetTransactionsByAccountId(accountId);
@@ -116,7 +116,7 @@ namespace BankBackend.Tests.Controllers
             };
             _mockBankService.Setup(service => service.CreateUser(user)).Returns(user);
 
-            var controller = new UsersController(null, _mockBankService.Object);
+            var controller = new UsersController(new Mock<ILogger<UsersController>>().Object, _mockBankService.Object);
 
             // Act
             var result = controller.PostUser(user);
@@ -142,7 +142,7 @@ namespace BankBackend.Tests.Controllers
             };
             _mockBankService.Setup(service => service.GetAllUsers()).Returns(users);
 
-            var controller = new UsersController(null, _mockBankService.Object);
+            var controller = new UsersController(new Mock<ILogger<UsersController>>().Object, _mockBankService.Object);
 
             // Act
             var result = controller.GetAllUsers();
