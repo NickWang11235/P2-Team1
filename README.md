@@ -144,6 +144,6 @@ Install `docfx` with the command
 
 Then navigate to the `BankBackend` directory and run the command 
 
-```docfx docfx.json --serve``
+```docfx docfx.json --serve```
 
 You can view the docs and the indicated url.
