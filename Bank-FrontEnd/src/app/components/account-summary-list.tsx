@@ -22,7 +22,7 @@ export default function AccountSummaryList(){
     const {currentUser} = useContext(CurrentUserContext);
 
 
-    const listOfAccountSummaries = currentUser.Accounts?.map((account,index)=>{
+    const listOfAccountSummaries = currentUser.accounts?.map((account,index)=>{
         return(
             <li key={index}>
                 <AccountSummary account = {account}/>

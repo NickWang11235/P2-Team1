@@ -3,7 +3,7 @@ import { User, Account, Transaction } from "../models/dtos";
 import { CurrentUserContext } from '../page';
 
 export const AccountSummaryDetails = (props) => {
-    const [balance, setBalance] = useState(props.account.Balance);
+    const [balance, setBalance] = useState(props.account.balance);
 
     const baseUri = 'http://localhost:5203/';
     const {currentUser} = useContext(CurrentUserContext);
