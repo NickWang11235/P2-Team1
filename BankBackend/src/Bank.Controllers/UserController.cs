@@ -32,6 +32,20 @@ public class UsersController : ControllerBase
         return _bankService.GetAllUsers();
     }
 
+    [HttpGet("{userId}")]
+    public User? GetUsersById([FromRoute] int userId)
+    {
+        try
+        {
+            return _bankService.GetUserByUserId(userId);
+        }
+        catch (UserIdNotFoundException)
+        {
+            Response.StatusCode = (int)HttpStatusCode.NotFound;
+            return null;
+        }
+    }
+
     [HttpPost("login")]
     public User? Login([FromBody] User user)
     {
@@ -57,6 +71,20 @@ public class UsersController : ControllerBase
         try
         {
             return _bankService.GetAccountsByUserId(id);
+        }
+        catch (UserIdNotFoundException)
+        {
+            Response.StatusCode = (int)HttpStatusCode.NotFound;
+            return null;
+        }
+    }
+
+    [HttpGet("{id}/transactions")]
+    public List<Transaction>? GetTransactionsByUserId([FromRoute] int id)
+    {
+        try
+        {
+            return _bankService.GetTransactionsByUserId(id);
         }
         catch (UserIdNotFoundException)
         {
@@ -134,8 +162,8 @@ public class UsersController : ControllerBase
         }
     }
 
-    [HttpPatch("{userId}/deposite")]
-    public Transaction? Deposite([FromRoute]int userId,[FromBody] int accoubtId,[FromBody] double amount)
+    [HttpPatch("{userId}/deposit")]
+    public Transaction? Deposit([FromRoute] int userId, int accoubtId, double amount)
     {
         try
         {
@@ -159,7 +187,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpPatch("{userId}/withdraw")]
-    public Transaction? Withdraw([FromRoute]int userId,[FromBody] int accoubtId,[FromBody] double amount)
+    public Transaction? Withdraw([FromRoute] int userId, int accoubtId, double amount)
     {
         try
         {
@@ -189,7 +217,7 @@ public class UsersController : ControllerBase
 
 
     [HttpPatch("{userId}/transfer")]
-    public Transaction? Transfer([FromRoute] int userId,[FromBody] int fromAccountId,[FromBody] int toAccountId, double amount)
+    public Transaction? Transfer([FromRoute] int userId, int fromAccountId, int toAccountId, double amount)
     {
         try
         {

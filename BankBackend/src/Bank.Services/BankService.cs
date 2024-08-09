@@ -1,6 +1,5 @@
 using BankBackend.Repository;
 using BankBackend.Models;
-using BankBackend.Service;
 
 namespace BankBackend.Service;
 
@@ -118,7 +117,7 @@ public class BankService : IBankService
 
 
         _bankRepository.AddUserToAccount(userId, accountId);
-        _bankRepository.AddAccountToUser(accountId, userId);
+        // _bankRepository.AddAccountToUser(accountId, userId);
         return user;
     }
 
@@ -148,7 +147,7 @@ public class BankService : IBankService
         }
 
         _bankRepository.DeleteUserAccountByAccountId(userId, accountId);
-        _bankRepository.DeleteAccountUserByUserId(accountId, userId);
+        // _bankRepository.DeleteAccountUserByUserId(accountId, userId);
         return user;
     }
 

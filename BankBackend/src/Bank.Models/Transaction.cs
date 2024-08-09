@@ -6,7 +6,7 @@ public class Transaction
 {
     [Key]
     public int TransactionId { get; set; }
-    // the account transaction originates from. a withdraw/deposite involves only the FromAccount
+    // the account transaction originates from. a withdraw/deposit involves only the FromAccount
     public Account FromAccount { get; set; }
     // the account transaction is acting on, e.g. sending money to this account
     public Account? ToAccount { get; set; }
