@@ -4,10 +4,10 @@
       "src": [
         {
           "files": [
-            "BankBackend.csproj"
+            "src/BankBackend.csproj"
           ],
           "exclude": [
-            "Migrations/*"
+            "src/Migrations/*"
           ]
         }
       ],
