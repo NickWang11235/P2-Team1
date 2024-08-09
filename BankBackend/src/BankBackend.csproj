@@ -5,6 +5,10 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Bank_Backend</RootNamespace>
+
+
+    <CoverletOutputFormat>cobertura</CoverletOutputFormat>
+    <CoverletExclude>[*BankBackend.Controllers*,*BankBackend.Models*,*BankBackend.Repository*,*BankBackend.Service*]</CoverletExclude>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +18,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.7" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="coverlet.collector" Version="3.0.3" />
   </ItemGroup>
 
 </Project>
