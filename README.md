@@ -70,7 +70,7 @@ This will start frontend server.
 ## Prerequsites 
 - To run the backend server you will need `.Net 8.0`
 - To run the SQL server you will need a docker container running `Microsoft SQL Server 2022`
-- To generate and view API documentation you will need `docfx`
+- To generate and view API documentation you will need `docfx`. Or you can view the API documentation on github [here](https://240708-net.github.io/P2-Team1/api/BankBackend.Controllers.html)
 
 ## Instructions
 
