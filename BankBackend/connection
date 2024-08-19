@@ -1,0 +1,1 @@
+Server=localhost;Database=BankDB;User=sa;Password=Password1!;TrustServerCertificate=true;
