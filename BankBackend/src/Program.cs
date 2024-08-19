@@ -12,6 +12,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         BankRepository _bankRepository = new BankRepository(builder.Configuration.GetConnectionString("BankDB") ?? "");
+        string str = "Server=localhost;Database=BankDB;User=sa;Password=Password1!;TrustServerCertificate=true;";
 
         builder.Services.AddDbContext<BankContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("BankDB")));
         builder.Services.AddScoped<IBankService>(repo => new BankService(_bankRepository));
